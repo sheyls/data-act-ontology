@@ -2408,15 +2408,179 @@
     </owl:NamedIndividual>
     
 
-
     <!-- http://www.semanticweb.org/dataact#userRequestsDataAccess -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#userRequestsDataAccess">
+    <!-- ============================================ -->
+    <!-- TEST INSTANCES FOR COMPLIANCE  -->
+    <!-- ============================================ -->
+
+    <!-- Test Case 1: Price Discrimination -->
+     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#userRequestsDataAccess">
         <rdf:type rdf:resource="http://www.semanticweb.org/dataact#RuleCondition"/>
         <hasDescription>User submits a request to access their product data</hasDescription>
         <rdfs:label>User Requests Data Access</rdfs:label>
     </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/dataact#mantenimientoTech -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#mantenimientoTech">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#SME"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#AftermarketServiceProvider"/>
+        <rdfs:label>MantenimientoTech SL</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#agreement247 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#agreement247">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#B2BDataSharing"/>
+        <authorizedBy rdf:resource="http://www.semanticweb.org/dataact#factoryOwnerAcme"/>
+        <governedBy rdf:resource="http://www.semanticweb.org/dataact#contract247"/>
+        <rdfs:label>Agreement 247</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#contract247 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#contract247">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataSharingAgreement"/>
+        <compensationAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800.00</compensationAmount>
+        <subjectToFRAND rdf:resource="http://www.semanticweb.org/dataact#frand247"/>
+        <rdfs:label>Contract 247</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#frand247 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#frand247">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#FRANDCondition"/>
+        <isFair rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isFair>
+        <isReasonable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReasonable>
+        <isNonDiscriminatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNonDiscriminatory>
+        <rdfs:label>FRAND Condition 247</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#factoryOwnerAcme -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#factoryOwnerAcme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#User"/>
+        <ownsOrUses rdf:resource="http://www.semanticweb.org/dataact#industrialRobot1"/>
+        <rdfs:label>Factory Owner ACME</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#industrialRobot1 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#industrialRobot1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConnectedProduct"/>
+        <rdfs:label>Industrial Robot 1</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- SME 2 - TechFix (comparable, pays less) -->
+    
+    <!-- http://www.semanticweb.org/dataact#techFix -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#techFix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#SME"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#AftermarketServiceProvider"/>
+        <rdfs:label>TechFix GmbH</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#agreement189 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#agreement189">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#B2BDataSharing"/>
+        <authorizedBy rdf:resource="http://www.semanticweb.org/dataact#factoryOwnerBeta"/>
+        <governedBy rdf:resource="http://www.semanticweb.org/dataact#contract189"/>
+        <rdfs:label>Agreement 189</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#contract189 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#contract189">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataSharingAgreement"/>
+        <compensationAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.00</compensationAmount>
+        <subjectToFRAND rdf:resource="http://www.semanticweb.org/dataact#frand189"/>
+        <rdfs:label>Contract 189</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#frand189 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#frand189">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#FRANDCondition"/>
+        <isFair rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isFair>
+        <isReasonable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReasonable>
+        <isNonDiscriminatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isNonDiscriminatory>
+        <rdfs:label>FRAND Condition 189</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#factoryOwnerBeta -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#factoryOwnerBeta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#User"/>
+        <ownsOrUses rdf:resource="http://www.semanticweb.org/dataact#industrialRobot2"/>
+        <rdfs:label>Factory Owner Beta</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#industrialRobot2 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#industrialRobot2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConnectedProduct"/>
+        <rdfs:label>Industrial Robot 2</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- SME 3 - AutoRepair -->
+    
+    <!-- http://www.semanticweb.org/dataact#autoRepair -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#autoRepair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#SME"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#AftermarketServiceProvider"/>
+        <rdfs:label>AutoRepair Ltd</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#agreement312 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#agreement312">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#B2BDataSharing"/>
+        <authorizedBy rdf:resource="http://www.semanticweb.org/dataact#factoryOwnerGamma"/>
+        <governedBy rdf:resource="http://www.semanticweb.org/dataact#contract312"/>
+        <rdfs:label>Agreement 312</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#contract312 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#contract312">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataSharingAgreement"/>
+        <compensationAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">580.00</compensationAmount>
+        <rdfs:label>Contract 312</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#factoryOwnerGamma -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#factoryOwnerGamma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#User"/>
+        <rdfs:label>Factory Owner Gamma</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- Test Case 2: Missing Authorization (Violation) -->
+    
+    <!-- http://www.semanticweb.org/dataact#agreement999 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#agreement999">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#B2BDataSharing"/>
+        <governedBy rdf:resource="http://www.semanticweb.org/dataact#contract999"/>
+        <rdfs:label>Agreement 999 (Missing Authorization)</rdfs:label>
+        <rdfs:comment>This agreement violates Article 8(4) - no user authorization</rdfs:comment>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#contract999 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#contract999">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataSharingAgreement"/>
+        <compensationAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">700.00</compensationAmount>
+        <rdfs:label>Contract 999</rdfs:label>
+    </owl:NamedIndividual>
+
+    <!-- Test Case 3: Non-Machine-Readable Data (Violation) -->
+    
+    <!-- http://www.semanticweb.org/dataact#legacyData -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#legacyData">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ProductData"/>
+        <isMachineReadable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isMachineReadable>
+        <isGeneratedBy rdf:resource="http://www.semanticweb.org/dataact#oldSensor"/>
+        <rdfs:label>Legacy Sensor Data</rdfs:label>
+        <rdfs:comment>This data violates Article 3(1) - not machine-readable</rdfs:comment>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/dataact#oldSensor -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#oldSensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConnectedProduct"/>
+        <generatesData rdf:resource="http://www.semanticweb.org/dataact#legacyData"/>
+        <rdfs:label>Old Sensor Model</rdfs:label>
+    </owl:NamedIndividual>
+
+
 </rdf:RDF>
 
 
