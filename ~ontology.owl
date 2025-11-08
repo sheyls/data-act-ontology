@@ -194,17 +194,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/dataact#containsTradeSecret -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dataact#containsTradeSecret">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dataact#Data"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dataact#TradeSecretData"/>
-        <rdfs:comment>Article 8(6) - Trade secrets need not be disclosed</rdfs:comment>
-        <rdfs:label>contains trade secret</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/dataact#correlatesTo -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dataact#correlatesTo">
@@ -254,6 +243,26 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/dataact#ThirdParty"/>
         <rdfs:comment>Article 5(1) - User can designate a third party to receive data</rdfs:comment>
         <rdfs:label>designates third party</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dataact#fulfillsActionCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dataact#fulfillsActionCondition">
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/odrl/2/Action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dataact#ActionCondition"/>
+        <rdfs:label>fulfills action condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dataact#fulfillsDataContentCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dataact#fulfillsDataContentCondition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dataact#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dataact#DataContentCondition"/>
+        <rdfs:label>fulfills data content condition</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -670,7 +679,6 @@
     <!-- http://www.semanticweb.org/dataact#securedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dataact#securedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dataact#TradeSecretData"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dataact#Data"/>
         <rdfs:comment>Trade secret protection constraints</rdfs:comment>
         <rdfs:label>secures</rdfs:label>
@@ -860,6 +868,16 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment>Article 8(1) - Compensation under FRAND terms</rdfs:comment>
         <rdfs:label>compensation amount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dataact#containsTradeSecret -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dataact#containsTradeSecret">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dataact#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>contains trade secret</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1672,16 +1690,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/dataact#TradeSecretData -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/dataact#TradeSecretData">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dataact#Data"/>
-        <rdfs:comment>Article 8(6) - Protected information</rdfs:comment>
-        <rdfs:label>Trade Secret Data</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/dataact#UnfairTerm -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dataact#UnfairTerm">
@@ -1894,6 +1902,33 @@
     
 
 
+    <!-- http://www.semanticweb.org/dataact#RobotData1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#RobotData1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ProductData"/>
+        <rdfs:label>Robot Data 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dataact#RobotManufacturer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#RobotManufacturer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataHolder"/>
+        <dpv:hasData rdf:resource="http://www.semanticweb.org/dataact#RobotData1"/>
+        <rdfs:label>Robot Manufacturer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dataact#SantasSecretCookieFormula -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#SantasSecretCookieFormula">
+        <rdfs:label>Santas Secret Cookie Formula</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/dataact#UseDataToDevelopCompetingProduct -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#UseDataToDevelopCompetingProduct">
@@ -2059,7 +2094,7 @@
     <!-- http://www.semanticweb.org/dataact#autoRepair -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#autoRepair">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#AftermarketServiceProvider"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataRecipient"/>
         <rdfs:label>AutoRepair Ltd</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2085,6 +2120,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/dataact#b2cSharing_charlie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#b2cSharing_charlie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#B2CDataSharing"/>
+        <governedBy rdf:resource="http://www.semanticweb.org/dataact#contract_charlie"/>
+        <rdfs:label>B2C Sharing Charlie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/dataact#b2gDataRequest -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#b2gDataRequest">
@@ -2099,6 +2144,28 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#bob">
         <rdf:type rdf:resource="http://www.semanticweb.org/dataact#EnterpriseUser"/>
         <rdfs:label>Bob (SME)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dataact#charlie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#charlie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConsumerUser"/>
+        <ownsOrUses rdf:resource="http://www.semanticweb.org/dataact#smartWatch1"/>
+        <requestsAccessTo rdf:resource="http://www.semanticweb.org/dataact#charlieHealthData"/>
+        <rdfs:label>Charlie (No Data Provided)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dataact#charlieHealthData -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#charlieHealthData">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ProductData"/>
+        <isGeneratedBy rdf:resource="http://www.semanticweb.org/dataact#smartWatch1"/>
+        <isMachineReadable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMachineReadable>
+        <rdfs:label>Charlie Health Data</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2129,6 +2196,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#contract247">
         <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataSharingAgreement"/>
         <subjectToFRAND rdf:resource="http://www.semanticweb.org/dataact#frand247"/>
+        <dpv:hasRecipient rdf:resource="http://www.semanticweb.org/dataact#autoRepair"/>
         <compensationAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800.00</compensationAmount>
         <rdfs:label>Contract 247</rdfs:label>
     </owl:NamedIndividual>
@@ -2151,6 +2219,16 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataSharingAgreement"/>
         <compensationAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">700.00</compensationAmount>
         <rdfs:label>Contract 999</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dataact#contract_charlie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#contract_charlie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataSharingAgreement"/>
+        <dpv:hasRecipient rdf:resource="http://www.semanticweb.org/dataact#charlie"/>
+        <rdfs:label>Charlie&apos;s Contract</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2284,6 +2362,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#industrialRobot1">
         <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConnectedProduct"/>
+        <generatesData rdf:resource="http://www.semanticweb.org/dataact#RobotData1"/>
         <rdfs:label>Industrial Robot 1</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2392,6 +2471,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/dataact#smartWatch1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#smartWatch1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConnectedProduct"/>
+        <generatesData rdf:resource="http://www.semanticweb.org/dataact#charlieHealthData"/>
+        <rdfs:label>Smart Watch 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/dataact#techFix -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#techFix">
@@ -2420,46 +2509,16 @@
         <hasDescription>User submits a request to access their product data</hasDescription>
         <rdfs:label>User Requests Data Access</rdfs:label>
     </owl:NamedIndividual>
-<!-- VIOLATION: User requests data but manufacturer doesn't provide it -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#charlie">
-    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConsumerUser"/>
-    <ownsOrUses rdf:resource="http://www.semanticweb.org/dataact#smartWatch1"/>
-    <requestsAccessTo rdf:resource="http://www.semanticweb.org/dataact#charlieHealthData"/>
-    <rdfs:label>Charlie (No Data Provided)</rdfs:label>
-</owl:NamedIndividual>
+    
 
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#smartWatch1">
-    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConnectedProduct"/>
-    <generatesData rdf:resource="http://www.semanticweb.org/dataact#charlieHealthData"/>
-    <rdfs:label>Smart Watch 1</rdfs:label>
-</owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#charlieHealthData">
-    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ProductData"/>
-    <isGeneratedBy rdf:resource="http://www.semanticweb.org/dataact#smartWatch1"/>
-    <isMachineReadable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMachineReadable>
-    <rdfs:label>Charlie Health Data</rdfs:label>
-</owl:NamedIndividual>
+    <!-- http://www.semanticweb.org/dataact#watchManufacturer -->
 
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#watchManufacturer">
-    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataHolder"/>
-    <dpv:hasData rdf:resource="http://www.semanticweb.org/dataact#charlieHealthData"/>
-    <!-- NO DataProvision action - this creates the violation! -->
-    <rdfs:label>Watch Manufacturer (Non-Compliant)</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#b2cSharing_charlie">
-    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#B2CDataSharing"/>
-    <governedBy rdf:resource="http://www.semanticweb.org/dataact#contract_charlie"/>
-    <rdfs:label>B2C Sharing Charlie</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#contract_charlie">
-    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataSharingAgreement"/>
-    <dpv:hasRecipient rdf:resource="http://www.semanticweb.org/dataact#charlie"/>
-    <rdfs:label>Charlie's Contract</rdfs:label>
-</owl:NamedIndividual>
-
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#watchManufacturer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataHolder"/>
+        <dpv:hasData rdf:resource="http://www.semanticweb.org/dataact#charlieHealthData"/>
+        <rdfs:label>Watch Manufacturer (Non-Compliant)</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
