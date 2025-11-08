@@ -44,3 +44,10 @@ WHERE {
 }
 ORDER BY ?recipient
 
+
+
+
+#### OUTPUTS:
+
+# b2bSharing || holder || recipient data || violationType || details
+# http://www.semanticweb.org/dataact#agreement247 || http://www.semanticweb.org/dataact#RobotManufacturer || http://www.semanticweb.org/dataact#autoRepair || http://www.semanticweb.org/dataact#RobotData || "UNJUSTIFIED_REFUSAL" || "Article 8(6) VIOLATED: Data holder refused to share data without trade secret justification"

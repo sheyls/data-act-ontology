@@ -1,0 +1,40 @@
+# ============================================================
+# COMPLIANCE CHECK: Article 19(2)(a) - Prohibition on Competitive Use (B2G)
+# ============================================================
+# Regulation: EU Data Act (Regulation 2023/2854)
+# Article: 19(2)(a) - Public body restrictions on data use
+# Type: B2G (Business-to-Government)
+# Deontic: Prohibition (public body MUST NOT compete)
+# ============================================================
+
+PREFIX dataact: <http://www.semanticweb.org/dataact#>
+PREFIX dpv: <https://w3c.github.io/dpv/2.2/dpv/#>
+
+SELECT DISTINCT 
+    ?b2gSharing 
+    ?publicBody 
+    ?holder
+    ?action 
+    ("COMPETITIVE_PRODUCT_DEVELOPMENT" AS ?violationType)
+    ("Article 19(2)(a) VIOLATED: Public body used data to develop competing product" AS ?details)
+WHERE {
+  ?b2gSharing a dataact:B2GDataSharing ;
+              dataact:governedBy ?contract .
+  ?contract dpv:hasRecipient ?publicBody .
+  ?publicBody a dataact:PublicSectorBody .
+  ?publicBody a dataact:DataRecipient .
+  ?holder a dataact:DataHolder ; #WatchManufacturer
+          dpv:hasData ?data .  #CharlieHealthData
+  ?holder dpv:hasRecipient ?publicBody .
+  
+  ?publicBody dataact:performsAction ?action .
+  ?action a dataact:UseDataToDevelopCompetingProduct .
+}
+ORDER BY ?publicBody
+
+
+
+#### OUTPUTS: 
+
+# b2gSharing || publicBody || holder || action || violationType || details
+# http://www.semanticweb.org/dataact#b2gSharingGonzalo || http://www.semanticweb.org/dataact#HealthAuthority || http://www.semanticweb.org/dataact#watchManufacturer || http://www.semanticweb.org/dataact#UsesDataToDevelopCompetingProduct1 || "COMPETITIVE_PRODUCT_DEVELOPMENT" || "Article 19(2)(a) VIOLATED: Public body used data to develop competing product"

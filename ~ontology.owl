@@ -547,6 +547,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/dataact#performsAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dataact#performsAction">
+        <rdfs:domain rdf:resource="https://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/odrl/2/Action"/>
+        <rdfs:label>performs action</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/dataact#performsLegalAction -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dataact#performsLegalAction">
@@ -1710,6 +1720,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/dataact#UseDataToDevelopCompetingProduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dataact#UseDataToDevelopCompetingProduct">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/odrl/2/Action"/>
+        <rdfs:label>Use Data To Develop Competing Product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/dataact#User -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dataact#User">
@@ -1874,6 +1893,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/dataact#Contract191 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#Contract191">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataSharingAgreement"/>
+        <dpv:hasRecipient rdf:resource="http://www.semanticweb.org/dataact#HealthAuthority"/>
+        <rdfs:label>Contract 191</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/dataact#DataProvisionOfThermostatDataToALice -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#DataProvisionOfThermostatDataToALice">
@@ -1886,7 +1915,9 @@
     <!-- http://www.semanticweb.org/dataact#HealthAuthority -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#HealthAuthority">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataRecipient"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/dataact#PublicSectorBody"/>
+        <performsAction rdf:resource="http://www.semanticweb.org/dataact#UsesDataToDevelopCompetingProduct1"/>
         <rdfs:label>Health Authority</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1921,19 +1952,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/dataact#SantasSecretCookieFormula -->
+    <!-- http://www.semanticweb.org/dataact#UsesDataToDevelopCompetingProduct1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#SantasSecretCookieFormula">
-        <rdfs:label>Santas Secret Cookie Formula</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/dataact#UseDataToDevelopCompetingProduct -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#UseDataToDevelopCompetingProduct">
-        <rdf:type rdf:resource="https://www.w3.org/ns/odrl/2/Action"/>
-        <rdfs:label>Use Data To Develop Competing Product</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#UsesDataToDevelopCompetingProduct1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#UseDataToDevelopCompetingProduct"/>
+        <rdfs:label>Uses Data To Develop Competing Product 1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2024,7 +2047,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#article19_2_a_prohibition">
         <rdf:type rdf:resource="https://www.w3.org/ns/odrl/2/Prohibition"/>
-        <specifiesAction rdf:resource="http://www.semanticweb.org/dataact#UseDataToDevelopCompetingProduct"/>
+        <specifiesAction rdf:resource="http://www.semanticweb.org/dataact#UsesDataToDevelopCompetingProduct1"/>
         <rdfs:label>Article 19(2)(a) Prohibition</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2139,6 +2162,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/dataact#b2gSharingGonzalo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#b2gSharingGonzalo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dataact#B2GDataSharing"/>
+        <governedBy rdf:resource="http://www.semanticweb.org/dataact#Contract191"/>
+        <rdfs:label>B2G Sharing Gonzalo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/dataact#bob -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#bob">
@@ -2164,6 +2197,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#charlieHealthData">
         <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ProductData"/>
         <isGeneratedBy rdf:resource="http://www.semanticweb.org/dataact#smartWatch1"/>
+        <performsAction rdf:resource="http://www.semanticweb.org/dataact#UsesDataToDevelopCompetingProduct1"/>
         <isMachineReadable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMachineReadable>
         <rdfs:label>Charlie Health Data</rdfs:label>
     </owl:NamedIndividual>
@@ -2517,6 +2551,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#watchManufacturer">
         <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataHolder"/>
         <dpv:hasData rdf:resource="http://www.semanticweb.org/dataact#charlieHealthData"/>
+        <dpv:hasRecipient rdf:resource="http://www.semanticweb.org/dataact#HealthAuthority"/>
         <rdfs:label>Watch Manufacturer (Non-Compliant)</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
