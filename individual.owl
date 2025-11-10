@@ -1,5 +1,15 @@
 
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
 
     <!-- http://www.semanticweb.org/dataact#Article19_2_a_rule -->
 
@@ -166,7 +176,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#article19_2_a_prohibition">
         <rdf:type rdf:resource="https://www.w3.org/ns/odrl/2/Prohibition"/>
-        <specifiesAction rdf:resource="http://www.semanticweb.org/dataact#UsesDataToDevelopCompetingProduct1"/>
+        <odrl:action rdf:resource="http://www.semanticweb.org/dataact#UsesDataToDevelopCompetingProduct1"/>
         <rdfs:label>Article 19(2)(a) Prohibition</rdfs:label>
     </owl:NamedIndividual>
     
@@ -177,8 +187,8 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#article4_1_obligation">
         <rdf:type rdf:resource="https://www.w3.org/ns/odrl/2/Duty"/>
         <hasBeneficiary rdf:resource="http://www.semanticweb.org/dataact#alice"/>
-        <specifiesAction rdf:resource="http://www.semanticweb.org/dataact#provideDataAction"/>
         <triggeredBy rdf:resource="http://www.semanticweb.org/dataact#userRequestsDataAccess"/>
+        <odrl:action rdf:resource="http://www.semanticweb.org/dataact#provideDataAction"/>
         <odrl:assignee rdf:resource="http://www.semanticweb.org/dataact#thermostatManufacturer"/>
         <deonticModality>Obligation</deonticModality>
         <hasDescription>Manufacturer must provide data to user</hasDescription>
@@ -207,7 +217,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#article8_6_permission">
         <rdf:type rdf:resource="https://www.w3.org/ns/odrl/2/Permission"/>
-        <specifiesAction rdf:resource="http://www.semanticweb.org/dataact#refuseDataAccessAction"/>
+        <odrl:action rdf:resource="http://www.semanticweb.org/dataact#refuseDataAccessAction"/>
         <odrl:assignee rdf:resource="http://www.semanticweb.org/dataact#sensorManufacturer"/>
         <deonticModality>Permission</deonticModality>
         <hasDescription>Data holder permitted to refuse if trade secret</hasDescription>
