@@ -1,0 +1,1372 @@
+<http://www.semanticweb.org/dataact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/dataact> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by-sa/4.0/> .
+<http://www.semanticweb.org/dataact> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-sa/4.0/> .
+<http://www.semanticweb.org/dataact> <http://www.w3.org/2000/01/rdf-schema#comment> "Comprehensive Ontology for the EU Data Act (Regulation 2023/2854)" .
+<http://www.semanticweb.org/dataact> <http://www.w3.org/2000/01/rdf-schema#label> "EU Data Act Ontology" .
+<http://www.semanticweb.org/dataact> <http://www.w3.org/2002/07/owl#versionInfo> "2.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.semanticweb.org/dataact#legalEffect
+<http://www.semanticweb.org/dataact#legalEffect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.semanticweb.org/dataact#legalEffect> <http://www.w3.org/2000/01/rdf-schema#comment> "Legal effect description" .
+<http://www.semanticweb.org/dataact#legalEffect> <http://www.w3.org/2000/01/rdf-schema#label> "legal effect" .
+# 
+# http://www.semanticweb.org/dataact#legalSource
+<http://www.semanticweb.org/dataact#legalSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.semanticweb.org/dataact#legalSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference to legal document or provision" .
+<http://www.semanticweb.org/dataact#legalSource> <http://www.w3.org/2000/01/rdf-schema#label> "legal source" .
+# 
+# http://www.semanticweb.org/dataact#qualifiedBy
+<http://www.semanticweb.org/dataact#qualifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.semanticweb.org/dataact#qualifiedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Qualification or condition" .
+<http://www.semanticweb.org/dataact#qualifiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "qualified by" .
+# 
+# http://www.semanticweb.org/dataact#ruleSource
+<http://www.semanticweb.org/dataact#ruleSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.semanticweb.org/dataact#ruleSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference to specific article or recital" .
+<http://www.semanticweb.org/dataact#ruleSource> <http://www.w3.org/2000/01/rdf-schema#label> "rule source" .
+# 
+# http://www.semanticweb.org/dataact#temporalExtent
+<http://www.semanticweb.org/dataact#temporalExtent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.semanticweb.org/dataact#temporalExtent> <http://www.w3.org/2000/01/rdf-schema#comment> "Temporal period during which something holds" .
+<http://www.semanticweb.org/dataact#temporalExtent> <http://www.w3.org/2000/01/rdf-schema#label> "temporal extent" .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.estrellaproject.org/lkif-core/expression.owl#qualifies
+<http://www.estrellaproject.org/lkif-core/expression.owl#qualifies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.estrellaproject.org/lkif-core/expression.owl#qualifies> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#Qualification> .
+<http://www.estrellaproject.org/lkif-core/expression.owl#qualifies> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.estrellaproject.org/lkif-core/norm.owl#Right> .
+<http://www.estrellaproject.org/lkif-core/expression.owl#qualifies> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Adds qualification to norm or right" .
+<http://www.estrellaproject.org/lkif-core/expression.owl#qualifies> <http://www.w3.org/2000/01/rdf-schema#label> "qualifies" .
+# 
+# http://www.estrellaproject.org/lkif-core/role.owl#plays
+<http://www.estrellaproject.org/lkif-core/role.owl#plays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.estrellaproject.org/lkif-core/role.owl#plays> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.estrellaproject.org/lkif-core/role.owl#plays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#LegalRelationship> .
+<http://www.estrellaproject.org/lkif-core/role.owl#plays> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that some thing plays a role" .
+<http://www.estrellaproject.org/lkif-core/role.owl#plays> <http://www.w3.org/2000/01/rdf-schema#label> "plays role in" .
+# 
+# http://www.semanticweb.org/dataact#actsOnBehalfOf
+<http://www.semanticweb.org/dataact#actsOnBehalfOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#actsOnBehalfOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#DataIntermediationService> .
+<http://www.semanticweb.org/dataact#actsOnBehalfOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#User> .
+<http://www.semanticweb.org/dataact#actsOnBehalfOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Recitals 29-33 - Intermediary may exercise user rights" .
+<http://www.semanticweb.org/dataact#actsOnBehalfOf> <http://www.w3.org/2000/01/rdf-schema#label> "acts on behalf of" .
+# 
+# http://www.semanticweb.org/dataact#authorizedBy
+<http://www.semanticweb.org/dataact#authorizedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#authorizedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#DataSharing> .
+<http://www.semanticweb.org/dataact#authorizedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#User> .
+<http://www.semanticweb.org/dataact#authorizedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 8(4) - B2B data sharing must be authorized by the user" .
+<http://www.semanticweb.org/dataact#authorizedBy> <http://www.w3.org/2000/01/rdf-schema#label> "authorized by" .
+# 
+# http://www.semanticweb.org/dataact#classifiedAs
+<http://www.semanticweb.org/dataact#classifiedAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#classifiedAs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#classifiedAs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#DataCategory> .
+<http://www.semanticweb.org/dataact#classifiedAs> <http://www.w3.org/2000/01/rdf-schema#label> "classified as" .
+# 
+# http://www.semanticweb.org/dataact#compliesWith
+<http://www.semanticweb.org/dataact#compliesWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#compliesWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#compliesWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#InteroperabilityStandard> .
+<http://www.semanticweb.org/dataact#compliesWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 34-35 - Interoperability compliance" .
+<http://www.semanticweb.org/dataact#compliesWith> <http://www.w3.org/2000/01/rdf-schema#label> "complies with" .
+# 
+# http://www.semanticweb.org/dataact#containsTradeSecret
+<http://www.semanticweb.org/dataact#containsTradeSecret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#containsTradeSecret> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#containsTradeSecret> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#TradeSecret> .
+<http://www.semanticweb.org/dataact#containsTradeSecret> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 8(6) - Trade secrets need not be disclosed" .
+<http://www.semanticweb.org/dataact#containsTradeSecret> <http://www.w3.org/2000/01/rdf-schema#label> "contains trade secret" .
+# 
+# http://www.semanticweb.org/dataact#correlatesTo
+<http://www.semanticweb.org/dataact#correlatesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#correlatesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.estrellaproject.org/lkif-core/norm.owl#Right> .
+<http://www.semanticweb.org/dataact#correlatesTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#Duty> .
+<http://www.semanticweb.org/dataact#correlatesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Right correlates to duty (Hohfeldian)" .
+<http://www.semanticweb.org/dataact#correlatesTo> <http://www.w3.org/2000/01/rdf-schema#label> "correlates to" .
+# 
+# http://www.semanticweb.org/dataact#countsAs
+<http://www.semanticweb.org/dataact#countsAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#countsAs> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Constitutive rule - X counts as Y in context C" .
+<http://www.semanticweb.org/dataact#countsAs> <http://www.w3.org/2000/01/rdf-schema#label> "counts as" .
+# 
+# http://www.semanticweb.org/dataact#createsDuty
+<http://www.semanticweb.org/dataact#createsDuty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#createsDuty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalAction> .
+<http://www.semanticweb.org/dataact#createsDuty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#Duty> .
+<http://www.semanticweb.org/dataact#createsDuty> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Action creates a duty" .
+<http://www.semanticweb.org/dataact#createsDuty> <http://www.w3.org/2000/01/rdf-schema#label> "creates duty" .
+# 
+# http://www.semanticweb.org/dataact#createsRight
+<http://www.semanticweb.org/dataact#createsRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#createsRight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalAction> .
+<http://www.semanticweb.org/dataact#createsRight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.estrellaproject.org/lkif-core/norm.owl#Right> .
+<http://www.semanticweb.org/dataact#createsRight> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Action creates a right" .
+<http://www.semanticweb.org/dataact#createsRight> <http://www.w3.org/2000/01/rdf-schema#label> "creates right" .
+# 
+# http://www.semanticweb.org/dataact#derivesFrom
+<http://www.semanticweb.org/dataact#derivesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#derivesFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#derivesFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#LegalSource> .
+<http://www.semanticweb.org/dataact#derivesFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Links rule to its legal source (article, regulation)" .
+<http://www.semanticweb.org/dataact#derivesFrom> <http://www.w3.org/2000/01/rdf-schema#label> "derives from" .
+# 
+# http://www.semanticweb.org/dataact#designatesThirdParty
+<http://www.semanticweb.org/dataact#designatesThirdParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#designatesThirdParty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#User> .
+<http://www.semanticweb.org/dataact#designatesThirdParty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#ThirdParty> .
+<http://www.semanticweb.org/dataact#designatesThirdParty> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 5(1) - User can designate a third party to receive data" .
+<http://www.semanticweb.org/dataact#designatesThirdParty> <http://www.w3.org/2000/01/rdf-schema#label> "designates third party" .
+# 
+# http://www.semanticweb.org/dataact#expressesDeontic
+<http://www.semanticweb.org/dataact#expressesDeontic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#expressesDeontic> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Rule> .
+<http://www.semanticweb.org/dataact#expressesDeontic> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Norm expresses deontic content" .
+<http://www.semanticweb.org/dataact#expressesDeontic> <http://www.w3.org/2000/01/rdf-schema#label> "expresses deontic" .
+# 
+# http://www.semanticweb.org/dataact#generatesData
+<http://www.semanticweb.org/dataact#generatesData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#generatesData> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/dataact#isGeneratedBy> .
+<http://www.semanticweb.org/dataact#generatesData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#ConnectedProduct> .
+<http://www.semanticweb.org/dataact#generatesData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#generatesData> <http://www.w3.org/2000/01/rdf-schema#comment> "Product generates data during use" .
+<http://www.semanticweb.org/dataact#generatesData> <http://www.w3.org/2000/01/rdf-schema#label> "generates data" .
+# 
+# http://www.semanticweb.org/dataact#governedBy
+<http://www.semanticweb.org/dataact#governedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#governedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#DataSharing> .
+<http://www.semanticweb.org/dataact#governedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.semanticweb.org/dataact#governedBy> <http://www.w3.org/2000/01/rdf-schema#label> "governed by" .
+# 
+# http://www.semanticweb.org/dataact#governedByAgreement
+<http://www.semanticweb.org/dataact#governedByAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#governedByAgreement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#governedByAgreement> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.semanticweb.org/dataact#governedByAgreement> <http://www.w3.org/2000/01/rdf-schema#comment> "Contract governs relationship" .
+<http://www.semanticweb.org/dataact#governedByAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "governed by agreement" .
+# 
+# http://www.semanticweb.org/dataact#grantsAccessTo
+<http://www.semanticweb.org/dataact#grantsAccessTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#grantsAccessTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#DataHolder> .
+<http://www.semanticweb.org/dataact#grantsAccessTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#DataRecipient> .
+<http://www.semanticweb.org/dataact#grantsAccessTo> <http://www.w3.org/2000/01/rdf-schema#label> "grants access to" .
+# 
+# http://www.semanticweb.org/dataact#hasAccessRight
+<http://www.semanticweb.org/dataact#hasAccessRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasAccessRight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#User> .
+<http://www.semanticweb.org/dataact#hasAccessRight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#DataAccessRight> .
+<http://www.semanticweb.org/dataact#hasAccessRight> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 4 - Users have rights to access data generated by their products" .
+<http://www.semanticweb.org/dataact#hasAccessRight> <http://www.w3.org/2000/01/rdf-schema#label> "has access right" .
+# 
+# http://www.semanticweb.org/dataact#hasAntecedent
+<http://www.semanticweb.org/dataact#hasAntecedent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasAntecedent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#hasAntecedent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#RuleCondition> .
+<http://www.semanticweb.org/dataact#hasAntecedent> <http://www.w3.org/2000/01/rdf-schema#comment> "Condition that triggers the rule (IF part)" .
+<http://www.semanticweb.org/dataact#hasAntecedent> <http://www.w3.org/2000/01/rdf-schema#label> "has antecedent" .
+# 
+# http://www.semanticweb.org/dataact#hasBeneficiary
+<http://www.semanticweb.org/dataact#hasBeneficiary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasBeneficiary> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Rule> .
+<http://www.semanticweb.org/dataact#hasBeneficiary> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#hasBeneficiary> <http://www.w3.org/2000/01/rdf-schema#comment> "Actor benefiting from the deontic" .
+<http://www.semanticweb.org/dataact#hasBeneficiary> <http://www.w3.org/2000/01/rdf-schema#label> "has beneficiary" .
+# 
+# http://www.semanticweb.org/dataact#hasConsequent
+<http://www.semanticweb.org/dataact#hasConsequent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasConsequent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#hasConsequent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#LegalEffect> .
+<http://www.semanticweb.org/dataact#hasConsequent> <http://www.w3.org/2000/01/rdf-schema#comment> "Effect when antecedent is satisfied (THEN part)" .
+<http://www.semanticweb.org/dataact#hasConsequent> <http://www.w3.org/2000/01/rdf-schema#label> "has consequent" .
+# 
+# http://www.semanticweb.org/dataact#hasCounterparty
+<http://www.semanticweb.org/dataact#hasCounterparty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasCounterparty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRelationship> .
+<http://www.semanticweb.org/dataact#hasCounterparty> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#hasCounterparty> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Other party in bilateral relationship" .
+<http://www.semanticweb.org/dataact#hasCounterparty> <http://www.w3.org/2000/01/rdf-schema#label> "has counterparty" .
+# 
+# http://www.semanticweb.org/dataact#hasDeonticSpecification
+<http://www.semanticweb.org/dataact#hasDeonticSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasDeonticSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#hasDeonticSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Rule> .
+<http://www.semanticweb.org/dataact#hasDeonticSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Obligation, permission, or prohibition" .
+<http://www.semanticweb.org/dataact#hasDeonticSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has deontic specification" .
+# 
+# http://www.semanticweb.org/dataact#hasDutyBearer
+<http://www.semanticweb.org/dataact#hasDutyBearer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasDutyBearer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#Duty> .
+<http://www.semanticweb.org/dataact#hasDutyBearer> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#hasDutyBearer> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Actor who bears the duty" .
+<http://www.semanticweb.org/dataact#hasDutyBearer> <http://www.w3.org/2000/01/rdf-schema#label> "has duty bearer" .
+# 
+# http://www.semanticweb.org/dataact#hasException
+<http://www.semanticweb.org/dataact#hasException> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasException> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#hasException> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#RuleCondition> .
+<http://www.semanticweb.org/dataact#hasException> <http://www.w3.org/2000/01/rdf-schema#comment> "Exception to rule application" .
+<http://www.semanticweb.org/dataact#hasException> <http://www.w3.org/2000/01/rdf-schema#label> "has exception" .
+# 
+# http://www.semanticweb.org/dataact#hasExceptionalNeedFor
+<http://www.semanticweb.org/dataact#hasExceptionalNeedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasExceptionalNeedFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#PublicSectorBody> .
+<http://www.semanticweb.org/dataact#hasExceptionalNeedFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#hasExceptionalNeedFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 14-15 - B2G request basis" .
+<http://www.semanticweb.org/dataact#hasExceptionalNeedFor> <http://www.w3.org/2000/01/rdf-schema#label> "has exceptional need for" .
+# 
+# http://www.semanticweb.org/dataact#hasNormSubject
+<http://www.semanticweb.org/dataact#hasNormSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasNormSubject> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#hasNormSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Subject of the norm" .
+<http://www.semanticweb.org/dataact#hasNormSubject> <http://www.w3.org/2000/01/rdf-schema#label> "has norm subject" .
+# 
+# http://www.semanticweb.org/dataact#hasObligation
+<http://www.semanticweb.org/dataact#hasObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasObligation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#DataHolder> .
+<http://www.semanticweb.org/dataact#hasObligation> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Duty> .
+<http://www.semanticweb.org/dataact#hasObligation> <http://www.w3.org/2000/01/rdf-schema#label> "has obligation" .
+# 
+# http://www.semanticweb.org/dataact#hasParticipant
+<http://www.semanticweb.org/dataact#hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalAction> .
+<http://www.semanticweb.org/dataact#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Actor involved in action" .
+<http://www.semanticweb.org/dataact#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "has participant" .
+# 
+# http://www.semanticweb.org/dataact#hasRightHolder
+<http://www.semanticweb.org/dataact#hasRightHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasRightHolder> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.estrellaproject.org/lkif-core/norm.owl#Right> .
+<http://www.semanticweb.org/dataact#hasRightHolder> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#hasRightHolder> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Actor who holds the right" .
+<http://www.semanticweb.org/dataact#hasRightHolder> <http://www.w3.org/2000/01/rdf-schema#label> "has right holder" .
+# 
+# http://www.semanticweb.org/dataact#hasTerm
+<http://www.semanticweb.org/dataact#hasTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#hasTerm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.semanticweb.org/dataact#hasTerm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#ContractualTerm> .
+<http://www.semanticweb.org/dataact#hasTerm> <http://www.w3.org/2000/01/rdf-schema#label> "has term" .
+# 
+# http://www.semanticweb.org/dataact#holdsRole
+<http://www.semanticweb.org/dataact#holdsRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#holdsRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#holdsRole> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Actor holds a legal role" .
+<http://www.semanticweb.org/dataact#holdsRole> <http://www.w3.org/2000/01/rdf-schema#label> "holds role" .
+# 
+# http://www.semanticweb.org/dataact#implementedBy
+<http://www.semanticweb.org/dataact#implementedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#implementedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#SmartContract> .
+<http://www.semanticweb.org/dataact#implementedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#DataProcessingService> .
+<http://www.semanticweb.org/dataact#implementedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 36 - Smart contract executed by DPS" .
+<http://www.semanticweb.org/dataact#implementedBy> <http://www.w3.org/2000/01/rdf-schema#label> "implemented by" .
+# 
+# http://www.semanticweb.org/dataact#involvesProcessingService
+<http://www.semanticweb.org/dataact#involvesProcessingService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#involvesProcessingService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#involvesProcessingService> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#DataProcessingService> .
+<http://www.semanticweb.org/dataact#involvesProcessingService> <http://www.w3.org/2000/01/rdf-schema#comment> "Cloud involvement in data processing" .
+<http://www.semanticweb.org/dataact#involvesProcessingService> <http://www.w3.org/2000/01/rdf-schema#label> "involves processing service" .
+# 
+# http://www.semanticweb.org/dataact#isGeneratedBy
+<http://www.semanticweb.org/dataact#isGeneratedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#isGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#isGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#ConnectedProduct> .
+<http://www.semanticweb.org/dataact#isGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is generated by" .
+# 
+# http://www.semanticweb.org/dataact#isSubjectOf
+<http://www.semanticweb.org/dataact#isSubjectOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#isSubjectOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3c.github.io/dpv/2.2/dpv/#hasDataSubject> .
+<http://www.semanticweb.org/dataact#isSubjectOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3c.github.io/dpv/2.2/dpv/#DataSubject> .
+<http://www.semanticweb.org/dataact#isSubjectOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3c.github.io/dpv/2.2/dpv/#PersonalData> .
+<http://www.semanticweb.org/dataact#isSubjectOf> <http://www.w3.org/2000/01/rdf-schema#label> "is subject of" .
+# 
+# http://www.semanticweb.org/dataact#modifies
+<http://www.semanticweb.org/dataact#modifies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#modifies> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalAction> .
+<http://www.semanticweb.org/dataact#modifies> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#LegalRelationship> .
+<http://www.semanticweb.org/dataact#modifies> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Action modifies existing relationship" .
+<http://www.semanticweb.org/dataact#modifies> <http://www.w3.org/2000/01/rdf-schema#label> "modifies" .
+# 
+# http://www.semanticweb.org/dataact#occursAt
+<http://www.semanticweb.org/dataact#occursAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#occursAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalAction> .
+<http://www.semanticweb.org/dataact#occursAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#TemporalEntity> .
+<http://www.semanticweb.org/dataact#occursAt> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Time when action occurs" .
+<http://www.semanticweb.org/dataact#occursAt> <http://www.w3.org/2000/01/rdf-schema#label> "occurs at" .
+# 
+# http://www.semanticweb.org/dataact#ownsOrUses
+<http://www.semanticweb.org/dataact#ownsOrUses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#ownsOrUses> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#User> .
+<http://www.semanticweb.org/dataact#ownsOrUses> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#ConnectedProduct> .
+<http://www.semanticweb.org/dataact#ownsOrUses> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(12) - Ownership or contractual use" .
+<http://www.semanticweb.org/dataact#ownsOrUses> <http://www.w3.org/2000/01/rdf-schema#label> "owns or uses" .
+# 
+# http://www.semanticweb.org/dataact#participatesIn
+<http://www.semanticweb.org/dataact#participatesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#participatesIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#participatesIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#DataSpace> .
+<http://www.semanticweb.org/dataact#participatesIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 33 - Participation in data space" .
+<http://www.semanticweb.org/dataact#participatesIn> <http://www.w3.org/2000/01/rdf-schema#label> "participates in" .
+# 
+# http://www.semanticweb.org/dataact#performsAction
+<http://www.semanticweb.org/dataact#performsAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#performsAction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#performsAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#LegalAction> .
+<http://www.semanticweb.org/dataact#performsAction> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Actor performs a legal action" .
+<http://www.semanticweb.org/dataact#performsAction> <http://www.w3.org/2000/01/rdf-schema#label> "performs action" .
+# 
+# http://www.semanticweb.org/dataact#permits
+<http://www.semanticweb.org/dataact#permits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#permits> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#permits> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Permission> .
+<http://www.semanticweb.org/dataact#permits> <http://www.w3.org/2000/01/rdf-schema#comment> "Rule grants a permission" .
+<http://www.semanticweb.org/dataact#permits> <http://www.w3.org/2000/01/rdf-schema#label> "permits" .
+# 
+# http://www.semanticweb.org/dataact#prescribes
+<http://www.semanticweb.org/dataact#prescribes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#prescribes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#prescribes> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Duty> .
+<http://www.semanticweb.org/dataact#prescribes> <http://www.w3.org/2000/01/rdf-schema#comment> "Rule creates an obligation" .
+<http://www.semanticweb.org/dataact#prescribes> <http://www.w3.org/2000/01/rdf-schema#label> "prescribes" .
+# 
+# http://www.semanticweb.org/dataact#prohibits
+<http://www.semanticweb.org/dataact#prohibits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#prohibits> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#prohibits> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Prohibition> .
+<http://www.semanticweb.org/dataact#prohibits> <http://www.w3.org/2000/01/rdf-schema#comment> "Rule establishes a prohibition" .
+<http://www.semanticweb.org/dataact#prohibits> <http://www.w3.org/2000/01/rdf-schema#label> "prohibits" .
+# 
+# http://www.semanticweb.org/dataact#providesConsentFor
+<http://www.semanticweb.org/dataact#providesConsentFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#providesConsentFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3c.github.io/dpv/2.2/dpv/#DataSubject> .
+<http://www.semanticweb.org/dataact#providesConsentFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3c.github.io/dpv/2.2/dpv/#Consent> .
+<http://www.semanticweb.org/dataact#providesConsentFor> <http://www.w3.org/2000/01/rdf-schema#label> "provides consent for" .
+# 
+# http://www.semanticweb.org/dataact#providesRelatedService
+<http://www.semanticweb.org/dataact#providesRelatedService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#providesRelatedService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#ConnectedProduct> .
+<http://www.semanticweb.org/dataact#providesRelatedService> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#RelatedService> .
+<http://www.semanticweb.org/dataact#providesRelatedService> <http://www.w3.org/2000/01/rdf-schema#comment> "Product linked to related service" .
+<http://www.semanticweb.org/dataact#providesRelatedService> <http://www.w3.org/2000/01/rdf-schema#label> "provides related service" .
+# 
+# http://www.semanticweb.org/dataact#realizedBy
+<http://www.semanticweb.org/dataact#realizedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#realizedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Abstract concept realized by concrete instance" .
+<http://www.semanticweb.org/dataact#realizedBy> <http://www.w3.org/2000/01/rdf-schema#label> "realized by" .
+# 
+# http://www.semanticweb.org/dataact#receivesDataFrom
+<http://www.semanticweb.org/dataact#receivesDataFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#receivesDataFrom> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3c.github.io/dpv/2.2/dpv/#hasRecipient> .
+<http://www.semanticweb.org/dataact#receivesDataFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#receivesDataFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#DataHolder> .
+<http://www.semanticweb.org/dataact#receivesDataFrom> <http://www.w3.org/2000/01/rdf-schema#label> "receives data from" .
+# 
+# http://www.semanticweb.org/dataact#requestsAccessFrom
+<http://www.semanticweb.org/dataact#requestsAccessFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#requestsAccessFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#DataRecipient> .
+<http://www.semanticweb.org/dataact#requestsAccessFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#DataHolder> .
+<http://www.semanticweb.org/dataact#requestsAccessFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 8(1) - Data recipient can request access to data" .
+<http://www.semanticweb.org/dataact#requestsAccessFrom> <http://www.w3.org/2000/01/rdf-schema#label> "requests access from" .
+# 
+# http://www.semanticweb.org/dataact#requestsAccessTo
+<http://www.semanticweb.org/dataact#requestsAccessTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#requestsAccessTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#User> .
+<http://www.semanticweb.org/dataact#requestsAccessTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#requestsAccessTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 4 - User requests access to their data" .
+<http://www.semanticweb.org/dataact#requestsAccessTo> <http://www.w3.org/2000/01/rdf-schema#label> "requests access to" .
+# 
+# http://www.semanticweb.org/dataact#respondsTo
+<http://www.semanticweb.org/dataact#respondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#respondsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#DataRequest> .
+<http://www.semanticweb.org/dataact#respondsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#ExceptionalNeed> .
+<http://www.semanticweb.org/dataact#respondsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links B2G request to justification" .
+<http://www.semanticweb.org/dataact#respondsTo> <http://www.w3.org/2000/01/rdf-schema#label> "responds to" .
+# 
+# http://www.semanticweb.org/dataact#securedBy
+<http://www.semanticweb.org/dataact#securedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#securedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#TradeSecret> .
+<http://www.semanticweb.org/dataact#securedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#securedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Trade secret protection constraints" .
+<http://www.semanticweb.org/dataact#securedBy> <http://www.w3.org/2000/01/rdf-schema#label> "secures" .
+# 
+# http://www.semanticweb.org/dataact#specifiesAction
+<http://www.semanticweb.org/dataact#specifiesAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#specifiesAction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Rule> .
+<http://www.semanticweb.org/dataact#specifiesAction> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Action> .
+<http://www.semanticweb.org/dataact#specifiesAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Action that must/may/must-not be performed" .
+<http://www.semanticweb.org/dataact#specifiesAction> <http://www.w3.org/2000/01/rdf-schema#label> "specifies action" .
+# 
+# http://www.semanticweb.org/dataact#subjectToFRAND
+<http://www.semanticweb.org/dataact#subjectToFRAND> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#subjectToFRAND> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.semanticweb.org/dataact#subjectToFRAND> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#FRANDCondition> .
+<http://www.semanticweb.org/dataact#subjectToFRAND> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 8-12 - FRAND conditions in B2B" .
+<http://www.semanticweb.org/dataact#subjectToFRAND> <http://www.w3.org/2000/01/rdf-schema#label> "subject to FRAND" .
+# 
+# http://www.semanticweb.org/dataact#terminatedBy
+<http://www.semanticweb.org/dataact#terminatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#terminatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRelationship> .
+<http://www.semanticweb.org/dataact#terminatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#LegalAction> .
+<http://www.semanticweb.org/dataact#terminatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Action that terminates relationship" .
+<http://www.semanticweb.org/dataact#terminatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "terminated by" .
+# 
+# http://www.semanticweb.org/dataact#treatsComparably
+<http://www.semanticweb.org/dataact#treatsComparably> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#treatsComparably> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#DataHolder> .
+<http://www.semanticweb.org/dataact#treatsComparably> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#DataRecipient> .
+<http://www.semanticweb.org/dataact#treatsComparably> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 8(3) - Non-discrimination between comparable recipients" .
+<http://www.semanticweb.org/dataact#treatsComparably> <http://www.w3.org/2000/01/rdf-schema#label> "treats comparably" .
+# 
+# http://www.semanticweb.org/dataact#triggeredBy
+<http://www.semanticweb.org/dataact#triggeredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#triggeredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Duty> .
+<http://www.semanticweb.org/dataact#triggeredBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#RuleCondition> .
+<http://www.semanticweb.org/dataact#triggeredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Condition that activates this obligation" .
+<http://www.semanticweb.org/dataact#triggeredBy> <http://www.w3.org/2000/01/rdf-schema#label> "triggered by" .
+# 
+# http://www.semanticweb.org/dataact#validDuring
+<http://www.semanticweb.org/dataact#validDuring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/dataact#validDuring> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.semanticweb.org/dataact#validDuring> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#TemporalEntity> .
+<http://www.semanticweb.org/dataact#validDuring> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Temporal validity period" .
+<http://www.semanticweb.org/dataact#validDuring> <http://www.w3.org/2000/01/rdf-schema#label> "valid during" .
+# 
+# https://w3c.github.io/dpv/2.2/dpv/#hasData
+<https://w3c.github.io/dpv/2.2/dpv/#hasData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3c.github.io/dpv/2.2/dpv/#hasData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#DataHolder> .
+<https://w3c.github.io/dpv/2.2/dpv/#hasData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/dataact#Data> .
+<https://w3c.github.io/dpv/2.2/dpv/#hasData> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(13) - Data holder has rights to control access to data" .
+<https://w3c.github.io/dpv/2.2/dpv/#hasData> <http://www.w3.org/2000/01/rdf-schema#label> "has data" .
+# 
+# https://w3c.github.io/dpv/2.2/dpv/#hasDataSubject
+<https://w3c.github.io/dpv/2.2/dpv/#hasDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3c.github.io/dpv/2.2/dpv/#hasDataSubject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3c.github.io/dpv/2.2/dpv/#PersonalData> .
+<https://w3c.github.io/dpv/2.2/dpv/#hasDataSubject> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3c.github.io/dpv/2.2/dpv/#DataSubject> .
+<https://w3c.github.io/dpv/2.2/dpv/#hasDataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates association with Data Subject" .
+<https://w3c.github.io/dpv/2.2/dpv/#hasDataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "has data subject" .
+# 
+# https://w3c.github.io/dpv/2.2/dpv/#hasPurpose
+<https://w3c.github.io/dpv/2.2/dpv/#hasPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3c.github.io/dpv/2.2/dpv/#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Party> .
+<https://w3c.github.io/dpv/2.2/dpv/#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/purpose> .
+<https://w3c.github.io/dpv/2.2/dpv/#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates association with Purpose" .
+<https://w3c.github.io/dpv/2.2/dpv/#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "has purpose" .
+# 
+# https://w3c.github.io/dpv/2.2/dpv/#hasRecipient
+<https://w3c.github.io/dpv/2.2/dpv/#hasRecipient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3c.github.io/dpv/2.2/dpv/#hasRecipient> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#DataHolder> .
+<https://w3c.github.io/dpv/2.2/dpv/#hasRecipient> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Party> .
+<https://w3c.github.io/dpv/2.2/dpv/#hasRecipient> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 5 and Article 8 - Data provision to recipients" .
+<https://w3c.github.io/dpv/2.2/dpv/#hasRecipient> <http://www.w3.org/2000/01/rdf-schema#label> "has recipient" .
+<https://w3c.github.io/dpv/2.2/dpv/#hasRecipient> <http://www.w3.org/2004/02/skos/core#altLabel> "provides data to" .
+# 
+# https://www.w3.org/ns/odrl/2/assignee
+<https://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Rule> .
+<https://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/odrl/2/Party> .
+<https://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/2000/01/rdf-schema#comment> "The Party is the recipient of the Rule." .
+<https://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/2000/01/rdf-schema#label> "assignee" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/dataact#actionType
+<http://www.semanticweb.org/dataact#actionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#actionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalAction> .
+<http://www.semanticweb.org/dataact#actionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#actionType> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Type of legal action" .
+<http://www.semanticweb.org/dataact#actionType> <http://www.w3.org/2000/01/rdf-schema#label> "action type" .
+# 
+# http://www.semanticweb.org/dataact#agreementDate
+<http://www.semanticweb.org/dataact#agreementDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#agreementDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.semanticweb.org/dataact#agreementDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/dataact#agreementDate> <http://www.w3.org/2000/01/rdf-schema#label> "agreement date" .
+# 
+# http://www.semanticweb.org/dataact#applicableArticle
+<http://www.semanticweb.org/dataact#applicableArticle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#applicableArticle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#DataAccessRight> .
+<http://www.semanticweb.org/dataact#applicableArticle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#applicableArticle> <http://www.w3.org/2000/01/rdf-schema#label> "applicable article" .
+# 
+# http://www.semanticweb.org/dataact#articleReference
+<http://www.semanticweb.org/dataact#articleReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#articleReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalSource> .
+<http://www.semanticweb.org/dataact#articleReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#articleReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Article number (e.g., 'Article 4(1)')" .
+<http://www.semanticweb.org/dataact#articleReference> <http://www.w3.org/2000/01/rdf-schema#label> "article reference" .
+# 
+# http://www.semanticweb.org/dataact#compensationAmount
+<http://www.semanticweb.org/dataact#compensationAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#compensationAmount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.semanticweb.org/dataact#compensationAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/dataact#compensationAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 8(1) - Compensation under FRAND terms" .
+<http://www.semanticweb.org/dataact#compensationAmount> <http://www.w3.org/2000/01/rdf-schema#label> "compensation amount" .
+# 
+# http://www.semanticweb.org/dataact#dataFormat
+<http://www.semanticweb.org/dataact#dataFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#dataFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#dataFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#dataFormat> <http://www.w3.org/2000/01/rdf-schema#label> "data format" .
+# 
+# http://www.semanticweb.org/dataact#deonticModality
+<http://www.semanticweb.org/dataact#deonticModality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#deonticModality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3.org/ns/odrl/2/Rule> .
+<http://www.semanticweb.org/dataact#deonticModality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#deonticModality> <http://www.w3.org/2000/01/rdf-schema#comment> "Obligation, Permission, or Prohibition" .
+<http://www.semanticweb.org/dataact#deonticModality> <http://www.w3.org/2000/01/rdf-schema#label> "deontic modality" .
+# 
+# http://www.semanticweb.org/dataact#duration
+<http://www.semanticweb.org/dataact#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#duration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#TemporalEntity> .
+<http://www.semanticweb.org/dataact#duration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://www.semanticweb.org/dataact#duration> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Duration of temporal entity" .
+<http://www.semanticweb.org/dataact#duration> <http://www.w3.org/2000/01/rdf-schema#label> "duration" .
+# 
+# http://www.semanticweb.org/dataact#endTime
+<http://www.semanticweb.org/dataact#endTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#endTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#TemporalEntity> .
+<http://www.semanticweb.org/dataact#endTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/dataact#endTime> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: End of temporal period" .
+<http://www.semanticweb.org/dataact#endTime> <http://www.w3.org/2000/01/rdf-schema#label> "end time" .
+# 
+# http://www.semanticweb.org/dataact#hasDeadline
+<http://www.semanticweb.org/dataact#hasDeadline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#hasDeadline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#DataRequest> .
+<http://www.semanticweb.org/dataact#hasDeadline> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/dataact#hasDeadline> <http://www.w3.org/2000/01/rdf-schema#comment> "Response deadline for data request" .
+<http://www.semanticweb.org/dataact#hasDeadline> <http://www.w3.org/2000/01/rdf-schema#label> "has deadline" .
+# 
+# http://www.semanticweb.org/dataact#hasDescription
+<http://www.semanticweb.org/dataact#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Human-readable description" .
+<http://www.semanticweb.org/dataact#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description" .
+# 
+# http://www.semanticweb.org/dataact#hasJurisdiction
+<http://www.semanticweb.org/dataact#hasJurisdiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#hasJurisdiction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalSource> .
+<http://www.semanticweb.org/dataact#hasJurisdiction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#hasJurisdiction> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Jurisdiction of legal source" .
+<http://www.semanticweb.org/dataact#hasJurisdiction> <http://www.w3.org/2000/01/rdf-schema#label> "has jurisdiction" .
+# 
+# http://www.semanticweb.org/dataact#isConstitutive
+<http://www.semanticweb.org/dataact#isConstitutive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#isConstitutive> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#isConstitutive> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#isConstitutive> <http://www.w3.org/2000/01/rdf-schema#comment> "True if rule defines concepts, false if regulative" .
+<http://www.semanticweb.org/dataact#isConstitutive> <http://www.w3.org/2000/01/rdf-schema#label> "is constitutive" .
+# 
+# http://www.semanticweb.org/dataact#isFair
+<http://www.semanticweb.org/dataact#isFair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#isFair> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#ContractualTerm> .
+<http://www.semanticweb.org/dataact#isFair> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#isFair> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 8(1) - FRAND requirement: Fair" .
+<http://www.semanticweb.org/dataact#isFair> <http://www.w3.org/2000/01/rdf-schema#label> "is fair" .
+# 
+# http://www.semanticweb.org/dataact#isMachineReadable
+<http://www.semanticweb.org/dataact#isMachineReadable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#isMachineReadable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#isMachineReadable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#isMachineReadable> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 3(1) - Default true" .
+<http://www.semanticweb.org/dataact#isMachineReadable> <http://www.w3.org/2000/01/rdf-schema#label> "is machine readable" .
+# 
+# http://www.semanticweb.org/dataact#isNonDiscriminatory
+<http://www.semanticweb.org/dataact#isNonDiscriminatory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#isNonDiscriminatory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#ContractualTerm> .
+<http://www.semanticweb.org/dataact#isNonDiscriminatory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#isNonDiscriminatory> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 8(1) - FRAND requirement: Non-discriminatory" .
+<http://www.semanticweb.org/dataact#isNonDiscriminatory> <http://www.w3.org/2000/01/rdf-schema#label> "is non-discriminatory" .
+# 
+# http://www.semanticweb.org/dataact#isPersonal
+<http://www.semanticweb.org/dataact#isPersonal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#isPersonal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#isPersonal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#isPersonal> <http://www.w3.org/2000/01/rdf-schema#label> "is personal data" .
+# 
+# http://www.semanticweb.org/dataact#isReasonable
+<http://www.semanticweb.org/dataact#isReasonable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#isReasonable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#ContractualTerm> .
+<http://www.semanticweb.org/dataact#isReasonable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#isReasonable> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 8(1) - FRAND requirement: Reasonable" .
+<http://www.semanticweb.org/dataact#isReasonable> <http://www.w3.org/2000/01/rdf-schema#label> "is reasonable" .
+# 
+# http://www.semanticweb.org/dataact#manufacturerIdentifier
+<http://www.semanticweb.org/dataact#manufacturerIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#manufacturerIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#ConnectedProduct> .
+<http://www.semanticweb.org/dataact#manufacturerIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#manufacturerIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "manufacturer identifier" .
+# 
+# http://www.semanticweb.org/dataact#normType
+<http://www.semanticweb.org/dataact#normType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#normType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#normType> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Type of norm (regulative, constitutive)" .
+<http://www.semanticweb.org/dataact#normType> <http://www.w3.org/2000/01/rdf-schema#label> "norm type" .
+# 
+# http://www.semanticweb.org/dataact#productCategory
+<http://www.semanticweb.org/dataact#productCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#productCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#ConnectedProduct> .
+<http://www.semanticweb.org/dataact#productCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#productCategory> <http://www.w3.org/2000/01/rdf-schema#label> "product category" .
+# 
+# http://www.semanticweb.org/dataact#roleType
+<http://www.semanticweb.org/dataact#roleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#roleType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#roleType> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Type of legal role" .
+<http://www.semanticweb.org/dataact#roleType> <http://www.w3.org/2000/01/rdf-schema#label> "role type" .
+# 
+# http://www.semanticweb.org/dataact#ruleIdentifier
+<http://www.semanticweb.org/dataact#ruleIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#ruleIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#ruleIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#ruleIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier for the rule" .
+<http://www.semanticweb.org/dataact#ruleIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "rule identifier" .
+# 
+# http://www.semanticweb.org/dataact#ruleText
+<http://www.semanticweb.org/dataact#ruleText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#ruleText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#ruleText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/dataact#ruleText> <http://www.w3.org/2000/01/rdf-schema#comment> "Full text of the legal rule" .
+<http://www.semanticweb.org/dataact#ruleText> <http://www.w3.org/2000/01/rdf-schema#label> "rule text" .
+# 
+# http://www.semanticweb.org/dataact#startTime
+<http://www.semanticweb.org/dataact#startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/dataact#startTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/dataact#TemporalEntity> .
+<http://www.semanticweb.org/dataact#startTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/dataact#startTime> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Start of temporal period" .
+<http://www.semanticweb.org/dataact#startTime> <http://www.w3.org/2000/01/rdf-schema#label> "start time" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.estrellaproject.org/lkif-core/expression.owl#Legal_Document
+<http://www.estrellaproject.org/lkif-core/expression.owl#Legal_Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.estrellaproject.org/lkif-core/expression.owl#Legal_Document> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.estrellaproject.org/lkif-core/expression.owl#Legal_Document> <http://www.w3.org/2000/01/rdf-schema#comment> "A legal document is a document bearing norms or normative statements. By virtue of this definition the norm-as-propositional-attitude is reified as norm-as proposition. In other words, the norm being expressed through the legal source is an expression of the propositional attitude." .
+<http://www.estrellaproject.org/lkif-core/expression.owl#Legal_Document> <http://www.w3.org/2000/01/rdf-schema#label> "Legal Document" .
+# 
+# http://www.estrellaproject.org/lkif-core/norm.owl#Right
+<http://www.estrellaproject.org/lkif-core/norm.owl#Right> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.estrellaproject.org/lkif-core/norm.owl#Right> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.estrellaproject.org/lkif-core/norm.owl#Right> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Legal entitlement (Hohfeldian)" .
+<http://www.estrellaproject.org/lkif-core/norm.owl#Right> <http://www.w3.org/2000/01/rdf-schema#label> "Right" .
+# 
+# http://www.semanticweb.org/dataact#AftermarketServiceProvider
+<http://www.semanticweb.org/dataact#AftermarketServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#AftermarketServiceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#ThirdParty> .
+<http://www.semanticweb.org/dataact#AftermarketServiceProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "Service provider competing with or complementing data holder" .
+<http://www.semanticweb.org/dataact#AftermarketServiceProvider> <http://www.w3.org/2000/01/rdf-schema#label> "Aftermarket Service Provider" .
+# 
+# http://www.semanticweb.org/dataact#B2BDataSharing
+<http://www.semanticweb.org/dataact#B2BDataSharing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#B2BDataSharing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#DataSharing> .
+<http://www.semanticweb.org/dataact#B2BDataSharing> <http://www.w3.org/2000/01/rdf-schema#comment> "Chapter III (Article 8) - Business-to-business data sharing, must be authorized by user per Article 8(4)" .
+<http://www.semanticweb.org/dataact#B2BDataSharing> <http://www.w3.org/2000/01/rdf-schema#label> "B2B Data Sharing" .
+# 
+# http://www.semanticweb.org/dataact#B2CDataSharing
+<http://www.semanticweb.org/dataact#B2CDataSharing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#B2CDataSharing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#DataSharing> .
+<http://www.semanticweb.org/dataact#B2CDataSharing> <http://www.w3.org/2000/01/rdf-schema#comment> "Chapter II (Articles 3-7) - Business-to-Consumer data sharing, data holder makes data available to user" .
+<http://www.semanticweb.org/dataact#B2CDataSharing> <http://www.w3.org/2000/01/rdf-schema#label> "B2C Data Sharing" .
+# 
+# http://www.semanticweb.org/dataact#B2GDataSharing
+<http://www.semanticweb.org/dataact#B2GDataSharing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#B2GDataSharing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#DataSharing> .
+<http://www.semanticweb.org/dataact#B2GDataSharing> <http://www.w3.org/2000/01/rdf-schema#comment> "Chapter V (Articles 14-22) - Business to Government data sharing for exceptional need" .
+<http://www.semanticweb.org/dataact#B2GDataSharing> <http://www.w3.org/2000/01/rdf-schema#label> "B2G Data Sharing" .
+# 
+# http://www.semanticweb.org/dataact#BusinessDataRecipient
+<http://www.semanticweb.org/dataact#BusinessDataRecipient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#BusinessDataRecipient> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#DataRecipient> .
+<http://www.semanticweb.org/dataact#BusinessDataRecipient> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 8 - Data recipient in B2B context" .
+<http://www.semanticweb.org/dataact#BusinessDataRecipient> <http://www.w3.org/2000/01/rdf-schema#label> "Business Data Recipient" .
+# 
+# http://www.semanticweb.org/dataact#ConnectedProduct
+<http://www.semanticweb.org/dataact#ConnectedProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#ConnectedProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Asset> .
+<http://www.semanticweb.org/dataact#ConnectedProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(5) - Product generating data" .
+<http://www.semanticweb.org/dataact#ConnectedProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Connected Product" .
+# 
+# http://www.semanticweb.org/dataact#ConstitutiveRule
+<http://www.semanticweb.org/dataact#ConstitutiveRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#ConstitutiveRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#ConstitutiveRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Rule that defines concepts or counts as relationships" .
+<http://www.semanticweb.org/dataact#ConstitutiveRule> <http://www.w3.org/2000/01/rdf-schema#label> "Constitutive Rule" .
+# 
+# http://www.semanticweb.org/dataact#ConsumerUser
+<http://www.semanticweb.org/dataact#ConsumerUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#ConsumerUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#User> .
+<http://www.semanticweb.org/dataact#ConsumerUser> <http://www.w3.org/2000/01/rdf-schema#comment> "Natural person acting for non-professional purposes - protected by Article 13" .
+<http://www.semanticweb.org/dataact#ConsumerUser> <http://www.w3.org/2000/01/rdf-schema#label> "Consumer User" .
+# 
+# http://www.semanticweb.org/dataact#ContractFormation
+<http://www.semanticweb.org/dataact#ContractFormation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#ContractFormation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#LegalAction> .
+<http://www.semanticweb.org/dataact#ContractFormation> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Action of forming agreement" .
+<http://www.semanticweb.org/dataact#ContractFormation> <http://www.w3.org/2000/01/rdf-schema#label> "Contract Formation" .
+# 
+# http://www.semanticweb.org/dataact#ContractualRelationship
+<http://www.semanticweb.org/dataact#ContractualRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#ContractualRelationship> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#LegalRelationship> .
+<http://www.semanticweb.org/dataact#ContractualRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Relationship governed by contract" .
+<http://www.semanticweb.org/dataact#ContractualRelationship> <http://www.w3.org/2000/01/rdf-schema#label> "Contractual Relationship" .
+# 
+# http://www.semanticweb.org/dataact#ContractualTerm
+<http://www.semanticweb.org/dataact#ContractualTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#ContractualTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#ContractualTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Provision in agreement" .
+<http://www.semanticweb.org/dataact#ContractualTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Contractual Term" .
+# 
+# http://www.semanticweb.org/dataact#Data
+<http://www.semanticweb.org/dataact#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#Data> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Asset> .
+<http://www.semanticweb.org/dataact#Data> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(1) - Any digital representation" .
+<http://www.semanticweb.org/dataact#Data> <http://www.w3.org/2000/01/rdf-schema#label> "Data" .
+# 
+# http://www.semanticweb.org/dataact#DataAccessAction
+<http://www.semanticweb.org/dataact#DataAccessAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataAccessAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Action> .
+<http://www.semanticweb.org/dataact#DataAccessAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Action of accessing or providing data" .
+<http://www.semanticweb.org/dataact#DataAccessAction> <http://www.w3.org/2000/01/rdf-schema#label> "Data Access Action" .
+# 
+# http://www.semanticweb.org/dataact#DataAccessRequest
+<http://www.semanticweb.org/dataact#DataAccessRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataAccessRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#LegalAction> .
+<http://www.semanticweb.org/dataact#DataAccessRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Action of requesting data access" .
+<http://www.semanticweb.org/dataact#DataAccessRequest> <http://www.w3.org/2000/01/rdf-schema#label> "Data Access Request" .
+# 
+# http://www.semanticweb.org/dataact#DataAccessRight
+<http://www.semanticweb.org/dataact#DataAccessRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataAccessRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.estrellaproject.org/lkif-core/norm.owl#Right> .
+<http://www.semanticweb.org/dataact#DataAccessRight> <http://www.w3.org/2000/01/rdf-schema#comment> "Legal entitlement to access data" .
+<http://www.semanticweb.org/dataact#DataAccessRight> <http://www.w3.org/2000/01/rdf-schema#label> "Data Access Right" .
+# 
+# http://www.semanticweb.org/dataact#DataCategory
+<http://www.semanticweb.org/dataact#DataCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#DataCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Data type classification" .
+<http://www.semanticweb.org/dataact#DataCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Data Category" .
+# 
+# http://www.semanticweb.org/dataact#DataHolder
+<http://www.semanticweb.org/dataact#DataHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataHolder> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#DataHolder> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(13) - Has the right or obligation to control access to data" .
+<http://www.semanticweb.org/dataact#DataHolder> <http://www.w3.org/2000/01/rdf-schema#label> "Data Holder" .
+# 
+# http://www.semanticweb.org/dataact#DataIntermediationService
+<http://www.semanticweb.org/dataact#DataIntermediationService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataIntermediationService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#DataIntermediationService> <http://www.w3.org/2000/01/rdf-schema#comment> "Recitals 29-33 - Acts on behalf of user" .
+<http://www.semanticweb.org/dataact#DataIntermediationService> <http://www.w3.org/2000/01/rdf-schema#label> "Data Intermediation Service" .
+# 
+# http://www.semanticweb.org/dataact#DataLicenseAgreement
+<http://www.semanticweb.org/dataact#DataLicenseAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataLicenseAgreement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.semanticweb.org/dataact#DataLicenseAgreement> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 4(13) - License for data use" .
+<http://www.semanticweb.org/dataact#DataLicenseAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "Data License Agreement" .
+# 
+# http://www.semanticweb.org/dataact#DataProcessingService
+<http://www.semanticweb.org/dataact#DataProcessingService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataProcessingService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#ServiceProvider> .
+<http://www.semanticweb.org/dataact#DataProcessingService> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(8), Articles 30-32 - Cloud/edge provider" .
+<http://www.semanticweb.org/dataact#DataProcessingService> <http://www.w3.org/2000/01/rdf-schema#label> "Data Processing Service" .
+# 
+# http://www.semanticweb.org/dataact#DataProvision
+<http://www.semanticweb.org/dataact#DataProvision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataProvision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#LegalAction> .
+<http://www.semanticweb.org/dataact#DataProvision> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Action of providing data" .
+<http://www.semanticweb.org/dataact#DataProvision> <http://www.w3.org/2000/01/rdf-schema#label> "Data Provision" .
+# 
+# http://www.semanticweb.org/dataact#DataRecipient
+<http://www.semanticweb.org/dataact#DataRecipient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataRecipient> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#DataRecipient> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/dataact#User> .
+<http://www.semanticweb.org/dataact#DataRecipient> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(14) - Receives data, OTHER THAN the user" .
+<http://www.semanticweb.org/dataact#DataRecipient> <http://www.w3.org/2000/01/rdf-schema#label> "Data Recipient" .
+# 
+# http://www.semanticweb.org/dataact#DataRequest
+<http://www.semanticweb.org/dataact#DataRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#DataRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 4, 5, 14 - Formal request" .
+<http://www.semanticweb.org/dataact#DataRequest> <http://www.w3.org/2000/01/rdf-schema#label> "Data Request" .
+# 
+# http://www.semanticweb.org/dataact#DataSharing
+<http://www.semanticweb.org/dataact#DataSharing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataSharing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#DataSharing> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of data being shared between parties" .
+<http://www.semanticweb.org/dataact#DataSharing> <http://www.w3.org/2000/01/rdf-schema#label> "Data Sharing" .
+# 
+# http://www.semanticweb.org/dataact#DataSharingAction
+<http://www.semanticweb.org/dataact#DataSharingAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataSharingAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Action> .
+<http://www.semanticweb.org/dataact#DataSharingAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Action of sharing data with another party" .
+<http://www.semanticweb.org/dataact#DataSharingAction> <http://www.w3.org/2000/01/rdf-schema#label> "Data Sharing Action" .
+# 
+# http://www.semanticweb.org/dataact#DataSharingAgreement
+<http://www.semanticweb.org/dataact#DataSharingAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataSharingAgreement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.semanticweb.org/dataact#DataSharingAgreement> <http://www.w3.org/2000/01/rdf-schema#comment> "Contract governing data sharing" .
+<http://www.semanticweb.org/dataact#DataSharingAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "Data Sharing Agreement" .
+# 
+# http://www.semanticweb.org/dataact#DataSharingAuthorization
+<http://www.semanticweb.org/dataact#DataSharingAuthorization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataSharingAuthorization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#LegalAction> .
+<http://www.semanticweb.org/dataact#DataSharingAuthorization> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: User authorizes B2B sharing per Article 8(4)" .
+<http://www.semanticweb.org/dataact#DataSharingAuthorization> <http://www.w3.org/2000/01/rdf-schema#label> "Data Sharing Authorization" .
+# 
+# http://www.semanticweb.org/dataact#DataSharingRelationship
+<http://www.semanticweb.org/dataact#DataSharingRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataSharingRelationship> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#LegalRelationship> .
+<http://www.semanticweb.org/dataact#DataSharingRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Relationship for data sharing" .
+<http://www.semanticweb.org/dataact#DataSharingRelationship> <http://www.w3.org/2000/01/rdf-schema#label> "Data Sharing Relationship" .
+# 
+# http://www.semanticweb.org/dataact#DataSpace
+<http://www.semanticweb.org/dataact#DataSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#DataSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#DataSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 33 - Data sharing space" .
+<http://www.semanticweb.org/dataact#DataSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Data Space" .
+# 
+# http://www.semanticweb.org/dataact#Duty
+<http://www.semanticweb.org/dataact#Duty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#Duty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#Duty> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Legal obligation correlating to right" .
+<http://www.semanticweb.org/dataact#Duty> <http://www.w3.org/2000/01/rdf-schema#label> "Duty" .
+# 
+# http://www.semanticweb.org/dataact#EnterpriseUser
+<http://www.semanticweb.org/dataact#EnterpriseUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#EnterpriseUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#User> .
+<http://www.semanticweb.org/dataact#EnterpriseUser> <http://www.w3.org/2000/01/rdf-schema#comment> "Legal person or natural person acting professionally as a user" .
+<http://www.semanticweb.org/dataact#EnterpriseUser> <http://www.w3.org/2000/01/rdf-schema#label> "Enterprise User" .
+# 
+# http://www.semanticweb.org/dataact#Entity
+<http://www.semanticweb.org/dataact#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#Entity> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract root for all Data Act ontology resources" .
+<http://www.semanticweb.org/dataact#Entity> <http://www.w3.org/2000/01/rdf-schema#label> "Entity" .
+# 
+# http://www.semanticweb.org/dataact#ExceptionalNeed
+<http://www.semanticweb.org/dataact#ExceptionalNeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#ExceptionalNeed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#ExceptionalNeed> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 15 - B2G basis" .
+<http://www.semanticweb.org/dataact#ExceptionalNeed> <http://www.w3.org/2000/01/rdf-schema#label> "Exceptional Need" .
+# 
+# http://www.semanticweb.org/dataact#FRANDCondition
+<http://www.semanticweb.org/dataact#FRANDCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#FRANDCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#FRANDCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 8-12 - FRAND conditions" .
+<http://www.semanticweb.org/dataact#FRANDCondition> <http://www.w3.org/2000/01/rdf-schema#label> "FRAND Condition" .
+# 
+# http://www.semanticweb.org/dataact#FRANDTerms
+<http://www.semanticweb.org/dataact#FRANDTerms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#FRANDTerms> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#ContractualTerm> .
+<http://www.semanticweb.org/dataact#FRANDTerms> <http://www.w3.org/2000/01/rdf-schema#comment> "FRAND contractual terms" .
+<http://www.semanticweb.org/dataact#FRANDTerms> <http://www.w3.org/2000/01/rdf-schema#label> "FRAND Terms" .
+# 
+# http://www.semanticweb.org/dataact#InteroperabilityStandard
+<http://www.semanticweb.org/dataact#InteroperabilityStandard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#InteroperabilityStandard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#InteroperabilityStandard> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 34-35 - Standard" .
+<http://www.semanticweb.org/dataact#InteroperabilityStandard> <http://www.w3.org/2000/01/rdf-schema#label> "Interoperability Standard" .
+# 
+# http://www.semanticweb.org/dataact#LegalAction
+<http://www.semanticweb.org/dataact#LegalAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#LegalAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#LegalAction> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Action with legal consequences" .
+<http://www.semanticweb.org/dataact#LegalAction> <http://www.w3.org/2000/01/rdf-schema#label> "Legal Action" .
+# 
+# http://www.semanticweb.org/dataact#LegalEffect
+<http://www.semanticweb.org/dataact#LegalEffect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#LegalEffect> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#LegalEffect> <http://www.w3.org/2000/01/rdf-schema#comment> "Legal consequence when rule fires" .
+<http://www.semanticweb.org/dataact#LegalEffect> <http://www.w3.org/2000/01/rdf-schema#label> "Legal Effect" .
+# 
+# http://www.semanticweb.org/dataact#LegalRelationship
+<http://www.semanticweb.org/dataact#LegalRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#LegalRelationship> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#LegalRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Relationship between legal parties" .
+<http://www.semanticweb.org/dataact#LegalRelationship> <http://www.w3.org/2000/01/rdf-schema#label> "Legal Relationship" .
+# 
+# http://www.semanticweb.org/dataact#LegalRule
+<http://www.semanticweb.org/dataact#LegalRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#LegalRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#LegalRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Formal representation of a legal rule from the Data Act" .
+<http://www.semanticweb.org/dataact#LegalRule> <http://www.w3.org/2000/01/rdf-schema#label> "Legal Rule" .
+# 
+# http://www.semanticweb.org/dataact#LegalSource
+<http://www.semanticweb.org/dataact#LegalSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#LegalSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#LegalSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Source document (regulation, article, recital)" .
+<http://www.semanticweb.org/dataact#LegalSource> <http://www.w3.org/2000/01/rdf-schema#label> "Legal Source" .
+# 
+# http://www.semanticweb.org/dataact#Manufacturer
+<http://www.semanticweb.org/dataact#Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#DataHolder> .
+<http://www.semanticweb.org/dataact#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#ServiceProvider> .
+<http://www.semanticweb.org/dataact#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 3 - Manufacturer of connected products" .
+<http://www.semanticweb.org/dataact#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer" .
+# 
+# http://www.semanticweb.org/dataact#Metadata
+<http://www.semanticweb.org/dataact#Metadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#Metadata> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#Metadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 3(1) - Information to interpret data" .
+<http://www.semanticweb.org/dataact#Metadata> <http://www.w3.org/2000/01/rdf-schema#label> "Metadata" .
+# 
+# http://www.semanticweb.org/dataact#Microenterprise
+<http://www.semanticweb.org/dataact#Microenterprise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#Microenterprise> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#SME> .
+<http://www.semanticweb.org/dataact#Microenterprise> <http://www.w3.org/2000/01/rdf-schema#comment> "Smallest category of SME" .
+<http://www.semanticweb.org/dataact#Microenterprise> <http://www.w3.org/2000/01/rdf-schema#label> "Microenterprise" .
+# 
+# http://www.semanticweb.org/dataact#ProductData
+<http://www.semanticweb.org/dataact#ProductData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#ProductData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#ProductData> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(15) - Generated by product use" .
+<http://www.semanticweb.org/dataact#ProductData> <http://www.w3.org/2000/01/rdf-schema#label> "Product Data" .
+# 
+# http://www.semanticweb.org/dataact#PublicSectorBody
+<http://www.semanticweb.org/dataact#PublicSectorBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#PublicSectorBody> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#PublicSectorBody> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(28) - National/regional/local authority" .
+<http://www.semanticweb.org/dataact#PublicSectorBody> <http://www.w3.org/2000/01/rdf-schema#label> "Public Sector Body" .
+# 
+# http://www.semanticweb.org/dataact#Qualification
+<http://www.semanticweb.org/dataact#Qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#Qualification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#Qualification> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Condition or exception qualifying norm" .
+<http://www.semanticweb.org/dataact#Qualification> <http://www.w3.org/2000/01/rdf-schema#label> "Qualification" .
+# 
+# http://www.semanticweb.org/dataact#RegulationDocument
+<http://www.semanticweb.org/dataact#RegulationDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#RegulationDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.estrellaproject.org/lkif-core/expression.owl#Legal_Document> .
+<http://www.semanticweb.org/dataact#RegulationDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: EU Regulation or legislative act" .
+<http://www.semanticweb.org/dataact#RegulationDocument> <http://www.w3.org/2000/01/rdf-schema#label> "Regulation Document" .
+# 
+# http://www.semanticweb.org/dataact#RegulativeRule
+<http://www.semanticweb.org/dataact#RegulativeRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#RegulativeRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#LegalRule> .
+<http://www.semanticweb.org/dataact#RegulativeRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Rule that prescribes behavior (obligations, permissions, prohibitions)" .
+<http://www.semanticweb.org/dataact#RegulativeRule> <http://www.w3.org/2000/01/rdf-schema#label> "Regulative Rule" .
+# 
+# http://www.semanticweb.org/dataact#RelatedService
+<http://www.semanticweb.org/dataact#RelatedService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#RelatedService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Asset> .
+<http://www.semanticweb.org/dataact#RelatedService> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(6) - Digital service connected to product" .
+<http://www.semanticweb.org/dataact#RelatedService> <http://www.w3.org/2000/01/rdf-schema#label> "Related Service" .
+# 
+# http://www.semanticweb.org/dataact#RelatedServiceData
+<http://www.semanticweb.org/dataact#RelatedServiceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#RelatedServiceData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Data> .
+<http://www.semanticweb.org/dataact#RelatedServiceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(16) - From related service" .
+<http://www.semanticweb.org/dataact#RelatedServiceData> <http://www.w3.org/2000/01/rdf-schema#label> "Related Service Data" .
+# 
+# http://www.semanticweb.org/dataact#RelatedServiceProvider
+<http://www.semanticweb.org/dataact#RelatedServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#RelatedServiceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#DataHolder> .
+<http://www.semanticweb.org/dataact#RelatedServiceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#ServiceProvider> .
+<http://www.semanticweb.org/dataact#RelatedServiceProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides related service" .
+<http://www.semanticweb.org/dataact#RelatedServiceProvider> <http://www.w3.org/2000/01/rdf-schema#label> "Related Service Provider" .
+# 
+# http://www.semanticweb.org/dataact#RuleCondition
+<http://www.semanticweb.org/dataact#RuleCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#RuleCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#RuleCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Condition in rule antecedent or exception" .
+<http://www.semanticweb.org/dataact#RuleCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Rule Condition" .
+# 
+# http://www.semanticweb.org/dataact#SME
+<http://www.semanticweb.org/dataact#SME> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#SME> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#EnterpriseUser> .
+<http://www.semanticweb.org/dataact#SME> <http://www.w3.org/2000/01/rdf-schema#comment> "Small and Medium-sized Enterprise" .
+<http://www.semanticweb.org/dataact#SME> <http://www.w3.org/2000/01/rdf-schema#label> "SME" .
+# 
+# http://www.semanticweb.org/dataact#ServiceProvider
+<http://www.semanticweb.org/dataact#ServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract class for service providers" .
+<http://www.semanticweb.org/dataact#ServiceProvider> <http://www.w3.org/2000/01/rdf-schema#label> "Service Provider" .
+# 
+# http://www.semanticweb.org/dataact#SmartContract
+<http://www.semanticweb.org/dataact#SmartContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#SmartContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#SmartContract> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 36 - Automated execution" .
+<http://www.semanticweb.org/dataact#SmartContract> <http://www.w3.org/2000/01/rdf-schema#label> "Smart Contract" .
+# 
+# http://www.semanticweb.org/dataact#TemporalEntity
+<http://www.semanticweb.org/dataact#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Time point or interval" .
+<http://www.semanticweb.org/dataact#TemporalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Temporal Entity" .
+# 
+# http://www.semanticweb.org/dataact#ThirdParty
+<http://www.semanticweb.org/dataact#ThirdParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#ThirdParty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#DataRecipient> .
+<http://www.semanticweb.org/dataact#ThirdParty> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 5 - Third party designated by user" .
+<http://www.semanticweb.org/dataact#ThirdParty> <http://www.w3.org/2000/01/rdf-schema#label> "Third Party" .
+# 
+# http://www.semanticweb.org/dataact#TimeInterval
+<http://www.semanticweb.org/dataact#TimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#TemporalEntity> .
+<http://www.semanticweb.org/dataact#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Period with start and end" .
+<http://www.semanticweb.org/dataact#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "Time Interval" .
+# 
+# http://www.semanticweb.org/dataact#TimePoint
+<http://www.semanticweb.org/dataact#TimePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#TimePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#TemporalEntity> .
+<http://www.semanticweb.org/dataact#TimePoint> <http://www.w3.org/2000/01/rdf-schema#comment> "LKIF: Instant in time" .
+<http://www.semanticweb.org/dataact#TimePoint> <http://www.w3.org/2000/01/rdf-schema#label> "Time Point" .
+# 
+# http://www.semanticweb.org/dataact#TradeSecret
+<http://www.semanticweb.org/dataact#TradeSecret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#TradeSecret> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<http://www.semanticweb.org/dataact#TradeSecret> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 8(6) - Protected information" .
+<http://www.semanticweb.org/dataact#TradeSecret> <http://www.w3.org/2000/01/rdf-schema#label> "Trade Secret" .
+# 
+# http://www.semanticweb.org/dataact#UnfairTerm
+<http://www.semanticweb.org/dataact#UnfairTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#UnfairTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#ContractualTerm> .
+<http://www.semanticweb.org/dataact#UnfairTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 13 - Unfair and not binding" .
+<http://www.semanticweb.org/dataact#UnfairTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Unfair Term" .
+# 
+# http://www.semanticweb.org/dataact#UnionBody
+<http://www.semanticweb.org/dataact#UnionBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#UnionBody> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#UnionBody> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(27) - EU body or agency" .
+<http://www.semanticweb.org/dataact#UnionBody> <http://www.w3.org/2000/01/rdf-schema#label> "Union Body" .
+# 
+# http://www.semanticweb.org/dataact#User
+<http://www.semanticweb.org/dataact#User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Party> .
+<http://www.semanticweb.org/dataact#User> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 2(12) - Natural or legal person who owns, rents, or leases a connected product" .
+<http://www.semanticweb.org/dataact#User> <http://www.w3.org/2000/01/rdf-schema#label> "User" .
+# 
+# http://www.semanticweb.org/dataact#UserAccessRight
+<http://www.semanticweb.org/dataact#UserAccessRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/dataact#UserAccessRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#DataAccessRight> .
+<http://www.semanticweb.org/dataact#UserAccessRight> <http://www.w3.org/2000/01/rdf-schema#comment> "Article 4 - User's right" .
+<http://www.semanticweb.org/dataact#UserAccessRight> <http://www.w3.org/2000/01/rdf-schema#label> "User Access Right" .
+# 
+# https://w3c.github.io/dpv/2.2/dpv/#Consent
+<https://w3c.github.io/dpv/2.2/dpv/#Consent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3c.github.io/dpv/2.2/dpv/#Consent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<https://w3c.github.io/dpv/2.2/dpv/#Consent> <http://www.w3.org/2000/01/rdf-schema#comment> "Consent of the Data Subject for specified process or activity" .
+<https://w3c.github.io/dpv/2.2/dpv/#Consent> <http://www.w3.org/2000/01/rdf-schema#label> "Consent" .
+# 
+# https://w3c.github.io/dpv/2.2/dpv/#DataSubject
+<https://w3c.github.io/dpv/2.2/dpv/#DataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3c.github.io/dpv/2.2/dpv/#DataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<https://w3c.github.io/dpv/2.2/dpv/#DataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "The individual (or category of individuals) whose personal data is being processed" .
+<https://w3c.github.io/dpv/2.2/dpv/#DataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Data Subject" .
+# 
+# https://w3c.github.io/dpv/2.2/dpv/#NonPersonalData
+<https://w3c.github.io/dpv/2.2/dpv/#NonPersonalData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3c.github.io/dpv/2.2/dpv/#NonPersonalData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Data> .
+<https://w3c.github.io/dpv/2.2/dpv/#NonPersonalData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data that is not Personal Data" .
+<https://w3c.github.io/dpv/2.2/dpv/#NonPersonalData> <http://www.w3.org/2000/01/rdf-schema#label> "Non-Personal Data" .
+# 
+# https://w3c.github.io/dpv/2.2/dpv/#PersonalData
+<https://w3c.github.io/dpv/2.2/dpv/#PersonalData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3c.github.io/dpv/2.2/dpv/#PersonalData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Data> .
+<https://w3c.github.io/dpv/2.2/dpv/#PersonalData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data directly or indirectly associated or related to an individual" .
+<https://w3c.github.io/dpv/2.2/dpv/#PersonalData> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Data" .
+# 
+# https://www.w3.org/ns/odrl/2/Action
+<https://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<https://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/2000/01/rdf-schema#comment> "An operation on an Asset." .
+<https://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/2000/01/rdf-schema#label> "Action" .
+# 
+# https://www.w3.org/ns/odrl/2/Agreement
+<https://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<https://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2000/01/rdf-schema#comment> "A Policy that grants the assignee a Rule over an Asset from an assigner." .
+<https://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2000/01/rdf-schema#label> "Agreement" .
+# 
+# https://www.w3.org/ns/odrl/2/Asset
+<https://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<https://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract class for products, services, and data" .
+<https://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/2000/01/rdf-schema#label> "Asset" .
+# 
+# https://www.w3.org/ns/odrl/2/Duty
+<https://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Rule> .
+<https://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#comment> "The obligation to perform an Action" .
+<https://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#label> "Duty" .
+# 
+# https://www.w3.org/ns/odrl/2/Party
+<https://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<https://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity or a collection of entities that undertake Roles in a Rule." .
+<https://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/2000/01/rdf-schema#label> "Party" .
+# 
+# https://www.w3.org/ns/odrl/2/Permission
+<https://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Rule> .
+<https://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#comment> "The ability to perform an Action over an Asset." .
+<https://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#label> "Permission" .
+# 
+# https://www.w3.org/ns/odrl/2/Prohibition
+<https://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/odrl/2/Rule> .
+<https://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#comment> "The inability to perform an Action over an Asset." .
+<https://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#label> "Prohibition" .
+# 
+# https://www.w3.org/ns/odrl/2/Rule
+<https://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<https://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract concept that represents the common characteristics of Permissions, Prohibitions, and Duties." .
+<https://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/2000/01/rdf-schema#label> "Rule" .
+# 
+# https://www.w3.org/ns/odrl/2/purpose
+<https://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/dataact#Entity> .
+<https://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/2000/01/rdf-schema#comment> "A defined purpose for exercising the action of the Rule." .
+<https://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/2000/01/rdf-schema#label> "Purpose" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/dataact#alice
+<http://www.semanticweb.org/dataact#alice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#alice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#ConsumerUser> .
+<http://www.semanticweb.org/dataact#alice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3c.github.io/dpv/2.2/dpv/#DataSubject> .
+<http://www.semanticweb.org/dataact#alice> <http://www.semanticweb.org/dataact#designatesThirdParty> <http://www.semanticweb.org/dataact#energyOptimizationService> .
+<http://www.semanticweb.org/dataact#alice> <http://www.semanticweb.org/dataact#hasAccessRight> <http://www.semanticweb.org/dataact#aliceAccessRight> .
+<http://www.semanticweb.org/dataact#alice> <http://www.semanticweb.org/dataact#isSubjectOf> <http://www.semanticweb.org/dataact#aliceTemperatureData> .
+<http://www.semanticweb.org/dataact#alice> <http://www.w3.org/2000/01/rdf-schema#label> "Alice" .
+# 
+# http://www.semanticweb.org/dataact#aliceAccessRight
+<http://www.semanticweb.org/dataact#aliceAccessRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#aliceAccessRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#UserAccessRight> .
+<http://www.semanticweb.org/dataact#aliceAccessRight> <http://www.semanticweb.org/dataact#applicableArticle> "Article 4" .
+<http://www.semanticweb.org/dataact#aliceAccessRight> <http://www.w3.org/2000/01/rdf-schema#label> "Alice Access Right" .
+# 
+# http://www.semanticweb.org/dataact#aliceTemperatureData
+<http://www.semanticweb.org/dataact#aliceTemperatureData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#aliceTemperatureData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#ProductData> .
+<http://www.semanticweb.org/dataact#aliceTemperatureData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3c.github.io/dpv/2.2/dpv/#PersonalData> .
+<http://www.semanticweb.org/dataact#aliceTemperatureData> <http://www.semanticweb.org/dataact#isGeneratedBy> <http://www.semanticweb.org/dataact#smartThermostat1> .
+<http://www.semanticweb.org/dataact#aliceTemperatureData> <https://w3c.github.io/dpv/2.2/dpv/#hasDataSubject> <http://www.semanticweb.org/dataact#alice> .
+<http://www.semanticweb.org/dataact#aliceTemperatureData> <http://www.semanticweb.org/dataact#isMachineReadable> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#aliceTemperatureData> <http://www.w3.org/2000/01/rdf-schema#label> "Alice Temperature Data" .
+# 
+# http://www.semanticweb.org/dataact#article4_1_obligation
+<http://www.semanticweb.org/dataact#article4_1_obligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#article4_1_obligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/ns/odrl/2/Duty> .
+<http://www.semanticweb.org/dataact#article4_1_obligation> <http://www.semanticweb.org/dataact#hasBeneficiary> <http://www.semanticweb.org/dataact#alice> .
+<http://www.semanticweb.org/dataact#article4_1_obligation> <http://www.semanticweb.org/dataact#specifiesAction> <http://www.semanticweb.org/dataact#provideDataAction> .
+<http://www.semanticweb.org/dataact#article4_1_obligation> <http://www.semanticweb.org/dataact#triggeredBy> <http://www.semanticweb.org/dataact#userRequestsDataAccess> .
+<http://www.semanticweb.org/dataact#article4_1_obligation> <https://www.w3.org/ns/odrl/2/assignee> <http://www.semanticweb.org/dataact#thermostatManufacturer> .
+<http://www.semanticweb.org/dataact#article4_1_obligation> <http://www.semanticweb.org/dataact#deonticModality> "Obligation" .
+<http://www.semanticweb.org/dataact#article4_1_obligation> <http://www.semanticweb.org/dataact#hasDescription> "Manufacturer must provide data to user" .
+<http://www.semanticweb.org/dataact#article4_1_obligation> <http://www.w3.org/2000/01/rdf-schema#label> "Article 4(1) Obligation" .
+# 
+# http://www.semanticweb.org/dataact#article4_1_rule
+<http://www.semanticweb.org/dataact#article4_1_rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#article4_1_rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#RegulativeRule> .
+<http://www.semanticweb.org/dataact#article4_1_rule> <http://www.semanticweb.org/dataact#derivesFrom> <http://www.semanticweb.org/dataact#dataActArticle4_1> .
+<http://www.semanticweb.org/dataact#article4_1_rule> <http://www.semanticweb.org/dataact#hasAntecedent> <http://www.semanticweb.org/dataact#userRequestsDataAccess> .
+<http://www.semanticweb.org/dataact#article4_1_rule> <http://www.semanticweb.org/dataact#hasConsequent> <http://www.semanticweb.org/dataact#dataHolderMustProvide> .
+<http://www.semanticweb.org/dataact#article4_1_rule> <http://www.semanticweb.org/dataact#prescribes> <http://www.semanticweb.org/dataact#article4_1_obligation> .
+<http://www.semanticweb.org/dataact#article4_1_rule> <http://www.semanticweb.org/dataact#isConstitutive> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#article4_1_rule> <http://www.semanticweb.org/dataact#ruleIdentifier> "DA-R-4.1" .
+<http://www.semanticweb.org/dataact#article4_1_rule> <http://www.semanticweb.org/dataact#ruleText> "Where a user requests access to product data from a data holder, the data holder shall make the data available to the user without undue delay, free of charge, easily, securely and, where applicable, continuously and in real-time." .
+<http://www.semanticweb.org/dataact#article4_1_rule> <http://www.w3.org/2000/01/rdf-schema#label> "Article 4(1) Rule - User Access Right" .
+# 
+# http://www.semanticweb.org/dataact#article8_6_permission
+<http://www.semanticweb.org/dataact#article8_6_permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#article8_6_permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/ns/odrl/2/Permission> .
+<http://www.semanticweb.org/dataact#article8_6_permission> <http://www.semanticweb.org/dataact#specifiesAction> <http://www.semanticweb.org/dataact#refuseDataAccessAction> .
+<http://www.semanticweb.org/dataact#article8_6_permission> <https://www.w3.org/ns/odrl/2/assignee> <http://www.semanticweb.org/dataact#sensorManufacturer> .
+<http://www.semanticweb.org/dataact#article8_6_permission> <http://www.semanticweb.org/dataact#deonticModality> "Permission" .
+<http://www.semanticweb.org/dataact#article8_6_permission> <http://www.semanticweb.org/dataact#hasDescription> "Data holder permitted to refuse if trade secret" .
+<http://www.semanticweb.org/dataact#article8_6_permission> <http://www.w3.org/2000/01/rdf-schema#label> "Article 8(6) Permission to Refuse" .
+# 
+# http://www.semanticweb.org/dataact#article8_6_rule
+<http://www.semanticweb.org/dataact#article8_6_rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#article8_6_rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#RegulativeRule> .
+<http://www.semanticweb.org/dataact#article8_6_rule> <http://www.semanticweb.org/dataact#derivesFrom> <http://www.semanticweb.org/dataact#dataActArticle8_6> .
+<http://www.semanticweb.org/dataact#article8_6_rule> <http://www.semanticweb.org/dataact#hasAntecedent> <http://www.semanticweb.org/dataact#b2bDataRequest> .
+<http://www.semanticweb.org/dataact#article8_6_rule> <http://www.semanticweb.org/dataact#hasConsequent> <http://www.semanticweb.org/dataact#dataHolderMayRefuse> .
+<http://www.semanticweb.org/dataact#article8_6_rule> <http://www.semanticweb.org/dataact#hasException> <http://www.semanticweb.org/dataact#containsTradeSecretCondition> .
+<http://www.semanticweb.org/dataact#article8_6_rule> <http://www.semanticweb.org/dataact#permits> <http://www.semanticweb.org/dataact#article8_6_permission> .
+<http://www.semanticweb.org/dataact#article8_6_rule> <http://www.semanticweb.org/dataact#isConstitutive> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#article8_6_rule> <http://www.semanticweb.org/dataact#ruleIdentifier> "DA-R-8.6" .
+<http://www.semanticweb.org/dataact#article8_6_rule> <http://www.semanticweb.org/dataact#ruleText> "The data holder shall not be required to make data available where those data constitute trade secrets." .
+<http://www.semanticweb.org/dataact#article8_6_rule> <http://www.w3.org/2000/01/rdf-schema#label> "Article 8(6) Rule - Trade Secret Exception" .
+# 
+# http://www.semanticweb.org/dataact#b2bAgreement1
+<http://www.semanticweb.org/dataact#b2bAgreement1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#b2bAgreement1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#DataSharingAgreement> .
+<http://www.semanticweb.org/dataact#b2bAgreement1> <http://www.semanticweb.org/dataact#subjectToFRAND> <http://www.semanticweb.org/dataact#frandCondition1> .
+<http://www.semanticweb.org/dataact#b2bAgreement1> <http://www.w3.org/2000/01/rdf-schema#label> "B2B Agreement 1" .
+# 
+# http://www.semanticweb.org/dataact#b2bDataRequest
+<http://www.semanticweb.org/dataact#b2bDataRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#b2bDataRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#RuleCondition> .
+<http://www.semanticweb.org/dataact#b2bDataRequest> <http://www.semanticweb.org/dataact#hasDescription> "Business requests data from data holder" .
+<http://www.semanticweb.org/dataact#b2bDataRequest> <http://www.w3.org/2000/01/rdf-schema#label> "B2B Data Request" .
+# 
+# http://www.semanticweb.org/dataact#bob
+<http://www.semanticweb.org/dataact#bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#EnterpriseUser> .
+<http://www.semanticweb.org/dataact#bob> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#SME> .
+<http://www.semanticweb.org/dataact#bob> <http://www.w3.org/2000/01/rdf-schema#label> "Bob (SME)" .
+# 
+# http://www.semanticweb.org/dataact#containsTradeSecretCondition
+<http://www.semanticweb.org/dataact#containsTradeSecretCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#containsTradeSecretCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#RuleCondition> .
+<http://www.semanticweb.org/dataact#containsTradeSecretCondition> <http://www.semanticweb.org/dataact#hasDescription> "Requested data contains trade secrets" .
+<http://www.semanticweb.org/dataact#containsTradeSecretCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Contains Trade Secret Condition" .
+# 
+# http://www.semanticweb.org/dataact#dataActArticle4_1
+<http://www.semanticweb.org/dataact#dataActArticle4_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#dataActArticle4_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#LegalSource> .
+<http://www.semanticweb.org/dataact#dataActArticle4_1> <http://www.semanticweb.org/dataact#articleReference> "Article 4(1)" .
+<http://www.semanticweb.org/dataact#dataActArticle4_1> <http://www.w3.org/2000/01/rdf-schema#label> "Data Act Article 4(1)" .
+# 
+# http://www.semanticweb.org/dataact#dataActArticle8_6
+<http://www.semanticweb.org/dataact#dataActArticle8_6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#dataActArticle8_6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#LegalSource> .
+<http://www.semanticweb.org/dataact#dataActArticle8_6> <http://www.semanticweb.org/dataact#articleReference> "Article 8(6)" .
+<http://www.semanticweb.org/dataact#dataActArticle8_6> <http://www.w3.org/2000/01/rdf-schema#label> "Data Act Article 8(6)" .
+# 
+# http://www.semanticweb.org/dataact#dataHolderMayRefuse
+<http://www.semanticweb.org/dataact#dataHolderMayRefuse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#dataHolderMayRefuse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#LegalEffect> .
+<http://www.semanticweb.org/dataact#dataHolderMayRefuse> <http://www.semanticweb.org/dataact#hasDescription> "Data holder is not required to disclose" .
+<http://www.semanticweb.org/dataact#dataHolderMayRefuse> <http://www.w3.org/2000/01/rdf-schema#label> "Data Holder May Refuse" .
+# 
+# http://www.semanticweb.org/dataact#dataHolderMustProvide
+<http://www.semanticweb.org/dataact#dataHolderMustProvide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#dataHolderMustProvide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#LegalEffect> .
+<http://www.semanticweb.org/dataact#dataHolderMustProvide> <http://www.semanticweb.org/dataact#hasDescription> "Data holder must make data available without undue delay" .
+<http://www.semanticweb.org/dataact#dataHolderMustProvide> <http://www.w3.org/2000/01/rdf-schema#label> "Data Holder Must Provide Data" .
+# 
+# http://www.semanticweb.org/dataact#energyOptimizationService
+<http://www.semanticweb.org/dataact#energyOptimizationService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#energyOptimizationService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#AftermarketServiceProvider> .
+<http://www.semanticweb.org/dataact#energyOptimizationService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#ThirdParty> .
+<http://www.semanticweb.org/dataact#energyOptimizationService> <http://www.semanticweb.org/dataact#receivesDataFrom> <http://www.semanticweb.org/dataact#thermostatManufacturer> .
+<http://www.semanticweb.org/dataact#energyOptimizationService> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Optimization Service" .
+# 
+# http://www.semanticweb.org/dataact#frandCondition1
+<http://www.semanticweb.org/dataact#frandCondition1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#frandCondition1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#FRANDCondition> .
+<http://www.semanticweb.org/dataact#frandCondition1> <http://www.semanticweb.org/dataact#isFair> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#frandCondition1> <http://www.semanticweb.org/dataact#isNonDiscriminatory> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#frandCondition1> <http://www.semanticweb.org/dataact#isReasonable> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#frandCondition1> <http://www.w3.org/2000/01/rdf-schema#label> "FRAND Condition 1" .
+# 
+# http://www.semanticweb.org/dataact#industrialSensor1
+<http://www.semanticweb.org/dataact#industrialSensor1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#industrialSensor1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#ConnectedProduct> .
+<http://www.semanticweb.org/dataact#industrialSensor1> <http://www.semanticweb.org/dataact#generatesData> <http://www.semanticweb.org/dataact#machineData1> .
+<http://www.semanticweb.org/dataact#industrialSensor1> <http://www.semanticweb.org/dataact#productCategory> "Industrial IoT" .
+<http://www.semanticweb.org/dataact#industrialSensor1> <http://www.w3.org/2000/01/rdf-schema#label> "Industrial Sensor 1" .
+# 
+# http://www.semanticweb.org/dataact#machineData1
+<http://www.semanticweb.org/dataact#machineData1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#machineData1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#ProductData> .
+<http://www.semanticweb.org/dataact#machineData1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3c.github.io/dpv/2.2/dpv/#NonPersonalData> .
+<http://www.semanticweb.org/dataact#machineData1> <http://www.semanticweb.org/dataact#isGeneratedBy> <http://www.semanticweb.org/dataact#industrialSensor1> .
+<http://www.semanticweb.org/dataact#machineData1> <http://www.semanticweb.org/dataact#isMachineReadable> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/dataact#machineData1> <http://www.w3.org/2000/01/rdf-schema#label> "Machine Data 1" .
+# 
+# http://www.semanticweb.org/dataact#provideDataAction
+<http://www.semanticweb.org/dataact#provideDataAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#provideDataAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#DataAccessAction> .
+<http://www.semanticweb.org/dataact#provideDataAction> <http://www.semanticweb.org/dataact#hasDescription> "Make data available to requestor" .
+<http://www.semanticweb.org/dataact#provideDataAction> <http://www.w3.org/2000/01/rdf-schema#label> "Provide Data Action" .
+# 
+# http://www.semanticweb.org/dataact#refuseDataAccessAction
+<http://www.semanticweb.org/dataact#refuseDataAccessAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#refuseDataAccessAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#DataAccessAction> .
+<http://www.semanticweb.org/dataact#refuseDataAccessAction> <http://www.semanticweb.org/dataact#hasDescription> "Refuse to provide data" .
+<http://www.semanticweb.org/dataact#refuseDataAccessAction> <http://www.w3.org/2000/01/rdf-schema#label> "Refuse Data Access Action" .
+# 
+# http://www.semanticweb.org/dataact#sensorManufacturer
+<http://www.semanticweb.org/dataact#sensorManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#sensorManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#Manufacturer> .
+<http://www.semanticweb.org/dataact#sensorManufacturer> <https://w3c.github.io/dpv/2.2/dpv/#hasData> <http://www.semanticweb.org/dataact#machineData1> .
+<http://www.semanticweb.org/dataact#sensorManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor Manufacturer" .
+# 
+# http://www.semanticweb.org/dataact#smartThermostat1
+<http://www.semanticweb.org/dataact#smartThermostat1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#smartThermostat1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#ConnectedProduct> .
+<http://www.semanticweb.org/dataact#smartThermostat1> <http://www.semanticweb.org/dataact#generatesData> <http://www.semanticweb.org/dataact#aliceTemperatureData> .
+<http://www.semanticweb.org/dataact#smartThermostat1> <http://www.semanticweb.org/dataact#manufacturerIdentifier> "THERMO-2024-001" .
+<http://www.semanticweb.org/dataact#smartThermostat1> <http://www.semanticweb.org/dataact#productCategory> "Smart Home" .
+<http://www.semanticweb.org/dataact#smartThermostat1> <http://www.w3.org/2000/01/rdf-schema#label> "Smart Thermostat 1" .
+# 
+# http://www.semanticweb.org/dataact#thermostatManufacturer
+<http://www.semanticweb.org/dataact#thermostatManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#thermostatManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#Manufacturer> .
+<http://www.semanticweb.org/dataact#thermostatManufacturer> <https://w3c.github.io/dpv/2.2/dpv/#hasData> <http://www.semanticweb.org/dataact#aliceTemperatureData> .
+<http://www.semanticweb.org/dataact#thermostatManufacturer> <https://w3c.github.io/dpv/2.2/dpv/#hasRecipient> <http://www.semanticweb.org/dataact#energyOptimizationService> .
+<http://www.semanticweb.org/dataact#thermostatManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Thermostat Manufacturer" .
+# 
+# http://www.semanticweb.org/dataact#userRequestsDataAccess
+<http://www.semanticweb.org/dataact#userRequestsDataAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/dataact#userRequestsDataAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/dataact#RuleCondition> .
+<http://www.semanticweb.org/dataact#userRequestsDataAccess> <http://www.semanticweb.org/dataact#hasDescription> "User submits a request to access their product data" .
+<http://www.semanticweb.org/dataact#userRequestsDataAccess> <http://www.w3.org/2000/01/rdf-schema#label> "User Requests Data Access" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
