@@ -1,0 +1,654 @@
+{
+  "@context" : {
+    "modifies" : {
+      "@id" : "https://w3id.org/def/dataact#modifies",
+      "@type" : "@id"
+    },
+    "legalEffect" : {
+      "@id" : "https://w3id.org/def/dataact#legalEffect"
+    },
+    "LegalSource" : {
+      "@id" : "https://w3id.org/def/dataact#LegalSource"
+    },
+    "DataSharingAuthorization" : {
+      "@id" : "https://w3id.org/def/dataact#DataSharingAuthorization"
+    },
+    "createsDuty" : {
+      "@id" : "https://w3id.org/def/dataact#createsDuty",
+      "@type" : "@id"
+    },
+    "scopeNote" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#scopeNote"
+    },
+    "governedBy" : {
+      "@id" : "https://w3id.org/def/dataact#governedBy",
+      "@type" : "@id"
+    },
+    "ConstitutiveRule" : {
+      "@id" : "https://w3id.org/def/dataact#ConstitutiveRule"
+    },
+    "member" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#member"
+    },
+    "Legal_Document" : {
+      "@id" : "http://www.estrellaproject.org/lkif-core/expression.owl#Legal_Document"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "example" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#example"
+    },
+    "isMachineReadable" : {
+      "@id" : "https://w3id.org/def/dataact#isMachineReadable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Duty" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/Duty"
+    },
+    "Qualification" : {
+      "@id" : "https://w3id.org/def/dataact#Qualification"
+    },
+    "occursAt" : {
+      "@id" : "https://w3id.org/def/dataact#occursAt",
+      "@type" : "@id"
+    },
+    "grantsAccessTo" : {
+      "@id" : "https://w3id.org/def/dataact#grantsAccessTo",
+      "@type" : "@id"
+    },
+    "hasRecipient" : {
+      "@id" : "https://w3c.github.io/dpv/2.2/dpv/#hasRecipient",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "UnfairTerm" : {
+      "@id" : "https://w3id.org/def/dataact#UnfairTerm"
+    },
+    "Asset" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/Asset"
+    },
+    "DataSharingRelationship" : {
+      "@id" : "https://w3id.org/def/dataact#DataSharingRelationship"
+    },
+    "DataProvision" : {
+      "@id" : "https://w3id.org/def/dataact#DataProvision"
+    },
+    "isFair" : {
+      "@id" : "https://w3id.org/def/dataact#isFair",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Permission" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/Permission"
+    },
+    "DataContentCondition" : {
+      "@id" : "https://w3id.org/def/dataact#DataContentCondition"
+    },
+    "hasAccessRight" : {
+      "@id" : "https://w3id.org/def/dataact#hasAccessRight",
+      "@type" : "@id"
+    },
+    "RelatedServiceProvider" : {
+      "@id" : "https://w3id.org/def/dataact#RelatedServiceProvider"
+    },
+    "isSubjectOf" : {
+      "@id" : "https://w3id.org/def/dataact#isSubjectOf",
+      "@type" : "@id"
+    },
+    "ProductData" : {
+      "@id" : "https://w3id.org/def/dataact#ProductData"
+    },
+    "InteroperabilityStandard" : {
+      "@id" : "https://w3id.org/def/dataact#InteroperabilityStandard"
+    },
+    "hasDeonticSpecification" : {
+      "@id" : "https://w3id.org/def/dataact#hasDeonticSpecification",
+      "@type" : "@id"
+    },
+    "triggeredBy" : {
+      "@id" : "https://w3id.org/def/dataact#triggeredBy",
+      "@type" : "@id"
+    },
+    "derivesFrom" : {
+      "@id" : "https://w3id.org/def/dataact#derivesFrom",
+      "@type" : "@id"
+    },
+    "Agreement" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/Agreement"
+    },
+    "governedByAgreement" : {
+      "@id" : "https://w3id.org/def/dataact#governedByAgreement",
+      "@type" : "@id"
+    },
+    "ThirdParty" : {
+      "@id" : "https://w3id.org/def/dataact#ThirdParty"
+    },
+    "plays" : {
+      "@id" : "http://www.estrellaproject.org/lkif-core/role.owl#plays",
+      "@type" : "@id"
+    },
+    "qualifies" : {
+      "@id" : "http://www.estrellaproject.org/lkif-core/expression.owl#qualifies",
+      "@type" : "@id"
+    },
+    "Manufacturer" : {
+      "@id" : "https://w3id.org/def/dataact#Manufacturer"
+    },
+    "ContractFormation" : {
+      "@id" : "https://w3id.org/def/dataact#ContractFormation"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Prohibition" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/Prohibition"
+    },
+    "deonticModality" : {
+      "@id" : "https://w3id.org/def/dataact#deonticModality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "compliesWith" : {
+      "@id" : "https://w3id.org/def/dataact#compliesWith",
+      "@type" : "@id"
+    },
+    "ServiceProvider" : {
+      "@id" : "https://w3id.org/def/dataact#ServiceProvider"
+    },
+    "classifiedAs" : {
+      "@id" : "https://w3id.org/def/dataact#classifiedAs",
+      "@type" : "@id"
+    },
+    "AftermarketServiceProvider" : {
+      "@id" : "https://w3id.org/def/dataact#AftermarketServiceProvider"
+    },
+    "DataLicenseAgreement" : {
+      "@id" : "https://w3id.org/def/dataact#DataLicenseAgreement"
+    },
+    "NaturalPerson" : {
+      "@id" : "https://w3id.org/def/dataact#NaturalPerson"
+    },
+    "ruleSource" : {
+      "@id" : "https://w3id.org/def/dataact#ruleSource"
+    },
+    "User" : {
+      "@id" : "https://w3id.org/def/dataact#User"
+    },
+    "hasTerm" : {
+      "@id" : "https://w3id.org/def/dataact#hasTerm",
+      "@type" : "@id"
+    },
+    "prohibits" : {
+      "@id" : "https://w3id.org/def/dataact#prohibits",
+      "@type" : "@id"
+    },
+    "presupposesAction" : {
+      "@id" : "https://w3id.org/def/dataact#presupposesAction",
+      "@type" : "@id"
+    },
+    "isReasonable" : {
+      "@id" : "https://w3id.org/def/dataact#isReasonable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "prescribes" : {
+      "@id" : "https://w3id.org/def/dataact#prescribes",
+      "@type" : "@id"
+    },
+    "isPersonal" : {
+      "@id" : "https://w3id.org/def/dataact#isPersonal",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "LargeEnterprise" : {
+      "@id" : "https://w3id.org/def/dataact#LargeEnterprise"
+    },
+    "fulfillsDataContentCondition" : {
+      "@id" : "https://w3id.org/def/dataact#fulfillsDataContentCondition",
+      "@type" : "@id"
+    },
+    "manufacturerIdentifier" : {
+      "@id" : "https://w3id.org/def/dataact#manufacturerIdentifier",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "agreementDate" : {
+      "@id" : "https://w3id.org/def/dataact#agreementDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "requestsAccessFrom" : {
+      "@id" : "https://w3id.org/def/dataact#requestsAccessFrom",
+      "@type" : "@id"
+    },
+    "generatesData" : {
+      "@id" : "https://w3id.org/def/dataact#generatesData",
+      "@type" : "@id"
+    },
+    "hasException" : {
+      "@id" : "https://w3id.org/def/dataact#hasException",
+      "@type" : "@id"
+    },
+    "involvesProcessingService" : {
+      "@id" : "https://w3id.org/def/dataact#involvesProcessingService",
+      "@type" : "@id"
+    },
+    "SME" : {
+      "@id" : "https://w3id.org/def/dataact#SME"
+    },
+    "RegulationDocument" : {
+      "@id" : "https://w3id.org/def/dataact#RegulationDocument"
+    },
+    "createsRight" : {
+      "@id" : "https://w3id.org/def/dataact#createsRight",
+      "@type" : "@id"
+    },
+    "DataRecipient" : {
+      "@id" : "https://w3id.org/def/dataact#DataRecipient"
+    },
+    "FRANDTerms" : {
+      "@id" : "https://w3id.org/def/dataact#FRANDTerms"
+    },
+    "temporalExtent" : {
+      "@id" : "https://w3id.org/def/dataact#temporalExtent"
+    },
+    "ruleText" : {
+      "@id" : "https://w3id.org/def/dataact#ruleText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "treatsComparably" : {
+      "@id" : "https://w3id.org/def/dataact#treatsComparably",
+      "@type" : "@id"
+    },
+    "ContractualRelationship" : {
+      "@id" : "https://w3id.org/def/dataact#ContractualRelationship"
+    },
+    "DataSharing" : {
+      "@id" : "https://w3id.org/def/dataact#DataSharing"
+    },
+    "performsAction" : {
+      "@id" : "https://w3id.org/def/dataact#performsAction",
+      "@type" : "@id"
+    },
+    "applicableArticle" : {
+      "@id" : "https://w3id.org/def/dataact#applicableArticle",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "receivesDataFrom" : {
+      "@id" : "https://w3id.org/def/dataact#receivesDataFrom",
+      "@type" : "@id"
+    },
+    "Constraint" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/Constraint"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "hasDataSubject" : {
+      "@id" : "https://w3c.github.io/dpv/2.2/dpv/#hasDataSubject",
+      "@type" : "@id"
+    },
+    "ExceptionalNeed" : {
+      "@id" : "https://w3id.org/def/dataact#ExceptionalNeed"
+    },
+    "NonPersonalData" : {
+      "@id" : "https://w3c.github.io/dpv/2.2/dpv/#NonPersonalData"
+    },
+    "providesConsentFor" : {
+      "@id" : "https://w3id.org/def/dataact#providesConsentFor",
+      "@type" : "@id"
+    },
+    "DataSpace" : {
+      "@id" : "https://w3id.org/def/dataact#DataSpace"
+    },
+    "hasCounterparty" : {
+      "@id" : "https://w3id.org/def/dataact#hasCounterparty",
+      "@type" : "@id"
+    },
+    "startTime" : {
+      "@id" : "https://w3id.org/def/dataact#startTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "implementedBy" : {
+      "@id" : "https://w3id.org/def/dataact#implementedBy",
+      "@type" : "@id"
+    },
+    "TimeInterval" : {
+      "@id" : "https://w3id.org/def/dataact#TimeInterval"
+    },
+    "validDuring" : {
+      "@id" : "https://w3id.org/def/dataact#validDuring",
+      "@type" : "@id"
+    },
+    "ConsumerUser" : {
+      "@id" : "https://w3id.org/def/dataact#ConsumerUser"
+    },
+    "legalSource" : {
+      "@id" : "https://w3id.org/def/dataact#legalSource"
+    },
+    "participatesIn" : {
+      "@id" : "https://w3id.org/def/dataact#participatesIn",
+      "@type" : "@id"
+    },
+    "hasExceptionalNeedFor" : {
+      "@id" : "https://w3id.org/def/dataact#hasExceptionalNeedFor",
+      "@type" : "@id"
+    },
+    "hasPurpose" : {
+      "@id" : "https://w3c.github.io/dpv/2.2/dpv/#hasPurpose",
+      "@type" : "@id"
+    },
+    "hasAntecedent" : {
+      "@id" : "https://w3id.org/def/dataact#hasAntecedent",
+      "@type" : "@id"
+    },
+    "TimePoint" : {
+      "@id" : "https://w3id.org/def/dataact#TimePoint"
+    },
+    "performsLegalAction" : {
+      "@id" : "https://w3id.org/def/dataact#performsLegalAction",
+      "@type" : "@id"
+    },
+    "TemporalEntity" : {
+      "@id" : "https://w3id.org/def/dataact#TemporalEntity"
+    },
+    "DataSharingAgreement" : {
+      "@id" : "https://w3id.org/def/dataact#DataSharingAgreement"
+    },
+    "hasBeneficiary" : {
+      "@id" : "https://w3id.org/def/dataact#hasBeneficiary",
+      "@type" : "@id"
+    },
+    "LegalEffect" : {
+      "@id" : "https://w3id.org/def/dataact#LegalEffect"
+    },
+    "RelatedService" : {
+      "@id" : "https://w3id.org/def/dataact#RelatedService"
+    },
+    "hasRightHolder" : {
+      "@id" : "https://w3id.org/def/dataact#hasRightHolder",
+      "@type" : "@id"
+    },
+    "UseDataToDevelopCompetingProduct" : {
+      "@id" : "https://w3id.org/def/dataact#UseDataToDevelopCompetingProduct"
+    },
+    "action" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/action",
+      "@type" : "@id"
+    },
+    "DataSubject" : {
+      "@id" : "https://w3c.github.io/dpv/2.2/dpv/#DataSubject"
+    },
+    "permits" : {
+      "@id" : "https://w3id.org/def/dataact#permits",
+      "@type" : "@id"
+    },
+    "Microenterprise" : {
+      "@id" : "https://w3id.org/def/dataact#Microenterprise"
+    },
+    "containsTradeSecret" : {
+      "@id" : "https://w3id.org/def/dataact#containsTradeSecret",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "EnterpriseUser" : {
+      "@id" : "https://w3id.org/def/dataact#EnterpriseUser"
+    },
+    "terminatedBy" : {
+      "@id" : "https://w3id.org/def/dataact#terminatedBy",
+      "@type" : "@id"
+    },
+    "B2GDataSharing" : {
+      "@id" : "https://w3id.org/def/dataact#B2GDataSharing"
+    },
+    "LegalRelationship" : {
+      "@id" : "https://w3id.org/def/dataact#LegalRelationship"
+    },
+    "definition" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#definition"
+    },
+    "DataProcessingService" : {
+      "@id" : "https://w3id.org/def/dataact#DataProcessingService"
+    },
+    "RegulativeRule" : {
+      "@id" : "https://w3id.org/def/dataact#RegulativeRule"
+    },
+    "Rule" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/Rule"
+    },
+    "duration" : {
+      "@id" : "https://w3id.org/def/dataact#duration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "actsOnBehalfOf" : {
+      "@id" : "https://w3id.org/def/dataact#actsOnBehalfOf",
+      "@type" : "@id"
+    },
+    "Data" : {
+      "@id" : "https://w3id.org/def/dataact#Data"
+    },
+    "ActionCondition" : {
+      "@id" : "https://w3id.org/def/dataact#ActionCondition"
+    },
+    "DataAccessRight" : {
+      "@id" : "https://w3id.org/def/dataact#DataAccessRight"
+    },
+    "assignee" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/assignee",
+      "@type" : "@id"
+    },
+    "hasParticipant" : {
+      "@id" : "https://w3id.org/def/dataact#hasParticipant",
+      "@type" : "@id"
+    },
+    "FRANDCondition" : {
+      "@id" : "https://w3id.org/def/dataact#FRANDCondition"
+    },
+    "productCategory" : {
+      "@id" : "https://w3id.org/def/dataact#productCategory",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasDeadline" : {
+      "@id" : "https://w3id.org/def/dataact#hasDeadline",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "PartyType" : {
+      "@id" : "https://w3id.org/def/dataact#PartyType"
+    },
+    "SmartContract" : {
+      "@id" : "https://w3id.org/def/dataact#SmartContract"
+    },
+    "PersonalData" : {
+      "@id" : "https://w3c.github.io/dpv/2.2/dpv/#PersonalData"
+    },
+    "hasData" : {
+      "@id" : "https://w3c.github.io/dpv/2.2/dpv/#hasData",
+      "@type" : "@id"
+    },
+    "hasJurisdiction" : {
+      "@id" : "https://w3id.org/def/dataact#hasJurisdiction",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "target" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/target",
+      "@type" : "@id"
+    },
+    "RuleCondition" : {
+      "@id" : "https://w3id.org/def/dataact#RuleCondition"
+    },
+    "PublicSectorBody" : {
+      "@id" : "https://w3id.org/def/dataact#PublicSectorBody"
+    },
+    "authorizedBy" : {
+      "@id" : "https://w3id.org/def/dataact#authorizedBy",
+      "@type" : "@id"
+    },
+    "fulfillsActionCondition" : {
+      "@id" : "https://w3id.org/def/dataact#fulfillsActionCondition",
+      "@type" : "@id"
+    },
+    "articleReference" : {
+      "@id" : "https://w3id.org/def/dataact#articleReference",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Metadata" : {
+      "@id" : "https://w3id.org/def/dataact#Metadata"
+    },
+    "ruleIdentifier" : {
+      "@id" : "https://w3id.org/def/dataact#ruleIdentifier",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "B2CDataSharing" : {
+      "@id" : "https://w3id.org/def/dataact#B2CDataSharing"
+    },
+    "RelatedServiceData" : {
+      "@id" : "https://w3id.org/def/dataact#RelatedServiceData"
+    },
+    "designatesThirdParty" : {
+      "@id" : "https://w3id.org/def/dataact#designatesThirdParty",
+      "@type" : "@id"
+    },
+    "isNonDiscriminatory" : {
+      "@id" : "https://w3id.org/def/dataact#isNonDiscriminatory",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "endTime" : {
+      "@id" : "https://w3id.org/def/dataact#endTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "UnionBody" : {
+      "@id" : "https://w3id.org/def/dataact#UnionBody"
+    },
+    "hasDutyBearer" : {
+      "@id" : "https://w3id.org/def/dataact#hasDutyBearer",
+      "@type" : "@id"
+    },
+    "BusinessDataRecipient" : {
+      "@id" : "https://w3id.org/def/dataact#BusinessDataRecipient"
+    },
+    "Party" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/Party"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "subjectToFRAND" : {
+      "@id" : "https://w3id.org/def/dataact#subjectToFRAND",
+      "@type" : "@id"
+    },
+    "B2BDataSharing" : {
+      "@id" : "https://w3id.org/def/dataact#B2BDataSharing"
+    },
+    "presupposesDataContent" : {
+      "@id" : "https://w3id.org/def/dataact#presupposesDataContent",
+      "@type" : "@id"
+    },
+    "DataRequest" : {
+      "@id" : "https://w3id.org/def/dataact#DataRequest"
+    },
+    "isGeneratedBy" : {
+      "@id" : "https://w3id.org/def/dataact#isGeneratedBy",
+      "@type" : "@id"
+    },
+    "DataIntermediationService" : {
+      "@id" : "https://w3id.org/def/dataact#DataIntermediationService"
+    },
+    "ContractualTerm" : {
+      "@id" : "https://w3id.org/def/dataact#ContractualTerm"
+    },
+    "providesRelatedService" : {
+      "@id" : "https://w3id.org/def/dataact#providesRelatedService",
+      "@type" : "@id"
+    },
+    "isConstitutive" : {
+      "@id" : "https://w3id.org/def/dataact#isConstitutive",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Right" : {
+      "@id" : "http://www.estrellaproject.org/lkif-core/norm.owl#Right"
+    },
+    "Enterprise" : {
+      "@id" : "https://w3id.org/def/dataact#Enterprise"
+    },
+    "hasConsequent" : {
+      "@id" : "https://w3id.org/def/dataact#hasConsequent",
+      "@type" : "@id"
+    },
+    "dataFormat" : {
+      "@id" : "https://w3id.org/def/dataact#dataFormat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Action" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/Action"
+    },
+    "LegalRule" : {
+      "@id" : "https://w3id.org/def/dataact#LegalRule"
+    },
+    "hasDescription" : {
+      "@id" : "https://w3id.org/def/dataact#hasDescription",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "LegalAction" : {
+      "@id" : "https://w3id.org/def/dataact#LegalAction"
+    },
+    "qualifiedBy" : {
+      "@id" : "https://w3id.org/def/dataact#qualifiedBy"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "DataCategory" : {
+      "@id" : "https://w3id.org/def/dataact#DataCategory"
+    },
+    "hasPartyType" : {
+      "@id" : "https://w3id.org/def/dataact#hasPartyType",
+      "@type" : "@id"
+    },
+    "respondsTo" : {
+      "@id" : "https://w3id.org/def/dataact#respondsTo",
+      "@type" : "@id"
+    },
+    "DataHolder" : {
+      "@id" : "https://w3id.org/def/dataact#DataHolder"
+    },
+    "hasObligation" : {
+      "@id" : "https://w3id.org/def/dataact#hasObligation",
+      "@type" : "@id"
+    },
+    "Consent" : {
+      "@id" : "https://w3c.github.io/dpv/2.2/dpv/#Consent"
+    },
+    "ConnectedProduct" : {
+      "@id" : "https://w3id.org/def/dataact#ConnectedProduct"
+    },
+    "actionType" : {
+      "@id" : "https://w3id.org/def/dataact#actionType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "constraint" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/constraint",
+      "@type" : "@id"
+    },
+    "Collection" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
+    },
+    "compensationAmount" : {
+      "@id" : "https://w3id.org/def/dataact#compensationAmount",
+      "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "purpose" : {
+      "@id" : "https://www.w3.org/ns/odrl/2/purpose"
+    },
+    "ownsOrUses" : {
+      "@id" : "https://w3id.org/def/dataact#ownsOrUses",
+      "@type" : "@id"
+    },
+    "UserAccessRight" : {
+      "@id" : "https://w3id.org/def/dataact#UserAccessRight"
+    },
+    "requestsAccessTo" : {
+      "@id" : "https://w3id.org/def/dataact#requestsAccessTo",
+      "@type" : "@id"
+    }
+  }
+}
