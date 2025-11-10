@@ -1,31 +1,31 @@
 {
   "@context" : {
     "modifies" : {
-      "@id" : "http://www.semanticweb.org/dataact#modifies",
+      "@id" : "https://w3id.org/def/dataact#modifies",
       "@type" : "@id"
     },
     "legalEffect" : {
-      "@id" : "http://www.semanticweb.org/dataact#legalEffect"
+      "@id" : "https://w3id.org/def/dataact#legalEffect"
     },
     "LegalSource" : {
-      "@id" : "http://www.semanticweb.org/dataact#LegalSource"
+      "@id" : "https://w3id.org/def/dataact#LegalSource"
     },
     "DataSharingAuthorization" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataSharingAuthorization"
+      "@id" : "https://w3id.org/def/dataact#DataSharingAuthorization"
     },
     "createsDuty" : {
-      "@id" : "http://www.semanticweb.org/dataact#createsDuty",
+      "@id" : "https://w3id.org/def/dataact#createsDuty",
       "@type" : "@id"
     },
     "scopeNote" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#scopeNote"
     },
     "governedBy" : {
-      "@id" : "http://www.semanticweb.org/dataact#governedBy",
+      "@id" : "https://w3id.org/def/dataact#governedBy",
       "@type" : "@id"
     },
     "ConstitutiveRule" : {
-      "@id" : "http://www.semanticweb.org/dataact#ConstitutiveRule"
+      "@id" : "https://w3id.org/def/dataact#ConstitutiveRule"
     },
     "member" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#member"
@@ -40,21 +40,21 @@
       "@id" : "http://www.w3.org/2004/02/skos/core#example"
     },
     "isMachineReadable" : {
-      "@id" : "http://www.semanticweb.org/dataact#isMachineReadable",
+      "@id" : "https://w3id.org/def/dataact#isMachineReadable",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "Duty" : {
       "@id" : "https://www.w3.org/ns/odrl/2/Duty"
     },
     "Qualification" : {
-      "@id" : "http://www.semanticweb.org/dataact#Qualification"
+      "@id" : "https://w3id.org/def/dataact#Qualification"
     },
     "occursAt" : {
-      "@id" : "http://www.semanticweb.org/dataact#occursAt",
+      "@id" : "https://w3id.org/def/dataact#occursAt",
       "@type" : "@id"
     },
     "grantsAccessTo" : {
-      "@id" : "http://www.semanticweb.org/dataact#grantsAccessTo",
+      "@id" : "https://w3id.org/def/dataact#grantsAccessTo",
       "@type" : "@id"
     },
     "hasRecipient" : {
@@ -65,65 +65,65 @@
       "@id" : "http://purl.org/dc/terms/license"
     },
     "UnfairTerm" : {
-      "@id" : "http://www.semanticweb.org/dataact#UnfairTerm"
+      "@id" : "https://w3id.org/def/dataact#UnfairTerm"
     },
     "Asset" : {
       "@id" : "https://www.w3.org/ns/odrl/2/Asset"
     },
     "DataSharingRelationship" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataSharingRelationship"
+      "@id" : "https://w3id.org/def/dataact#DataSharingRelationship"
     },
     "DataProvision" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataProvision"
+      "@id" : "https://w3id.org/def/dataact#DataProvision"
     },
     "isFair" : {
-      "@id" : "http://www.semanticweb.org/dataact#isFair",
+      "@id" : "https://w3id.org/def/dataact#isFair",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "Permission" : {
       "@id" : "https://www.w3.org/ns/odrl/2/Permission"
     },
     "DataContentCondition" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataContentCondition"
+      "@id" : "https://w3id.org/def/dataact#DataContentCondition"
     },
     "hasAccessRight" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasAccessRight",
+      "@id" : "https://w3id.org/def/dataact#hasAccessRight",
       "@type" : "@id"
     },
     "RelatedServiceProvider" : {
-      "@id" : "http://www.semanticweb.org/dataact#RelatedServiceProvider"
+      "@id" : "https://w3id.org/def/dataact#RelatedServiceProvider"
     },
     "isSubjectOf" : {
-      "@id" : "http://www.semanticweb.org/dataact#isSubjectOf",
+      "@id" : "https://w3id.org/def/dataact#isSubjectOf",
       "@type" : "@id"
     },
     "ProductData" : {
-      "@id" : "http://www.semanticweb.org/dataact#ProductData"
+      "@id" : "https://w3id.org/def/dataact#ProductData"
     },
     "InteroperabilityStandard" : {
-      "@id" : "http://www.semanticweb.org/dataact#InteroperabilityStandard"
+      "@id" : "https://w3id.org/def/dataact#InteroperabilityStandard"
     },
     "hasDeonticSpecification" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasDeonticSpecification",
+      "@id" : "https://w3id.org/def/dataact#hasDeonticSpecification",
       "@type" : "@id"
     },
     "triggeredBy" : {
-      "@id" : "http://www.semanticweb.org/dataact#triggeredBy",
+      "@id" : "https://w3id.org/def/dataact#triggeredBy",
       "@type" : "@id"
     },
     "derivesFrom" : {
-      "@id" : "http://www.semanticweb.org/dataact#derivesFrom",
+      "@id" : "https://w3id.org/def/dataact#derivesFrom",
       "@type" : "@id"
     },
     "Agreement" : {
       "@id" : "https://www.w3.org/ns/odrl/2/Agreement"
     },
     "governedByAgreement" : {
-      "@id" : "http://www.semanticweb.org/dataact#governedByAgreement",
+      "@id" : "https://w3id.org/def/dataact#governedByAgreement",
       "@type" : "@id"
     },
     "ThirdParty" : {
-      "@id" : "http://www.semanticweb.org/dataact#ThirdParty"
+      "@id" : "https://w3id.org/def/dataact#ThirdParty"
     },
     "plays" : {
       "@id" : "http://www.estrellaproject.org/lkif-core/role.owl#plays",
@@ -134,10 +134,10 @@
       "@type" : "@id"
     },
     "Manufacturer" : {
-      "@id" : "http://www.semanticweb.org/dataact#Manufacturer"
+      "@id" : "https://w3id.org/def/dataact#Manufacturer"
     },
     "ContractFormation" : {
-      "@id" : "http://www.semanticweb.org/dataact#ContractFormation"
+      "@id" : "https://w3id.org/def/dataact#ContractFormation"
     },
     "altLabel" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
@@ -149,133 +149,133 @@
       "@id" : "https://www.w3.org/ns/odrl/2/Prohibition"
     },
     "deonticModality" : {
-      "@id" : "http://www.semanticweb.org/dataact#deonticModality",
+      "@id" : "https://w3id.org/def/dataact#deonticModality",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "compliesWith" : {
-      "@id" : "http://www.semanticweb.org/dataact#compliesWith",
+      "@id" : "https://w3id.org/def/dataact#compliesWith",
       "@type" : "@id"
     },
     "ServiceProvider" : {
-      "@id" : "http://www.semanticweb.org/dataact#ServiceProvider"
+      "@id" : "https://w3id.org/def/dataact#ServiceProvider"
     },
     "classifiedAs" : {
-      "@id" : "http://www.semanticweb.org/dataact#classifiedAs",
+      "@id" : "https://w3id.org/def/dataact#classifiedAs",
       "@type" : "@id"
     },
     "AftermarketServiceProvider" : {
-      "@id" : "http://www.semanticweb.org/dataact#AftermarketServiceProvider"
+      "@id" : "https://w3id.org/def/dataact#AftermarketServiceProvider"
     },
     "DataLicenseAgreement" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataLicenseAgreement"
+      "@id" : "https://w3id.org/def/dataact#DataLicenseAgreement"
     },
     "NaturalPerson" : {
-      "@id" : "http://www.semanticweb.org/dataact#NaturalPerson"
+      "@id" : "https://w3id.org/def/dataact#NaturalPerson"
     },
     "ruleSource" : {
-      "@id" : "http://www.semanticweb.org/dataact#ruleSource"
+      "@id" : "https://w3id.org/def/dataact#ruleSource"
     },
     "User" : {
-      "@id" : "http://www.semanticweb.org/dataact#User"
+      "@id" : "https://w3id.org/def/dataact#User"
     },
     "hasTerm" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasTerm",
+      "@id" : "https://w3id.org/def/dataact#hasTerm",
       "@type" : "@id"
     },
     "prohibits" : {
-      "@id" : "http://www.semanticweb.org/dataact#prohibits",
+      "@id" : "https://w3id.org/def/dataact#prohibits",
       "@type" : "@id"
     },
     "presupposesAction" : {
-      "@id" : "http://www.semanticweb.org/dataact#presupposesAction",
+      "@id" : "https://w3id.org/def/dataact#presupposesAction",
       "@type" : "@id"
     },
     "isReasonable" : {
-      "@id" : "http://www.semanticweb.org/dataact#isReasonable",
+      "@id" : "https://w3id.org/def/dataact#isReasonable",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "prescribes" : {
-      "@id" : "http://www.semanticweb.org/dataact#prescribes",
+      "@id" : "https://w3id.org/def/dataact#prescribes",
       "@type" : "@id"
     },
     "isPersonal" : {
-      "@id" : "http://www.semanticweb.org/dataact#isPersonal",
+      "@id" : "https://w3id.org/def/dataact#isPersonal",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "LargeEnterprise" : {
-      "@id" : "http://www.semanticweb.org/dataact#LargeEnterprise"
+      "@id" : "https://w3id.org/def/dataact#LargeEnterprise"
     },
     "fulfillsDataContentCondition" : {
-      "@id" : "http://www.semanticweb.org/dataact#fulfillsDataContentCondition",
+      "@id" : "https://w3id.org/def/dataact#fulfillsDataContentCondition",
       "@type" : "@id"
     },
     "manufacturerIdentifier" : {
-      "@id" : "http://www.semanticweb.org/dataact#manufacturerIdentifier",
+      "@id" : "https://w3id.org/def/dataact#manufacturerIdentifier",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "agreementDate" : {
-      "@id" : "http://www.semanticweb.org/dataact#agreementDate",
+      "@id" : "https://w3id.org/def/dataact#agreementDate",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "requestsAccessFrom" : {
-      "@id" : "http://www.semanticweb.org/dataact#requestsAccessFrom",
+      "@id" : "https://w3id.org/def/dataact#requestsAccessFrom",
       "@type" : "@id"
     },
     "generatesData" : {
-      "@id" : "http://www.semanticweb.org/dataact#generatesData",
+      "@id" : "https://w3id.org/def/dataact#generatesData",
       "@type" : "@id"
     },
     "hasException" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasException",
+      "@id" : "https://w3id.org/def/dataact#hasException",
       "@type" : "@id"
     },
     "involvesProcessingService" : {
-      "@id" : "http://www.semanticweb.org/dataact#involvesProcessingService",
+      "@id" : "https://w3id.org/def/dataact#involvesProcessingService",
       "@type" : "@id"
     },
     "SME" : {
-      "@id" : "http://www.semanticweb.org/dataact#SME"
+      "@id" : "https://w3id.org/def/dataact#SME"
     },
     "RegulationDocument" : {
-      "@id" : "http://www.semanticweb.org/dataact#RegulationDocument"
+      "@id" : "https://w3id.org/def/dataact#RegulationDocument"
     },
     "createsRight" : {
-      "@id" : "http://www.semanticweb.org/dataact#createsRight",
+      "@id" : "https://w3id.org/def/dataact#createsRight",
       "@type" : "@id"
     },
     "DataRecipient" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataRecipient"
+      "@id" : "https://w3id.org/def/dataact#DataRecipient"
     },
     "FRANDTerms" : {
-      "@id" : "http://www.semanticweb.org/dataact#FRANDTerms"
+      "@id" : "https://w3id.org/def/dataact#FRANDTerms"
     },
     "temporalExtent" : {
-      "@id" : "http://www.semanticweb.org/dataact#temporalExtent"
+      "@id" : "https://w3id.org/def/dataact#temporalExtent"
     },
     "ruleText" : {
-      "@id" : "http://www.semanticweb.org/dataact#ruleText",
+      "@id" : "https://w3id.org/def/dataact#ruleText",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "treatsComparably" : {
-      "@id" : "http://www.semanticweb.org/dataact#treatsComparably",
+      "@id" : "https://w3id.org/def/dataact#treatsComparably",
       "@type" : "@id"
     },
     "ContractualRelationship" : {
-      "@id" : "http://www.semanticweb.org/dataact#ContractualRelationship"
+      "@id" : "https://w3id.org/def/dataact#ContractualRelationship"
     },
     "DataSharing" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataSharing"
+      "@id" : "https://w3id.org/def/dataact#DataSharing"
     },
     "performsAction" : {
-      "@id" : "http://www.semanticweb.org/dataact#performsAction",
+      "@id" : "https://w3id.org/def/dataact#performsAction",
       "@type" : "@id"
     },
     "applicableArticle" : {
-      "@id" : "http://www.semanticweb.org/dataact#applicableArticle",
+      "@id" : "https://w3id.org/def/dataact#applicableArticle",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "receivesDataFrom" : {
-      "@id" : "http://www.semanticweb.org/dataact#receivesDataFrom",
+      "@id" : "https://w3id.org/def/dataact#receivesDataFrom",
       "@type" : "@id"
     },
     "Constraint" : {
@@ -290,49 +290,49 @@
       "@type" : "@id"
     },
     "ExceptionalNeed" : {
-      "@id" : "http://www.semanticweb.org/dataact#ExceptionalNeed"
+      "@id" : "https://w3id.org/def/dataact#ExceptionalNeed"
     },
     "NonPersonalData" : {
       "@id" : "https://w3c.github.io/dpv/2.2/dpv/#NonPersonalData"
     },
     "providesConsentFor" : {
-      "@id" : "http://www.semanticweb.org/dataact#providesConsentFor",
+      "@id" : "https://w3id.org/def/dataact#providesConsentFor",
       "@type" : "@id"
     },
     "DataSpace" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataSpace"
+      "@id" : "https://w3id.org/def/dataact#DataSpace"
     },
     "hasCounterparty" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasCounterparty",
+      "@id" : "https://w3id.org/def/dataact#hasCounterparty",
       "@type" : "@id"
     },
     "startTime" : {
-      "@id" : "http://www.semanticweb.org/dataact#startTime",
+      "@id" : "https://w3id.org/def/dataact#startTime",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "implementedBy" : {
-      "@id" : "http://www.semanticweb.org/dataact#implementedBy",
+      "@id" : "https://w3id.org/def/dataact#implementedBy",
       "@type" : "@id"
     },
     "TimeInterval" : {
-      "@id" : "http://www.semanticweb.org/dataact#TimeInterval"
+      "@id" : "https://w3id.org/def/dataact#TimeInterval"
     },
     "validDuring" : {
-      "@id" : "http://www.semanticweb.org/dataact#validDuring",
+      "@id" : "https://w3id.org/def/dataact#validDuring",
       "@type" : "@id"
     },
     "ConsumerUser" : {
-      "@id" : "http://www.semanticweb.org/dataact#ConsumerUser"
+      "@id" : "https://w3id.org/def/dataact#ConsumerUser"
     },
     "legalSource" : {
-      "@id" : "http://www.semanticweb.org/dataact#legalSource"
+      "@id" : "https://w3id.org/def/dataact#legalSource"
     },
     "participatesIn" : {
-      "@id" : "http://www.semanticweb.org/dataact#participatesIn",
+      "@id" : "https://w3id.org/def/dataact#participatesIn",
       "@type" : "@id"
     },
     "hasExceptionalNeedFor" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasExceptionalNeedFor",
+      "@id" : "https://w3id.org/def/dataact#hasExceptionalNeedFor",
       "@type" : "@id"
     },
     "hasPurpose" : {
@@ -340,38 +340,38 @@
       "@type" : "@id"
     },
     "hasAntecedent" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasAntecedent",
+      "@id" : "https://w3id.org/def/dataact#hasAntecedent",
       "@type" : "@id"
     },
     "TimePoint" : {
-      "@id" : "http://www.semanticweb.org/dataact#TimePoint"
+      "@id" : "https://w3id.org/def/dataact#TimePoint"
     },
     "performsLegalAction" : {
-      "@id" : "http://www.semanticweb.org/dataact#performsLegalAction",
+      "@id" : "https://w3id.org/def/dataact#performsLegalAction",
       "@type" : "@id"
     },
     "TemporalEntity" : {
-      "@id" : "http://www.semanticweb.org/dataact#TemporalEntity"
+      "@id" : "https://w3id.org/def/dataact#TemporalEntity"
     },
     "DataSharingAgreement" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataSharingAgreement"
+      "@id" : "https://w3id.org/def/dataact#DataSharingAgreement"
     },
     "hasBeneficiary" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasBeneficiary",
+      "@id" : "https://w3id.org/def/dataact#hasBeneficiary",
       "@type" : "@id"
     },
     "LegalEffect" : {
-      "@id" : "http://www.semanticweb.org/dataact#LegalEffect"
+      "@id" : "https://w3id.org/def/dataact#LegalEffect"
     },
     "RelatedService" : {
-      "@id" : "http://www.semanticweb.org/dataact#RelatedService"
+      "@id" : "https://w3id.org/def/dataact#RelatedService"
     },
     "hasRightHolder" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasRightHolder",
+      "@id" : "https://w3id.org/def/dataact#hasRightHolder",
       "@type" : "@id"
     },
     "UseDataToDevelopCompetingProduct" : {
-      "@id" : "http://www.semanticweb.org/dataact#UseDataToDevelopCompetingProduct"
+      "@id" : "https://w3id.org/def/dataact#UseDataToDevelopCompetingProduct"
     },
     "action" : {
       "@id" : "https://www.w3.org/ns/odrl/2/action",
@@ -381,82 +381,82 @@
       "@id" : "https://w3c.github.io/dpv/2.2/dpv/#DataSubject"
     },
     "permits" : {
-      "@id" : "http://www.semanticweb.org/dataact#permits",
+      "@id" : "https://w3id.org/def/dataact#permits",
       "@type" : "@id"
     },
     "Microenterprise" : {
-      "@id" : "http://www.semanticweb.org/dataact#Microenterprise"
+      "@id" : "https://w3id.org/def/dataact#Microenterprise"
     },
     "containsTradeSecret" : {
-      "@id" : "http://www.semanticweb.org/dataact#containsTradeSecret",
+      "@id" : "https://w3id.org/def/dataact#containsTradeSecret",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "EnterpriseUser" : {
-      "@id" : "http://www.semanticweb.org/dataact#EnterpriseUser"
+      "@id" : "https://w3id.org/def/dataact#EnterpriseUser"
     },
     "terminatedBy" : {
-      "@id" : "http://www.semanticweb.org/dataact#terminatedBy",
+      "@id" : "https://w3id.org/def/dataact#terminatedBy",
       "@type" : "@id"
     },
     "B2GDataSharing" : {
-      "@id" : "http://www.semanticweb.org/dataact#B2GDataSharing"
+      "@id" : "https://w3id.org/def/dataact#B2GDataSharing"
     },
     "LegalRelationship" : {
-      "@id" : "http://www.semanticweb.org/dataact#LegalRelationship"
+      "@id" : "https://w3id.org/def/dataact#LegalRelationship"
     },
     "definition" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#definition"
     },
     "DataProcessingService" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataProcessingService"
+      "@id" : "https://w3id.org/def/dataact#DataProcessingService"
     },
     "RegulativeRule" : {
-      "@id" : "http://www.semanticweb.org/dataact#RegulativeRule"
+      "@id" : "https://w3id.org/def/dataact#RegulativeRule"
     },
     "Rule" : {
       "@id" : "https://www.w3.org/ns/odrl/2/Rule"
     },
     "duration" : {
-      "@id" : "http://www.semanticweb.org/dataact#duration",
+      "@id" : "https://w3id.org/def/dataact#duration",
       "@type" : "http://www.w3.org/2001/XMLSchema#duration"
     },
     "actsOnBehalfOf" : {
-      "@id" : "http://www.semanticweb.org/dataact#actsOnBehalfOf",
+      "@id" : "https://w3id.org/def/dataact#actsOnBehalfOf",
       "@type" : "@id"
     },
     "Data" : {
-      "@id" : "http://www.semanticweb.org/dataact#Data"
+      "@id" : "https://w3id.org/def/dataact#Data"
     },
     "ActionCondition" : {
-      "@id" : "http://www.semanticweb.org/dataact#ActionCondition"
+      "@id" : "https://w3id.org/def/dataact#ActionCondition"
     },
     "DataAccessRight" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataAccessRight"
+      "@id" : "https://w3id.org/def/dataact#DataAccessRight"
     },
     "assignee" : {
       "@id" : "https://www.w3.org/ns/odrl/2/assignee",
       "@type" : "@id"
     },
     "hasParticipant" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasParticipant",
+      "@id" : "https://w3id.org/def/dataact#hasParticipant",
       "@type" : "@id"
     },
     "FRANDCondition" : {
-      "@id" : "http://www.semanticweb.org/dataact#FRANDCondition"
+      "@id" : "https://w3id.org/def/dataact#FRANDCondition"
     },
     "productCategory" : {
-      "@id" : "http://www.semanticweb.org/dataact#productCategory",
+      "@id" : "https://w3id.org/def/dataact#productCategory",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "hasDeadline" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasDeadline",
+      "@id" : "https://w3id.org/def/dataact#hasDeadline",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
     "PartyType" : {
-      "@id" : "http://www.semanticweb.org/dataact#PartyType"
+      "@id" : "https://w3id.org/def/dataact#PartyType"
     },
     "SmartContract" : {
-      "@id" : "http://www.semanticweb.org/dataact#SmartContract"
+      "@id" : "https://w3id.org/def/dataact#SmartContract"
     },
     "PersonalData" : {
       "@id" : "https://w3c.github.io/dpv/2.2/dpv/#PersonalData"
@@ -466,7 +466,7 @@
       "@type" : "@id"
     },
     "hasJurisdiction" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasJurisdiction",
+      "@id" : "https://w3id.org/def/dataact#hasJurisdiction",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "target" : {
@@ -474,57 +474,57 @@
       "@type" : "@id"
     },
     "RuleCondition" : {
-      "@id" : "http://www.semanticweb.org/dataact#RuleCondition"
+      "@id" : "https://w3id.org/def/dataact#RuleCondition"
     },
     "PublicSectorBody" : {
-      "@id" : "http://www.semanticweb.org/dataact#PublicSectorBody"
+      "@id" : "https://w3id.org/def/dataact#PublicSectorBody"
     },
     "authorizedBy" : {
-      "@id" : "http://www.semanticweb.org/dataact#authorizedBy",
+      "@id" : "https://w3id.org/def/dataact#authorizedBy",
       "@type" : "@id"
     },
     "fulfillsActionCondition" : {
-      "@id" : "http://www.semanticweb.org/dataact#fulfillsActionCondition",
+      "@id" : "https://w3id.org/def/dataact#fulfillsActionCondition",
       "@type" : "@id"
     },
     "articleReference" : {
-      "@id" : "http://www.semanticweb.org/dataact#articleReference",
+      "@id" : "https://w3id.org/def/dataact#articleReference",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Metadata" : {
-      "@id" : "http://www.semanticweb.org/dataact#Metadata"
+      "@id" : "https://w3id.org/def/dataact#Metadata"
     },
     "ruleIdentifier" : {
-      "@id" : "http://www.semanticweb.org/dataact#ruleIdentifier",
+      "@id" : "https://w3id.org/def/dataact#ruleIdentifier",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "B2CDataSharing" : {
-      "@id" : "http://www.semanticweb.org/dataact#B2CDataSharing"
+      "@id" : "https://w3id.org/def/dataact#B2CDataSharing"
     },
     "RelatedServiceData" : {
-      "@id" : "http://www.semanticweb.org/dataact#RelatedServiceData"
+      "@id" : "https://w3id.org/def/dataact#RelatedServiceData"
     },
     "designatesThirdParty" : {
-      "@id" : "http://www.semanticweb.org/dataact#designatesThirdParty",
+      "@id" : "https://w3id.org/def/dataact#designatesThirdParty",
       "@type" : "@id"
     },
     "isNonDiscriminatory" : {
-      "@id" : "http://www.semanticweb.org/dataact#isNonDiscriminatory",
+      "@id" : "https://w3id.org/def/dataact#isNonDiscriminatory",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "endTime" : {
-      "@id" : "http://www.semanticweb.org/dataact#endTime",
+      "@id" : "https://w3id.org/def/dataact#endTime",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "UnionBody" : {
-      "@id" : "http://www.semanticweb.org/dataact#UnionBody"
+      "@id" : "https://w3id.org/def/dataact#UnionBody"
     },
     "hasDutyBearer" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasDutyBearer",
+      "@id" : "https://w3id.org/def/dataact#hasDutyBearer",
       "@type" : "@id"
     },
     "BusinessDataRecipient" : {
-      "@id" : "http://www.semanticweb.org/dataact#BusinessDataRecipient"
+      "@id" : "https://w3id.org/def/dataact#BusinessDataRecipient"
     },
     "Party" : {
       "@id" : "https://www.w3.org/ns/odrl/2/Party"
@@ -533,96 +533,96 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "subjectToFRAND" : {
-      "@id" : "http://www.semanticweb.org/dataact#subjectToFRAND",
+      "@id" : "https://w3id.org/def/dataact#subjectToFRAND",
       "@type" : "@id"
     },
     "B2BDataSharing" : {
-      "@id" : "http://www.semanticweb.org/dataact#B2BDataSharing"
+      "@id" : "https://w3id.org/def/dataact#B2BDataSharing"
     },
     "presupposesDataContent" : {
-      "@id" : "http://www.semanticweb.org/dataact#presupposesDataContent",
+      "@id" : "https://w3id.org/def/dataact#presupposesDataContent",
       "@type" : "@id"
     },
     "DataRequest" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataRequest"
+      "@id" : "https://w3id.org/def/dataact#DataRequest"
     },
     "isGeneratedBy" : {
-      "@id" : "http://www.semanticweb.org/dataact#isGeneratedBy",
+      "@id" : "https://w3id.org/def/dataact#isGeneratedBy",
       "@type" : "@id"
     },
     "DataIntermediationService" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataIntermediationService"
+      "@id" : "https://w3id.org/def/dataact#DataIntermediationService"
     },
     "ContractualTerm" : {
-      "@id" : "http://www.semanticweb.org/dataact#ContractualTerm"
+      "@id" : "https://w3id.org/def/dataact#ContractualTerm"
     },
     "providesRelatedService" : {
-      "@id" : "http://www.semanticweb.org/dataact#providesRelatedService",
+      "@id" : "https://w3id.org/def/dataact#providesRelatedService",
       "@type" : "@id"
     },
     "isConstitutive" : {
-      "@id" : "http://www.semanticweb.org/dataact#isConstitutive",
+      "@id" : "https://w3id.org/def/dataact#isConstitutive",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "Right" : {
       "@id" : "http://www.estrellaproject.org/lkif-core/norm.owl#Right"
     },
     "Enterprise" : {
-      "@id" : "http://www.semanticweb.org/dataact#Enterprise"
+      "@id" : "https://w3id.org/def/dataact#Enterprise"
     },
     "hasConsequent" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasConsequent",
+      "@id" : "https://w3id.org/def/dataact#hasConsequent",
       "@type" : "@id"
     },
     "dataFormat" : {
-      "@id" : "http://www.semanticweb.org/dataact#dataFormat",
+      "@id" : "https://w3id.org/def/dataact#dataFormat",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Action" : {
       "@id" : "https://www.w3.org/ns/odrl/2/Action"
     },
     "LegalRule" : {
-      "@id" : "http://www.semanticweb.org/dataact#LegalRule"
+      "@id" : "https://w3id.org/def/dataact#LegalRule"
     },
     "hasDescription" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasDescription",
+      "@id" : "https://w3id.org/def/dataact#hasDescription",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "LegalAction" : {
-      "@id" : "http://www.semanticweb.org/dataact#LegalAction"
+      "@id" : "https://w3id.org/def/dataact#LegalAction"
     },
     "qualifiedBy" : {
-      "@id" : "http://www.semanticweb.org/dataact#qualifiedBy"
+      "@id" : "https://w3id.org/def/dataact#qualifiedBy"
     },
     "prefLabel" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
     },
     "DataCategory" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataCategory"
+      "@id" : "https://w3id.org/def/dataact#DataCategory"
     },
     "hasPartyType" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasPartyType",
+      "@id" : "https://w3id.org/def/dataact#hasPartyType",
       "@type" : "@id"
     },
     "respondsTo" : {
-      "@id" : "http://www.semanticweb.org/dataact#respondsTo",
+      "@id" : "https://w3id.org/def/dataact#respondsTo",
       "@type" : "@id"
     },
     "DataHolder" : {
-      "@id" : "http://www.semanticweb.org/dataact#DataHolder"
+      "@id" : "https://w3id.org/def/dataact#DataHolder"
     },
     "hasObligation" : {
-      "@id" : "http://www.semanticweb.org/dataact#hasObligation",
+      "@id" : "https://w3id.org/def/dataact#hasObligation",
       "@type" : "@id"
     },
     "Consent" : {
       "@id" : "https://w3c.github.io/dpv/2.2/dpv/#Consent"
     },
     "ConnectedProduct" : {
-      "@id" : "http://www.semanticweb.org/dataact#ConnectedProduct"
+      "@id" : "https://w3id.org/def/dataact#ConnectedProduct"
     },
     "actionType" : {
-      "@id" : "http://www.semanticweb.org/dataact#actionType",
+      "@id" : "https://w3id.org/def/dataact#actionType",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "constraint" : {
@@ -633,21 +633,21 @@
       "@id" : "http://www.w3.org/2004/02/skos/core#Collection"
     },
     "compensationAmount" : {
-      "@id" : "http://www.semanticweb.org/dataact#compensationAmount",
+      "@id" : "https://w3id.org/def/dataact#compensationAmount",
       "@type" : "http://www.w3.org/2001/XMLSchema#decimal"
     },
     "purpose" : {
       "@id" : "https://www.w3.org/ns/odrl/2/purpose"
     },
     "ownsOrUses" : {
-      "@id" : "http://www.semanticweb.org/dataact#ownsOrUses",
+      "@id" : "https://w3id.org/def/dataact#ownsOrUses",
       "@type" : "@id"
     },
     "UserAccessRight" : {
-      "@id" : "http://www.semanticweb.org/dataact#UserAccessRight"
+      "@id" : "https://w3id.org/def/dataact#UserAccessRight"
     },
     "requestsAccessTo" : {
-      "@id" : "http://www.semanticweb.org/dataact#requestsAccessTo",
+      "@id" : "https://w3id.org/def/dataact#requestsAccessTo",
       "@type" : "@id"
     }
   }
