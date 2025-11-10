@@ -140,13 +140,13 @@ class DataActComplianceChecker:
         # Define article mappings
         self.article_mappings = {
             'B2C': [
-                ('4.1', 'User Access Rights', 'check-b2c-article4.1.sparql'),
+                ('4.1', 'User Access Rights', 'query-4.1.sparql'),
             ],
             'B2B': [
-                ('8.6', 'Trade Secret Exception', 'check-b2b-article8.6.sparql'),
+                ('8.6', 'Trade Secret Exception', 'query-8.6.sparql'),
             ],
             'B2G': [
-                ('19.2a', 'Competitive Use Prohibition', 'check-b2g-article19.2a.sparql'),
+                ('19.2a', 'Competitive Use Prohibition', 'query-19.2.a.sparql'),
             ]
         }
     
@@ -182,42 +182,32 @@ class DataActComplianceChecker:
             return g, f"File not found: {e}"
         except Exception as e:
             return g, f"Error loading contract: {e}"
-    
-    def detect_contract_type(self, g: Graph) -> str:
+ 
+    def detect_contract_type(self, g: Graph, contract_path: Optional[str] = None) -> str:
         """
-        Automatically detect contract type (B2C/B2B/B2G).
-        
-        Args:
-            g: RDF graph containing contract
-            
-        Returns:
-            Contract type string ('B2C', 'B2B', 'B2G', or 'UNKNOWN')
+        Detect contract type (B2C, B2B, B2G) safely, avoiding ontology contamination.
         """
-        # Check for B2C
-        b2c_query = """
-        PREFIX dataact: <http://www.semanticweb.org/dataact#>
-        ASK { ?s a dataact:B2CDataSharing }
-        """
-        if g.query(b2c_query).askAnswer:
-            return 'B2C'
-        
-        # Check for B2B
-        b2b_query = """
-        PREFIX dataact: <http://www.semanticweb.org/dataact#>
-        ASK { ?s a dataact:B2BDataSharing }
-        """
-        if g.query(b2b_query).askAnswer:
-            return 'B2B'
-        
-        # Check for B2G
-        b2g_query = """
-        PREFIX dataact: <http://www.semanticweb.org/dataact#>
-        ASK { ?s a dataact:B2GDataSharing }
-        """
-        if g.query(b2g_query).askAnswer:
-            return 'B2G'
-        
-        return 'UNKNOWN'
+        PREFIX = "PREFIX dataact: <http://www.semanticweb.org/dataact#> "
+
+        # Try pattern detection by filename first
+        if contract_path:
+            name = Path(contract_path).stem.lower()
+            if "b2c" in name:
+                return "B2C"
+            if "b2b" in name:
+                return "B2B"
+            if "b2g" in name:
+                return "B2G"
+
+        # Fallback: query actual individuals (not class definitions)
+        for t, q in [
+            ("B2C", "ASK { ?s a dataact:B2CDataSharing . FILTER(isIRI(?s)) }"),
+            ("B2B", "ASK { ?s a dataact:B2BDataSharing . FILTER(isIRI(?s)) }"),
+            ("B2G", "ASK { ?s a dataact:B2GDataSharing . FILTER(isIRI(?s)) }"),
+        ]:
+            if g.query(PREFIX + q).askAnswer:
+                return t
+        return "UNKNOWN"
     
     def execute_check(self, 
                       g: Graph, 
@@ -300,7 +290,8 @@ class DataActComplianceChecker:
         report.total_triples = len(g)
         
         # Detect contract type
-        contract_type = self.detect_contract_type(g)
+        contract_type = self.detect_contract_type(g, contract_path)
+
         report.contract_type = contract_type
         
         if contract_type == 'UNKNOWN':
