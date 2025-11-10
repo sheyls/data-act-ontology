@@ -1,34 +1,115 @@
-About Widoco output
-===================
-The purpose of Widoco is to reuse and integrate existing tools for documentation, plus the set of features listed below:
-* Separation of the sections of your html page so you can write them independently and replace only those needed.
-* Automatic annotation in RDF-a of the html produced.
-* Association of a provenance page which includes the history of your vocabulary (W3C PROV-O compliant).
-* Metadata extraction from the ontology plus the means to complete it on the fly when generating your ontology.
-* Guidelines on the main sections that your document should have and how to complete them.
+## EU Data Act Ontology
 
-Widoco will create 3 different folders:
-|
-|-provenance (a folder including an html and RDF serialization of how the documentation page was created)
-|-resources (folder with the different resources)
-|-sections (folder with the different sections of the documentation, separated for easy editing. Just edit one and the main page will be updated)
+Formal Ontology for Automated Compliance with Regulation (EU) 2023/2854
 
-Completing ontology metadata.
-===================
-Widoco uses the ontology metadata to update a configuration file. If you complete that configuration file (ended up widoco.conf), the tool will enhance your html with additional details, such as how to cite the document, previous revisions, icons with the licence, etc.
+### Overview
 
-Browser issues
-==========
-The result of executing Widoco is an html file. We have tested it in Mozilla, IE and Chrome, and when the page is stored in a server all the browsers work correctly. If you view the file locally, we recommend you to use Mozilla Firefox (or Internet Explorer, if you must). Google Chrome will not show the contents correctly, as it doesn't allow  XMLHttpRequest without HTTP. If you want to view the page locally with Google Chrome you have two possibilities:
+This repository provides the first comprehensive ontology for the EU Data Act (Regulation 2023/2854), enabling automated deontic reasoning and compliance verification across business-to-consumer (B2C), business-to-business (B2B), and business-to-government (B2G) data-sharing scenarios.
 
-a) Place the file in a server and access it via its URL (for example, put it in dropbox and access through its public url).
+The ontology integrates 3 foundational standards—LKIF-Core, ODRL, and DPV—to model obligations, permissions, and prohibitions in machine-readable form.
+It allows organizations to verify compliance, detect violations, and evaluate FRAND conditions through SPARQL queries and semantic reasoning.
 
-b) Execute Chrome with the following commands :
+Applicable from September 12, 2025, the EU Data Act introduces complex requirements for data access and sharing. This ontology bridges the gap between legal text and computational enforcement, supporting interoperability in European data spaces and automated contract validation.
 
-(WIN) chrome.exe --allow-file-access-from-files,
+### Key Features
 
-(OSX) open /Applications/Google\ Chrome.app/ --args --allow-file-access-from-files
+- Semantic Representation of the Data Act
 
-(UNX) /usr/bin/google-chrome --allow-file-access-from-files
+    - Models rights, duties, and prohibitions across B2C, B2B, and B2G contexts.
 
-Do you have a problem? open an issue at https://github.com/dgarijo/Widoco
+    - Includes formal representations of:
+
+      - Article 4(1) – B2C user access rights
+
+      - Article 8(6) – B2B trade secret exceptions
+
+      - Article 19(2)(a) – B2G competitive use prohibitions
+
+- Multi-Standard Integration
+- 
+- Automated Compliance Checking
+  - SPARQL queries validate whether contractual terms satisfy Data Act requirements.
+  - Python compliance checker (built with rdflib) executes reasoning tasks and reports results.
+  - Results identify violations, exceptions, and unfulfilled obligations for each article-based contract.
+
+## Repository Structure
+
+```
+compliance-checks/
+│
+├── contracts/
+│   ├── b2b_8.6.owl           # B2B trade secret exceptions (Art. 8(6))
+│   ├── b2c_4.1.owl           # B2C user access rights (Art. 4(1))
+│   └── b2g_19.2.a.owl        # B2G competitive use prohibitions (Art. 19(2)(a))
+│
+├── queries/
+│   ├── query-4.1.update.sparql
+│   ├── query-8.6.update.sparql
+│   ├── query-19.2.a.update.sparql
+│   ├── Screenshot_4_1.png
+│   ├── Screenshot_8_6.png
+│   └── Screenshot_19_2_a.png
+│
+├── compliance_checker.py      # Core reasoning and validation module
+└── run_compliance_check.py    # CLI runner for automated checks
+│
+├── ontology.owl               # Main ontology (LegalRuleML + LKIF + ODRL + DPV)
+├── ontology.ttl               # Turtle serialization
+├── ontology.jsonld            # JSON-LD serialization
+├── ontology.nt                # N-Triples serialization
+│
+├── webvowl/                   # Visualization files (WebVOWL)
+├── resources/                 # Auxiliary resources
+├── sections/                  # Paper sectioned fragments
+│
+├── index-en.html              # Ontology HTML documentation
+├── LICENSE
+└── README.md
+```
+
+## Installation and Usage
+- Prerequisites
+  - Python 3.9+
+  - RDFLib
+  - SPARQLWrapper
+
+Install dependencies:
+
+``pip install rdflib sparqlwrapper``
+
+- Run a Compliance Check
+``python run_compliance_check.py``
+or 
+``python run_compliance_check.py --contract contracts/b2b_8.6.owl --query queries/query-8.6.update.sparql``
+
+The system will:
+- Load the specified contract ontology
+- Execute the compliance SPARQL query
+- Return the list of fulfilled, violated, or pending obligations
+
+
+## Proof-of-Concept Examples
+
+Each compliance scenario includes:
+- Formalized contract ontology (.owl)
+- SPARQL compliance queries
+- Screenshot of results
+
+| **Scenario** | **Article** | **Description** |
+|---------------|--------------|-----------------|
+| **B2C** | Art. 4(1) | User access rights to connected product data |
+| **B2B** | Art. 8(6) | Trade secret exceptions and FRAND conditions |
+| **B2G** | Art. 19(2)(a) | Prohibition of data use for competitive purposes |
+
+
+## Citation
+If you use this ontology, please cite the corresponding paper:
+Toward A Formal Ontology for EU Data Act Compliance: Automated Deontic Reasoning for Data Sharing Agreements
+In: Proceedings of the JURIX 2025 Conference on Conventicle on Artificial Intelligence Regulation and Safety
+
+### 📄 License
+
+This project is released under the **Creative Commons Attribution–ShareAlike (CC BY-SA 4.0)** license.  
+You are free to share and adapt the material for any purpose, even commercially, provided that appropriate credit is given and adaptations are distributed under the same license.
+
+See the full license text at: [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/)
