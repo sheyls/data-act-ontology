@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dataact#"
+     xml:base="http://www.semanticweb.org/dataact"
+     xmlns:dpv="https://w3c.github.io/dpv/2.2/dpv/#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dataact="http://www.semanticweb.org/dataact#">
+
+  <owl:Ontology rdf:about="http://www.semanticweb.org/dataact/contracts/b2g-health">
+    <owl:imports rdf:resource="http://www.semanticweb.org/dataact"/>
+    <rdfs:label>Public Health Emergency Data Sharing Contract (Violation)</rdfs:label>
+    <rdfs:comment>
+      ❌ VIOLATION scenario — Public authority used data to develop a competing product (Article 19(2)(a) violated).
+    </rdfs:comment>
+  </owl:Ontology>
+
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#gonzalo">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConsumerUser"/>
+    <ownsOrUses rdf:resource="http://www.semanticweb.org/dataact#healthMonitor1"/>
+    <rdfs:label>Gonzalo</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#healthMonitor1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConnectedProduct"/>
+    <generatesData rdf:resource="http://www.semanticweb.org/dataact#gonzaloHealthData"/>
+    <manufacturerIdentifier>HEALTH-MON-2024-GZ</manufacturerIdentifier>
+    <productCategory>Medical Device</productCategory>
+    <rdfs:label>Health Monitor 1</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#gonzaloHealthData">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ProductData"/>
+    <rdf:type rdf:resource="https://w3c.github.io/dpv/2.2/dpv/#PersonalData"/>
+    <isGeneratedBy rdf:resource="http://www.semanticweb.org/dataact#healthMonitor1"/>
+    <isMachineReadable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMachineReadable>
+    <isPersonal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isPersonal>
+    <hasDescription>Vital signs, disease indicators, health metrics for pandemic monitoring</hasDescription>
+    <rdfs:label>Gonzalo Health Data</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#healthDeviceManufacturer">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataHolder"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#Manufacturer"/>
+    <dpv:hasData rdf:resource="http://www.semanticweb.org/dataact#gonzaloHealthData"/>
+    <dpv:hasRecipient rdf:resource="http://www.semanticweb.org/dataact#healthAuthority"/>
+    <rdfs:label>Health Device Manufacturer</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Public Authority performing prohibited action -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#healthAuthority">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#PublicSectorBody"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataRecipient"/>
+    <hasExceptionalNeedFor rdf:resource="http://www.semanticweb.org/dataact#gonzaloHealthData"/>
+    <dataact:performsAction rdf:resource="http://www.semanticweb.org/dataact#competitiveProductDevelopment1"/>
+    <rdfs:label>Health Authority</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Prohibited Action -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#competitiveProductDevelopment1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#UseDataToDevelopCompetingProduct"/>
+    <hasDescription>Health authority used emergency data to develop a competing health app.</hasDescription>
+    <rdfs:label>Competitive Product Development 1</rdfs:label>
+    <rdfs:comment>Prohibited under Article 19(2)(a).</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#b2gSharingGonzalo">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#B2GDataSharing"/>
+    <dataact:governedBy rdf:resource="http://www.semanticweb.org/dataact#contract191"/>
+    <rdfs:label>B2G Sharing - Gonzalo</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#contract191">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataSharingAgreement"/>
+    <dpv:hasRecipient rdf:resource="http://www.semanticweb.org/dataact#healthAuthority"/>
+    <agreementDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-03-20T09:00:00Z</agreementDate>
+    <rdfs:label>Contract 191 - Public Health Emergency</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#publicHealthEmergency2024">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ExceptionalNeed"/>
+    <hasDescription>Pandemic monitoring and public health response coordination</hasDescription>
+    <rdfs:label>Public Health Emergency 2024</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#b2gDataRequest191">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataRequest"/>
+    <respondsTo rdf:resource="http://www.semanticweb.org/dataact#publicHealthEmergency2024"/>
+    <hasDeadline rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-25</hasDeadline>
+    <rdfs:label>B2G Data Request 191</rdfs:label>
+  </owl:NamedIndividual>
+
+</rdf:RDF>

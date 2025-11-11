@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dataact#"
+     xml:base="http://www.semanticweb.org/dataact"
+     xmlns:dpv="https://w3c.github.io/dpv/2.2/dpv/#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dataact="http://www.semanticweb.org/dataact#">
+
+  <owl:Ontology rdf:about="http://www.semanticweb.org/dataact/contracts/b2c-charlie">
+    <owl:imports rdf:resource="http://www.semanticweb.org/dataact"/>
+    <rdfs:label>Charlie's Smart Watch Contract (Compliant)</rdfs:label>
+    <rdfs:comment>
+      ✅ COMPLIANT scenario — Manufacturer performs DataProvision action (Article 4(1)).
+    </rdfs:comment>
+  </owl:Ontology>
+
+  <!-- Consumer -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#charlie">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConsumerUser"/>
+    <ownsOrUses rdf:resource="http://www.semanticweb.org/dataact#smartWatch1"/>
+    <requestsAccessTo rdf:resource="http://www.semanticweb.org/dataact#charlieHealthData"/>
+    <rdfs:label>Charlie</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Product -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#smartWatch1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConnectedProduct"/>
+    <generatesData rdf:resource="http://www.semanticweb.org/dataact#charlieHealthData"/>
+    <manufacturerIdentifier>WATCH-2024-CH001</manufacturerIdentifier>
+    <productCategory>Wearable Health Device</productCategory>
+    <rdfs:label>Smart Watch 1</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Data -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#charlieHealthData">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ProductData"/>
+    <rdf:type rdf:resource="https://w3c.github.io/dpv/2.2/dpv/#PersonalData"/>
+    <isGeneratedBy rdf:resource="http://www.semanticweb.org/dataact#smartWatch1"/>
+    <isMachineReadable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMachineReadable>
+    <isPersonal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isPersonal>
+    <hasDescription>Heart rate, steps, sleep patterns, activity data</hasDescription>
+    <rdfs:label>Charlie Health Data</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Data Holder -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#watchManufacturer">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataHolder"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#Manufacturer"/>
+    <dpv:hasData rdf:resource="http://www.semanticweb.org/dataact#charlieHealthData"/>
+    <performsLegalAction rdf:resource="http://www.semanticweb.org/dataact#action_dataProvision_charlie"/>
+    <rdfs:label>Watch Manufacturer</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- B2C Data Sharing -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#b2cSharing_charlie">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#B2CDataSharing"/>
+    <governedBy rdf:resource="http://www.semanticweb.org/dataact#contract_charlie"/>
+    <rdfs:label>B2C Sharing - Charlie</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Contract -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#contract_charlie">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataSharingAgreement"/>
+    <dpv:hasRecipient rdf:resource="http://www.semanticweb.org/dataact#charlie"/>
+    <agreementDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-15T10:00:00Z</agreementDate>
+    <rdfs:label>Charlie's Smart Watch Contract</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- DataProvision Action -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#action_dataProvision_charlie">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataProvision"/>
+    <hasProvider rdf:resource="http://www.semanticweb.org/dataact#watchManufacturer"/>
+    <hasRecipient rdf:resource="http://www.semanticweb.org/dataact#charlie"/>
+    <providesData rdf:resource="http://www.semanticweb.org/dataact#charlieHealthData"/>
+    <hasLegalBasis rdf:resource="http://www.semanticweb.org/dataact#Article4_1_DataAct"/>
+    <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-20T09:00:00Z</actionDate>
+    <rdfs:label>Data Provision to Charlie</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Legal Reference -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#Article4_1_DataAct">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#LegalReference"/>
+    <hasLegalSource>Regulation (EU) 2023/2854 – Data Act</hasLegalSource>
+    <hasArticleNumber>4(1)</hasArticleNumber>
+    <rdfs:label>Article 4(1) – User Access Rights</rdfs:label>
+  </owl:NamedIndividual>
+
+</rdf:RDF>

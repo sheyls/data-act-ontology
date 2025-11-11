@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dataact#"
+     xml:base="http://www.semanticweb.org/dataact"
+     xmlns:dpv="https://w3c.github.io/dpv/2.2/dpv/#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dataact="http://www.semanticweb.org/dataact#">
+
+  <owl:Ontology rdf:about="http://www.semanticweb.org/dataact/contracts/b2b-robot">
+    <owl:imports rdf:resource="http://www.semanticweb.org/dataact"/>
+    <rdfs:label>Industrial Robot Maintenance Contract (Compliant)</rdfs:label>
+    <rdfs:comment>
+      ✅ COMPLIANT scenario — Manufacturer performs DataProvision and declares TradeSecret justification.
+    </rdfs:comment>
+  </owl:Ontology>
+
+  <!-- Factory Owner -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#factoryOwnerAcme">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#User"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#EnterpriseUser"/>
+    <ownsOrUses rdf:resource="http://www.semanticweb.org/dataact#industrialRobot1"/>
+    <rdfs:label>Factory Owner ACME</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Connected Product -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#industrialRobot1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ConnectedProduct"/>
+    <generatesData rdf:resource="http://www.semanticweb.org/dataact#robotData1"/>
+    <manufacturerIdentifier>ROBOT-IND-2024-001</manufacturerIdentifier>
+    <productCategory>Industrial Automation</productCategory>
+    <rdfs:label>Industrial Robot 1</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Product Data -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#robotData1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#ProductData"/>
+    <rdf:type rdf:resource="https://w3c.github.io/dpv/2.2/dpv/#NonPersonalData"/>
+    <isGeneratedBy rdf:resource="http://www.semanticweb.org/dataact#industrialRobot1"/>
+    <isMachineReadable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isMachineReadable>
+    <isPersonal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isPersonal>
+    <hasDescription>Operational metrics, performance data, maintenance logs</hasDescription>
+    <rdfs:label>Robot Data 1</rdfs:label>
+    <dataact:containsTradeSecret rdf:resource="http://www.semanticweb.org/dataact#tradeSecret_robotData1"/>
+  </owl:NamedIndividual>
+
+  <!-- Trade-Secret Justification -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#tradeSecret_robotData1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#TradeSecretData"/>
+    <hasDescription>Contains sensitive specifications of industrial robot algorithms.</hasDescription>
+    <rdfs:label>Trade Secret - Robot Data 1</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Data Holder -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#robotManufacturer">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataHolder"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#Manufacturer"/>
+    <dpv:hasData rdf:resource="http://www.semanticweb.org/dataact#robotData1"/>
+    <dataact:performsLegalAction rdf:resource="http://www.semanticweb.org/dataact#dataProvision_robot1"/>
+    <rdfs:label>Robot Manufacturer</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Data Provision -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#dataProvision_robot1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataProvision"/>
+    <hasProvider rdf:resource="http://www.semanticweb.org/dataact#robotManufacturer"/>
+    <hasRecipient rdf:resource="http://www.semanticweb.org/dataact#autoRepair"/>
+    <providesData rdf:resource="http://www.semanticweb.org/dataact#robotData1"/>
+    <rdfs:label>Data Provision - Robot Manufacturer to AutoRepair</rdfs:label>
+    <rdfs:comment>Shared under FRAND and TradeSecret justification: COMPLIANT.</rdfs:comment>
+  </owl:NamedIndividual>
+
+  <!-- Recipient -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#autoRepair">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataRecipient"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#AftermarketServiceProvider"/>
+    <rdfs:label>AutoRepair Ltd</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Agreement -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#agreement247">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#B2BDataSharing"/>
+    <dataact:governedBy rdf:resource="http://www.semanticweb.org/dataact#contract247"/>
+    <dataact:authorizedBy rdf:resource="http://www.semanticweb.org/dataact#factoryOwnerAcme"/>
+    <rdfs:label>Agreement 247</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- Contract -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#contract247">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#DataSharingAgreement"/>
+    <dpv:hasRecipient rdf:resource="http://www.semanticweb.org/dataact#autoRepair"/>
+    <dataact:subjectToFRAND rdf:resource="http://www.semanticweb.org/dataact#frand247"/>
+    <agreementDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-10T14:30:00Z</agreementDate>
+    <compensationAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800.00</compensationAmount>
+    <rdfs:label>Contract 247 - Robot Maintenance</rdfs:label>
+  </owl:NamedIndividual>
+
+  <!-- FRAND -->
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dataact#frand247">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dataact#FRANDCondition"/>
+    <isFair rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isFair>
+    <isReasonable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReasonable>
+    <isNonDiscriminatory rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isNonDiscriminatory>
+    <rdfs:label>FRAND Condition 247</rdfs:label>
+  </owl:NamedIndividual>
+
+</rdf:RDF>
