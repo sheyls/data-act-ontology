@@ -5,7 +5,7 @@ EU Data Act Compliance Dashboard - Streamlit Application
 import streamlit as st
 import pandas as pd
 import json
-import subprocess
+import sys
 import plotly.express as px
 from pathlib import Path
 from datetime import datetime
@@ -27,34 +27,36 @@ st.caption("Automated compliance monitoring under Regulation (EU) 2023/2854")
 # --------------------------------------------------------------
 base_path = Path(__file__).resolve().parent.parent
 default_contracts_rel = "compliance-checks/contracts"
-contracts_default = base_path / default_contracts_rel
-run_script_path = base_path / "compliance-checks/run_compliance_check.py"
+contracts_dir = (base_path / default_contracts_rel).resolve()
+reports_dir = contracts_dir.parent / "compliance-reports"
+
+sys.path.insert(0, str(base_path / "compliance-checks"))
 
 # --------------------------------------------------------------
 # SIDEBAR CONFIGURATION
 # --------------------------------------------------------------
 st.sidebar.header("⚙️ Settings")
 
-contracts_rel_input = st.sidebar.text_input(
-    "📂 Contracts Folder Path:",
-    default_contracts_rel,
-    help="Relative path to the folder containing contract files.",
-)
-contracts_dir = (base_path / contracts_rel_input).resolve()
-reports_dir = contracts_dir.parent / "compliance-reports"
-
 # --------------------------------------------------------------
 # HELPER FUNCTIONS
 # --------------------------------------------------------------
-def run_compliance_check(script_path: Path):
-    """Execute compliance checker script and return console output."""
-    result = subprocess.run(
-        ["python3", str(script_path)],
-        capture_output=True,
-        text=True,
-        check=False,
-    )
-    return result
+def run_compliance_check_direct():
+    """Execute compliance checker by importing directly."""
+    try:
+        # Importar el módulo
+        from run_compliance_check import main as run_compliance
+        
+        # Crear carpeta de reportes si no existe
+        reports_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Ejecutar
+        run_compliance()
+        
+        return True, "✅ Compliance check completed successfully"
+    except Exception as e:
+        import traceback
+        error_details = traceback.format_exc()
+        return False, f"❌ Error: {str(e)}\n\n{error_details}"
 
 
 def load_latest_report(reports_dir: Path):
@@ -90,14 +92,13 @@ if "button_clicked" not in st.session_state:
 # 🚀 Auto-ejecutar si no hay datos (primer carga)
 if not st.session_state.button_clicked:
     with st.spinner("🔄 Running initial compliance check... please wait ⏳"):
-        result = run_compliance_check(run_script_path)
+        success, message = run_compliance_check_direct()
         st.session_state.button_clicked = True
         
-        # Mostrar resultado en sidebar
-        if result.returncode == 0:
-            st.sidebar.success("✅ Initial compliance check completed.")
+        if success:
+            st.sidebar.success(message)
         else:
-            st.sidebar.warning("⚠️ Compliance check completed with warnings.")
+            st.sidebar.error(message)
         
         # Load and store latest report
         data, report_name = load_latest_report(reports_dir)
@@ -110,16 +111,12 @@ if not st.session_state.button_clicked:
 # --------------------------------------------------------------
 if st.sidebar.button("🔄 Re-run Compliance Check"):
     with st.spinner("Running compliance checks... please wait ⏳"):
-        result = run_compliance_check(run_script_path)
+        success, message = run_compliance_check_direct()
         
-        if result.returncode == 0:
-            st.sidebar.success("✅ Compliance check completed.")
+        if success:
+            st.sidebar.success(message)
         else:
-            st.sidebar.warning("⚠️ Compliance check completed with warnings.")
-            
-        st.sidebar.text_area(
-            "Execution Log:", result.stdout + "\n" + result.stderr, height=200
-        )
+            st.sidebar.error(message)
 
         # Load and store latest report
         data, report_name = load_latest_report(reports_dir)
