@@ -1,3 +1,7 @@
+"""
+EU Data Act Compliance Dashboard - Streamlit Application
+"""
+
 import streamlit as st
 import pandas as pd
 import json
@@ -5,8 +9,6 @@ import subprocess
 import plotly.express as px
 from pathlib import Path
 from datetime import datetime
-import os
-import sys
 
 # --------------------------------------------------------------
 # INITIAL CONFIGURATION
@@ -21,20 +23,31 @@ st.title("⚖️ EU Data Act Compliance Dashboard")
 st.caption("Automated compliance monitoring under Regulation (EU) 2023/2854")
 
 # --------------------------------------------------------------
-# ENVIRONMENT DETECTION
+# PROJECT ROOT AND DEFAULT PATHS
 # --------------------------------------------------------------
-is_cloud = "STREAMLIT_SERVER_ROOT" in os.environ
+base_path = Path(__file__).resolve().parent.parent
+default_contracts_rel = "compliance-checks/contracts"
+contracts_default = base_path / default_contracts_rel
+run_script_path = base_path / "compliance-checks/run_compliance_check.py"
 
-base_path = Path(__file__).resolve().parent
-contracts_dir = base_path / "contracts"
-reports_dir = base_path / "compliance-reports"
-run_script_path = base_path / "run_compliance_check.py"
+# --------------------------------------------------------------
+# SIDEBAR CONFIGURATION
+# --------------------------------------------------------------
+st.sidebar.header("⚙️ Settings")
+
+contracts_rel_input = st.sidebar.text_input(
+    "📂 Contracts Folder Path:",
+    default_contracts_rel,
+    help="Relative path to the folder containing contract files.",
+)
+contracts_dir = (base_path / contracts_rel_input).resolve()
+reports_dir = contracts_dir.parent / "compliance-reports"
 
 # --------------------------------------------------------------
 # HELPER FUNCTIONS
 # --------------------------------------------------------------
-def run_compliance_check_subprocess(script_path: Path):
-    """Execute compliance checker script via subprocess."""
+def run_compliance_check(script_path: Path):
+    """Execute compliance checker script and return console output."""
     result = subprocess.run(
         ["python3", str(script_path)],
         capture_output=True,
@@ -44,29 +57,10 @@ def run_compliance_check_subprocess(script_path: Path):
     return result
 
 
-def run_compliance_check_direct():
-    """Execute compliance checker by importing and running directly."""
-    try:
-        from run_compliance_check import main as run_compliance
-        
-        # Crear carpeta de reportes si no existe
-        reports_dir.mkdir(exist_ok=True)
-        
-        # Run compliance check
-        run_compliance()
-        
-        return True, "Compliance check completed successfully"
-    except Exception as e:
-        import traceback
-        error_details = traceback.format_exc()
-        return False, f"Error: {str(e)}\n\nDetails:\n{error_details}"
-
-
 def load_latest_report(reports_dir: Path):
     """Load the most recent JSON report if available."""
     if not reports_dir.exists():
         return None, None
-    
     report_files = sorted(
         reports_dir.glob("*.json"),
         key=lambda x: x.stat().st_mtime,
@@ -74,14 +68,14 @@ def load_latest_report(reports_dir: Path):
     )
     if not report_files:
         return None, None
-    
     selected_report = report_files[0]
     with open(selected_report, "r", encoding="utf-8") as f:
         data = json.load(f)
     return data, selected_report.name
 
+
 # --------------------------------------------------------------
-# SESSION STATE
+# SESSION STATE (PERSISTENCE)
 # --------------------------------------------------------------
 if "data" not in st.session_state:
     st.session_state.data = None
@@ -91,42 +85,20 @@ if "button_clicked" not in st.session_state:
     st.session_state.button_clicked = False
 
 # --------------------------------------------------------------
-# MAIN LOGIC
+# AUTO-RUN ON FIRST LOAD
 # --------------------------------------------------------------
-if is_cloud:
-    # 🌐 Cloud mode — run compliance check automatically
-    st.info("🌐 Running in Streamlit Cloud — processing contracts...")
-    
-    with st.spinner("Running compliance checks... please wait ⏳"):
-        success, message = run_compliance_check_direct()
-        
-        if not success:
-            st.error(f"❌ {message}")
-            st.stop()
-    
-    # Load and store latest report
-    data, report_name = load_latest_report(reports_dir)
-    
-    if data:
-        st.session_state.data = data
-        st.session_state.report_name = report_name
+# 🚀 Auto-ejecutar si no hay datos (primer carga)
+if not st.session_state.button_clicked:
+    with st.spinner("🔄 Running initial compliance check... please wait ⏳"):
+        result = run_compliance_check(run_script_path)
         st.session_state.button_clicked = True
-        st.success("✅ Compliance check completed successfully")
-    else:
-        st.error("❌ No compliance reports found")
-        st.info(f"Looking in: {reports_dir}")
-        st.stop()
-
-else:
-    # 💻 Local mode — allow manual compliance checking
-    st.sidebar.header("⚙️ Settings")
-
-    if st.sidebar.button("▶️ Run Compliance Check"):
-        with st.spinner("Running compliance checks... please wait ⏳"):
-            result = run_compliance_check_subprocess(run_script_path)
-            st.sidebar.success("✅ Compliance check completed.")
-            st.session_state.button_clicked = True
-
+        
+        # Mostrar resultado en sidebar
+        if result.returncode == 0:
+            st.sidebar.success("✅ Initial compliance check completed.")
+        else:
+            st.sidebar.warning("⚠️ Compliance check completed with warnings.")
+        
         # Load and store latest report
         data, report_name = load_latest_report(reports_dir)
         if data:
@@ -134,9 +106,33 @@ else:
             st.session_state.report_name = report_name
 
 # --------------------------------------------------------------
-# STOP IF NOTHING TO SHOW
+# MANUAL RE-RUN BUTTON
 # --------------------------------------------------------------
-if not st.session_state.button_clicked or not st.session_state.data:
+if st.sidebar.button("🔄 Re-run Compliance Check"):
+    with st.spinner("Running compliance checks... please wait ⏳"):
+        result = run_compliance_check(run_script_path)
+        
+        if result.returncode == 0:
+            st.sidebar.success("✅ Compliance check completed.")
+        else:
+            st.sidebar.warning("⚠️ Compliance check completed with warnings.")
+            
+        st.sidebar.text_area(
+            "Execution Log:", result.stdout + "\n" + result.stderr, height=200
+        )
+
+        # Load and store latest report
+        data, report_name = load_latest_report(reports_dir)
+        if data:
+            st.session_state.data = data
+            st.session_state.report_name = report_name
+            st.rerun()
+
+# --------------------------------------------------------------
+# ONLY SHOW CONTENT AFTER RUN
+# --------------------------------------------------------------
+if not st.session_state.data:
+    st.info("⏳ Waiting for compliance report to be generated...")
     st.stop()
 
 # --------------------------------------------------------------
@@ -231,18 +227,20 @@ if selected_contract == "📊 General Summary":
     st.plotly_chart(fig, use_container_width=True)
 
     st.divider()
-    st.header("📋 Contract Overview")
 
-    contracts = [
-        {
-            "Contract": r["contract_name"],
-            "Type": r["contract_type"],
-            "Violations": r["total_violations"],
-            "Compliant": "✅ Yes" if r["overall_compliant"] else "❌ No",
-        }
-        for r in data["reports"]
-    ]
-    st.dataframe(pd.DataFrame(contracts), use_container_width=True)
+    st.header("📋 Contract Overview")
+    contracts = []
+    for r in data["reports"]:
+        contracts.append(
+            {
+                "Contract": r["contract_name"],
+                "Type": r["contract_type"],
+                "Violations": r["total_violations"],
+                "Compliant": "✅ Yes" if r["overall_compliant"] else "❌ No",
+            }
+        )
+    contracts_df = pd.DataFrame(contracts)
+    st.dataframe(contracts_df, use_container_width=True)
     st.divider()
 
 # --------------------------------------------------------------
@@ -257,9 +255,12 @@ else:
     colC.markdown(f"**Violations:** `{contract['total_violations']}`")
 
     st.markdown("#### 📑 Article Checks")
+
     for article_id, check in contract["checks"].items():
         compliant = check["compliant"]
-        article_url = f"https://eur-lex.europa.eu/eli/reg/2023/2854/oj#d1e{article_id.replace('.', '')}"
+        article_url = (
+            f"https://eur-lex.europa.eu/eli/reg/2023/2854/oj#d1e{article_id.replace('.', '')}"
+        )
         header = (
             f"✅ [Article {article_id}: {check['article_name']}]({article_url})"
             if compliant
