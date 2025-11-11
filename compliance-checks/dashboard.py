@@ -6,6 +6,7 @@ import plotly.express as px
 from pathlib import Path
 from datetime import datetime
 import os
+import sys
 
 # --------------------------------------------------------------
 # INITIAL CONFIGURATION
@@ -24,17 +25,16 @@ st.caption("Automated compliance monitoring under Regulation (EU) 2023/2854")
 # --------------------------------------------------------------
 is_cloud = "STREAMLIT_SERVER_ROOT" in os.environ
 
-base_path = Path(__file__).resolve().parent.parent
+base_path = Path(__file__).resolve().parent
 contracts_dir = base_path / "compliance-checks" / "contracts"
-reports_dir = contracts_dir.parent / "compliance-reports"
-example_report = base_path / "compliance-checks" / "example_report.json"
+reports_dir = base_path / "compliance-checks" / "compliance-reports"
 run_script_path = base_path / "compliance-checks" / "run_compliance_check.py"
 
 # --------------------------------------------------------------
 # HELPER FUNCTIONS
 # --------------------------------------------------------------
-def run_compliance_check(script_path: Path):
-    """Execute compliance checker script and return console output."""
+def run_compliance_check_subprocess(script_path: Path):
+    """Execute compliance checker script via subprocess."""
     result = subprocess.run(
         ["python3", str(script_path)],
         capture_output=True,
@@ -44,8 +44,28 @@ def run_compliance_check(script_path: Path):
     return result
 
 
+def run_compliance_check_direct():
+    """Execute compliance checker by importing and running directly."""
+    try:
+        # Add compliance-checks to path
+        sys.path.insert(0, str(base_path / "compliance-checks"))
+        
+        # Import and run
+        from run_compliance_check import main as run_compliance
+        
+        # Run compliance check
+        run_compliance()
+        
+        return True, "Compliance check completed successfully"
+    except Exception as e:
+        return False, f"Error running compliance check: {str(e)}"
+
+
 def load_latest_report(reports_dir: Path):
     """Load the most recent JSON report if available."""
+    if not reports_dir.exists():
+        return None, None
+    
     report_files = sorted(
         reports_dir.glob("*.json"),
         key=lambda x: x.stat().st_mtime,
@@ -53,6 +73,7 @@ def load_latest_report(reports_dir: Path):
     )
     if not report_files:
         return None, None
+    
     selected_report = report_files[0]
     with open(selected_report, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -72,20 +93,35 @@ if "button_clicked" not in st.session_state:
 # MAIN LOGIC
 # --------------------------------------------------------------
 if is_cloud:
-    # 🌐 Cloud mode — use example data
-    st.info("🌐 Running in Streamlit Cloud — using example data.")
-    with open(example_report, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    st.session_state.data = data
-    st.session_state.report_name = "example_report.json"
-    st.session_state.button_clicked = True
+    # 🌐 Cloud mode — run compliance check automatically
+    st.info("🌐 Running in Streamlit Cloud — processing contracts...")
+    
+    with st.spinner("Running compliance checks... please wait ⏳"):
+        success, message = run_compliance_check_direct()
+        
+        if not success:
+            st.error(f"❌ {message}")
+            st.stop()
+    
+    # Load and store latest report
+    data, report_name = load_latest_report(reports_dir)
+    
+    if data:
+        st.session_state.data = data
+        st.session_state.report_name = report_name
+        st.session_state.button_clicked = True
+        st.success("✅ Compliance check completed successfully")
+    else:
+        st.error("❌ No compliance reports found")
+        st.stop()
+
 else:
-    # 💻 Local mode — allow compliance checking
+    # 💻 Local mode — allow manual compliance checking
     st.sidebar.header("⚙️ Settings")
 
     if st.sidebar.button("▶️ Run Compliance Check"):
         with st.spinner("Running compliance checks... please wait ⏳"):
-            result = run_compliance_check(run_script_path)
+            result = run_compliance_check_subprocess(run_script_path)
             st.sidebar.success("✅ Compliance check completed.")
             st.session_state.button_clicked = True
 
