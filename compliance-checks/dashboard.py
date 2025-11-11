@@ -91,9 +91,6 @@ if st.sidebar.button("▶️ Run Compliance Check"):
         st.session_state.button_clicked = True
         
         st.sidebar.success("✅ Compliance check completed.")
-        st.sidebar.text_area(
-            "Execution Log:", result.stdout + "\n" + result.stderr, height=200
-        )
 
     # Load and store latest report
     data, report_name = load_latest_report(reports_dir)
@@ -254,4 +251,4 @@ else:
 
     st.divider()
 
-st.caption("© 2025 - EU Data Act Compliance Toolkit | CC BY-SA 4.0 License")
+st.caption("© 2025 - EU Data Act Compliance | CC BY-SA 4.0 License")
