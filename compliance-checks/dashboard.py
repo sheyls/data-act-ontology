@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 EU Data Act Compliance Dashboard - Streamlit Application
 """
@@ -9,6 +10,7 @@ import subprocess
 import plotly.express as px
 from pathlib import Path
 from datetime import datetime
+import os
 
 # --------------------------------------------------------------
 # INITIAL CONFIGURATION
@@ -23,25 +25,15 @@ st.title("⚖️ EU Data Act Compliance Dashboard")
 st.caption("Automated compliance monitoring under Regulation (EU) 2023/2854")
 
 # --------------------------------------------------------------
-# PROJECT ROOT AND DEFAULT PATHS
+# ENVIRONMENT DETECTION
 # --------------------------------------------------------------
+is_cloud = "STREAMLIT_SERVER_ROOT" in os.environ
+
 base_path = Path(__file__).resolve().parent.parent
-default_contracts_rel = "compliance-checks/contracts"
-contracts_default = base_path / default_contracts_rel
-run_script_path = base_path / "compliance-checks/run_compliance_check.py"
-
-# --------------------------------------------------------------
-# SIDEBAR CONFIGURATION
-# --------------------------------------------------------------
-st.sidebar.header("⚙️ Settings")
-
-contracts_rel_input = st.sidebar.text_input(
-    "📂 Contracts Folder Path:",
-    default_contracts_rel,
-    help="Relative path to the folder containing contract files.",
-)
-contracts_dir = (base_path / contracts_rel_input).resolve()
+contracts_dir = base_path / "compliance-checks" / "contracts"
 reports_dir = contracts_dir.parent / "compliance-reports"
+example_report = base_path / "compliance-checks" / "example_report.json"
+run_script_path = base_path / "compliance-checks" / "run_compliance_check.py"
 
 # --------------------------------------------------------------
 # HELPER FUNCTIONS
@@ -71,9 +63,8 @@ def load_latest_report(reports_dir: Path):
         data = json.load(f)
     return data, selected_report.name
 
-
 # --------------------------------------------------------------
-# SESSION STATE (PERSISTENCE)
+# SESSION STATE
 # --------------------------------------------------------------
 if "data" not in st.session_state:
     st.session_state.data = None
@@ -83,26 +74,36 @@ if "button_clicked" not in st.session_state:
     st.session_state.button_clicked = False
 
 # --------------------------------------------------------------
-# RUN BUTTON
+# MAIN LOGIC
 # --------------------------------------------------------------
-if st.sidebar.button("▶️ Run Compliance Check"):
-    with st.spinner("Running compliance checks... please wait ⏳"):
-        result = run_compliance_check(run_script_path)
-        st.session_state.button_clicked = True
-        
-        st.sidebar.success("✅ Compliance check completed.")
+if is_cloud:
+    # 🌐 Cloud mode — use example data
+    st.info("🌐 Running in Streamlit Cloud — using example data.")
+    with open(example_report, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    st.session_state.data = data
+    st.session_state.report_name = "example_report.json"
+    st.session_state.button_clicked = True
+else:
+    # 💻 Local mode — allow compliance checking
+    st.sidebar.header("⚙️ Settings")
 
-    # Load and store latest report
-    data, report_name = load_latest_report(reports_dir)
-    if data:
-        st.session_state.data = data
-        st.session_state.report_name = report_name
+    if st.sidebar.button("▶️ Run Compliance Check"):
+        with st.spinner("Running compliance checks... please wait ⏳"):
+            result = run_compliance_check(run_script_path)
+            st.sidebar.success("✅ Compliance check completed.")
+            st.session_state.button_clicked = True
+
+        # Load and store latest report
+        data, report_name = load_latest_report(reports_dir)
+        if data:
+            st.session_state.data = data
+            st.session_state.report_name = report_name
 
 # --------------------------------------------------------------
-# ONLY SHOW CONTENT AFTER RUN
+# STOP IF NOTHING TO SHOW
 # --------------------------------------------------------------
 if not st.session_state.button_clicked or not st.session_state.data:
-    # Show nothing else — just the title and caption
     st.stop()
 
 # --------------------------------------------------------------
@@ -192,25 +193,23 @@ if selected_contract == "📊 General Summary":
         values="Count",
         title="Overall Compliance Distribution",
         color="Status",
-        color_discrete_map={"Compliant": "green", "Non-Compliant": "red"},
+        color_discrete_map={"Compliant": "#2ecc71", "Non-Compliant": "#e74c3c"},
     )
     st.plotly_chart(fig, use_container_width=True)
 
     st.divider()
-
     st.header("📋 Contract Overview")
-    contracts = []
-    for r in data["reports"]:
-        contracts.append(
-            {
-                "Contract": r["contract_name"],
-                "Type": r["contract_type"],
-                "Violations": r["total_violations"],
-                "Compliant": "✅ Yes" if r["overall_compliant"] else "❌ No",
-            }
-        )
-    contracts_df = pd.DataFrame(contracts)
-    st.dataframe(contracts_df, use_container_width=True)
+
+    contracts = [
+        {
+            "Contract": r["contract_name"],
+            "Type": r["contract_type"],
+            "Violations": r["total_violations"],
+            "Compliant": "✅ Yes" if r["overall_compliant"] else "❌ No",
+        }
+        for r in data["reports"]
+    ]
+    st.dataframe(pd.DataFrame(contracts), use_container_width=True)
     st.divider()
 
 # --------------------------------------------------------------
@@ -225,12 +224,9 @@ else:
     colC.markdown(f"**Violations:** `{contract['total_violations']}`")
 
     st.markdown("#### 📑 Article Checks")
-
     for article_id, check in contract["checks"].items():
         compliant = check["compliant"]
-        article_url = (
-            f"https://eur-lex.europa.eu/eli/reg/2023/2854/oj#d1e{article_id.replace('.', '')}"
-        )
+        article_url = f"https://eur-lex.europa.eu/eli/reg/2023/2854/oj#d1e{article_id.replace('.', '')}"
         header = (
             f"✅ [Article {article_id}: {check['article_name']}]({article_url})"
             if compliant
@@ -244,11 +240,7 @@ else:
                 for i, v in enumerate(check["violations"], start=1):
                     st.markdown(f"**Violation {i}: {v.get('violationType', 'Unknown')}**")
                     st.write(v.get("details", "No details provided."))
-                    other_fields = {
-                        k: v[k] for k in v if k not in ["violationType", "details"]
-                    }
-                    st.json(other_fields)
 
     st.divider()
 
-st.caption("© 2025 - EU Data Act Compliance | CC BY-SA 4.0 License")
+st.caption("© 2025 - EU Data Act Compliance Toolkit | CC BY-SA 4.0 License")
