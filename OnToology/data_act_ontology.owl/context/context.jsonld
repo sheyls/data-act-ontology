@@ -125,6 +125,10 @@
     "ThirdParty" : {
       "@id" : "https://w3id.org/def/dataact#ThirdParty"
     },
+    "hasPartyCategory" : {
+      "@id" : "https://w3id.org/def/dataact#hasPartyCategory",
+      "@type" : "@id"
+    },
     "plays" : {
       "@id" : "http://www.estrellaproject.org/lkif-core/role.owl#plays",
       "@type" : "@id"
@@ -292,6 +296,10 @@
     "ExceptionalNeed" : {
       "@id" : "https://w3id.org/def/dataact#ExceptionalNeed"
     },
+    "wasDerivedFrom" : {
+      "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "@type" : "@id"
+    },
     "NonPersonalData" : {
       "@id" : "https://w3c.github.io/dpv/2.2/dpv/#NonPersonalData"
     },
@@ -452,14 +460,15 @@
       "@id" : "https://w3id.org/def/dataact#hasDeadline",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
-    "PartyType" : {
-      "@id" : "https://w3id.org/def/dataact#PartyType"
-    },
     "SmartContract" : {
       "@id" : "https://w3id.org/def/dataact#SmartContract"
     },
     "PersonalData" : {
       "@id" : "https://w3c.github.io/dpv/2.2/dpv/#PersonalData"
+    },
+    "uses" : {
+      "@id" : "https://w3id.org/def/dataact#uses",
+      "@type" : "@id"
     },
     "hasData" : {
       "@id" : "https://w3c.github.io/dpv/2.2/dpv/#hasData",
@@ -556,6 +565,10 @@
     "ContractualTerm" : {
       "@id" : "https://w3id.org/def/dataact#ContractualTerm"
     },
+    "owns" : {
+      "@id" : "https://w3id.org/def/dataact#owns",
+      "@type" : "@id"
+    },
     "providesRelatedService" : {
       "@id" : "https://w3id.org/def/dataact#providesRelatedService",
       "@type" : "@id"
@@ -591,6 +604,9 @@
     "LegalAction" : {
       "@id" : "https://w3id.org/def/dataact#LegalAction"
     },
+    "PartyCategory" : {
+      "@id" : "https://w3id.org/def/dataact#PartyCategory"
+    },
     "qualifiedBy" : {
       "@id" : "https://w3id.org/def/dataact#qualifiedBy"
     },
@@ -599,10 +615,6 @@
     },
     "DataCategory" : {
       "@id" : "https://w3id.org/def/dataact#DataCategory"
-    },
-    "hasPartyType" : {
-      "@id" : "https://w3id.org/def/dataact#hasPartyType",
-      "@type" : "@id"
     },
     "respondsTo" : {
       "@id" : "https://w3id.org/def/dataact#respondsTo",
@@ -638,10 +650,6 @@
     },
     "purpose" : {
       "@id" : "https://www.w3.org/ns/odrl/2/purpose"
-    },
-    "ownsOrUses" : {
-      "@id" : "https://w3id.org/def/dataact#ownsOrUses",
-      "@type" : "@id"
     },
     "UserAccessRight" : {
       "@id" : "https://w3id.org/def/dataact#UserAccessRight"

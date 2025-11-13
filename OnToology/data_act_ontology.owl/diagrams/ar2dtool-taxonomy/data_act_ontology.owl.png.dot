@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "odrl:Rule" "dataact:UseDataToDevelopCompetingProduct" "dataact:B2GDataSharing" "dataact:LegalRelationship" "odrl:Party" "dataact:TemporalEntity" "dataact:LegalRule" "dataact:UserAccessRight" "dpv:NonPersonalData" "dataact:B2CDataSharing" "dataact:Data" "dataact:Manufacturer" "dataact:DataRequest" "dataact:AftermarketServiceProvider" "dataact:DataSharing" "odrl:Agreement" "dataact:NaturalPerson" "dataact:ContractualRelationship" "dataact:Microenterprise" "dataact:ServiceProvider" "dataact:ConnectedProduct" "dataact:DataIntermediationService" "dataact:RelatedServiceProvider" "dataact:PartyType" "dataact:RegulativeRule" "http://www.estrellaproject.org/lkif-core/expression.owl#Legal_Document" "dataact:ThirdParty" "dataact:SME" "dataact:User" "dpv:PersonalData" "dataact:DataAccessRight" "dataact:BusinessDataRecipient" "odrl:Action" "dataact:TimePoint" "dataact:RuleCondition" "dataact:DataProvision" "dataact:RelatedService" "http://www.estrellaproject.org/lkif-core/norm.owl#Right" "dataact:ContractualTerm" "dataact:DataSharingRelationship" "dataact:DataRecipient" "dataact:ProductData" "odrl:Duty" "odrl:Prohibition" "dataact:DataHolder" "dataact:DataContentCondition" "dataact:LargeEnterprise" "dataact:RelatedServiceData" "dataact:ContractFormation" "dataact:DataSharingAgreement" "dataact:ActionCondition" "dataact:DataSharingAuthorization" "dataact:DataProcessingService" "dataact:B2BDataSharing" "odrl:Permission" "dataact:DataLicenseAgreement" "dataact:UnfairTerm" "dataact:Enterprise" "odrl:Asset" "dataact:RegulationDocument" "dataact:TimeInterval" "dataact:LegalAction" "dataact:ConsumerUser" "dataact:UnionBody" "dataact:EnterpriseUser" "dataact:ConstitutiveRule" "dataact:PublicSectorBody" "dataact:Metadata" "dataact:FRANDTerms" ; /*classes style*/
+node [shape = rectangle, color="black"]; "odrl:Rule" "dataact:UseDataToDevelopCompetingProduct" "dataact:B2GDataSharing" "dataact:LegalRelationship" "odrl:Party" "dataact:TemporalEntity" "dataact:LegalRule" "dataact:UserAccessRight" "dpv:NonPersonalData" "dataact:B2CDataSharing" "dataact:Data" "dataact:Manufacturer" "dataact:DataRequest" "dataact:AftermarketServiceProvider" "dataact:DataSharing" "odrl:Agreement" "dataact:NaturalPerson" "dataact:ContractualRelationship" "dataact:Microenterprise" "dataact:ServiceProvider" "dataact:ConnectedProduct" "dataact:DataIntermediationService" "dataact:RelatedServiceProvider" "dataact:RegulativeRule" "http://www.estrellaproject.org/lkif-core/expression.owl#Legal_Document" "dataact:ThirdParty" "dataact:SME" "dataact:User" "dpv:PersonalData" "dataact:DataAccessRight" "dataact:BusinessDataRecipient" "odrl:Action" "dataact:TimePoint" "dataact:RuleCondition" "dataact:DataProvision" "dataact:RelatedService" "http://www.estrellaproject.org/lkif-core/norm.owl#Right" "dataact:ContractualTerm" "dataact:DataSharingRelationship" "dataact:DataRecipient" "dataact:ProductData" "dataact:PartyCategory" "odrl:Duty" "odrl:Prohibition" "dataact:DataHolder" "dataact:DataContentCondition" "dataact:LargeEnterprise" "dataact:RelatedServiceData" "dataact:ContractFormation" "dataact:DataSharingAgreement" "dataact:ActionCondition" "dataact:DataSharingAuthorization" "dataact:DataProcessingService" "dataact:B2BDataSharing" "odrl:Permission" "dataact:DataLicenseAgreement" "dataact:UnfairTerm" "dataact:Enterprise" "odrl:Asset" "dataact:RegulationDocument" "dataact:TimeInterval" "dataact:LegalAction" "dataact:ConsumerUser" "dataact:UnionBody" "dataact:EnterpriseUser" "dataact:ConstitutiveRule" "dataact:PublicSectorBody" "dataact:Metadata" "dataact:FRANDTerms" ; /*classes style*/
 	"dataact:UnionBody" -> "dataact:PublicSectorBody" [ label = "rdfs:subClassOf" ];
 	"dataact:B2BDataSharing" -> "dataact:DataSharing" [ label = "rdfs:subClassOf" ];
 	"dataact:ContractFormation" -> "dataact:LegalAction" [ label = "rdfs:subClassOf" ];
@@ -15,14 +15,14 @@ node [shape = rectangle, color="black"]; "odrl:Rule" "dataact:UseDataToDevelopCo
 	"dataact:B2GDataSharing" -> "dataact:DataSharing" [ label = "rdfs:subClassOf" ];
 	"dataact:Manufacturer" -> "dataact:ServiceProvider" [ label = "rdfs:subClassOf" ];
 	"dataact:Manufacturer" -> "dataact:DataHolder" [ label = "rdfs:subClassOf" ];
-	"dataact:NaturalPerson" -> "dataact:PartyType" [ label = "rdfs:subClassOf" ];
+	"dataact:NaturalPerson" -> "dataact:PartyCategory" [ label = "rdfs:subClassOf" ];
 	"dataact:DataContentCondition" -> "dataact:RuleCondition" [ label = "rdfs:subClassOf" ];
 	"dataact:ServiceProvider" -> "odrl:Party" [ label = "rdfs:subClassOf" ];
 	"dataact:BusinessDataRecipient" -> "dataact:DataRecipient" [ label = "rdfs:subClassOf" ];
 	"dataact:TimeInterval" -> "dataact:TemporalEntity" [ label = "rdfs:subClassOf" ];
 	"dataact:ConstitutiveRule" -> "dataact:LegalRule" [ label = "rdfs:subClassOf" ];
 	"dataact:DataSharing" -> "dataact:LegalAction" [ label = "rdfs:subClassOf" ];
-	"dataact:PublicSectorBody" -> "dataact:PartyType" [ label = "rdfs:subClassOf" ];
+	"dataact:PublicSectorBody" -> "dataact:PartyCategory" [ label = "rdfs:subClassOf" ];
 	"dataact:Metadata" -> "dataact:Data" [ label = "rdfs:subClassOf" ];
 	"dataact:UnfairTerm" -> "dataact:ContractualTerm" [ label = "rdfs:subClassOf" ];
 	"dataact:ActionCondition" -> "dataact:RuleCondition" [ label = "rdfs:subClassOf" ];
@@ -58,7 +58,7 @@ node [shape = rectangle, color="black"]; "odrl:Rule" "dataact:UseDataToDevelopCo
 	"dataact:RelatedServiceProvider" -> "dataact:DataHolder" [ label = "rdfs:subClassOf" ];
 	"dataact:TimePoint" -> "dataact:TemporalEntity" [ label = "rdfs:subClassOf" ];
 	"dataact:DataSharingRelationship" -> "dataact:LegalRelationship" [ label = "rdfs:subClassOf" ];
-	"dataact:Enterprise" -> "dataact:PartyType" [ label = "rdfs:subClassOf" ];
+	"dataact:Enterprise" -> "dataact:PartyCategory" [ label = "rdfs:subClassOf" ];
 	"dataact:DataIntermediationService" -> "odrl:Party" [ label = "rdfs:subClassOf" ];
 
 }
