@@ -38,25 +38,17 @@ Applicable from September 12, 2025, the EU Data Act introduces complex requireme
 compliance-checks/
 │
 ├── contracts/
-│   ├── b2b_8.6.owl           # B2B trade secret exceptions (Art. 8(6))
-│   ├── b2c_4.1.owl           # B2C user access rights (Art. 4(1))
-│   └── b2g_19.2.a.owl        # B2G competitive use prohibitions (Art. 19(2)(a))
 │
 ├── queries/
-│   ├── query-4.1.update.sparql
-│   ├── query-8.6.update.sparql
-│   ├── query-19.2.a.update.sparql
-│   ├── Screenshot_4_1.png
-│   ├── Screenshot_8_6.png
-│   └── Screenshot_19_2_a.png
+│   ├── query-4.1.sparql
+│   ├── query-8.6.sparql
+│   ├── query-19.2.a.sparql
 │
 ├── compliance_checker.py      # Core reasoning and validation module
 └── run_compliance_check.py    # CLI runner for automated checks
 │
-├── ontology.owl               # Main ontology (LegalRuleML + LKIF + ODRL + DPV)
-├── ontology.ttl               # Turtle serialization
-├── ontology.jsonld            # JSON-LD serialization
-├── ontology.nt                # N-Triples serialization
+├── DAOnt.owl               # Main ontology (LegalRuleML + LKIF + ODRL + DPV)
+├── DAOnt.ttl               # Turtle serialization
 │
 ├── webvowl/                   # Visualization files (WebVOWL)
 ├── resources/                 # Auxiliary resources
